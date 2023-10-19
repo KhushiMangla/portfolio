@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Loading from './Loading'
+import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 
 const Home = ({ restBase }) => {
     const restPath = restBase + 'pages/10'
@@ -28,6 +29,24 @@ const Home = ({ restBase }) => {
                     <div className="entry-content">
                         <section>
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
+                        </section>
+
+                        <section class="social-media-icons">
+                            <a href={`mailto:${restData.acf.email}`}>
+                                <span className="icon-wrapper">
+                                    <FaEnvelope />
+                                </span>
+                            </a>
+                            <a href={restData.acf.linkedin}>
+                                <span className="icon-wrapper">
+                                    <FaLinkedin />
+                                </span>
+                            </a>
+                            <a href={restData.acf.github}>
+                                <span className="icon-wrapper">
+                                    <FaGithub />
+                                </span>
+                            </a>
                         </section>
                     </div>
                 </article>

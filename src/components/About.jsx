@@ -30,7 +30,10 @@ const About= ({ restBase }) => {
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
                         </section>
                     </div>
+                 
+                    
                 </article>
+                
                 :
                 <Loading />
             }
