@@ -1,37 +1,42 @@
-import { useState, useEffect } from 'react'
-import Loading from './Loading'
+import React, { useState, useEffect } from 'react';
+import Loading from './Loading';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
+import Work from './Work'; // Import the Work component
 
 const Home = ({ restBase }) => {
-    const restPath = restBase + 'pages/10'
-    const [restData, setData] = useState([])
-    const [isLoaded, setLoadStatus] = useState(false)
+    const restPath = restBase + 'pages/10';
+    const [restData, setData] = useState([]);
+    const [isLoaded, setLoadStatus] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(restPath)
+            const response = await fetch(restPath);
             if (response.ok) {
-                const data = await response.json()
-                setData(data)
-                setLoadStatus(true)
+                const data = await response.json();
+                setData(data);
+                setLoadStatus(true);
             } else {
-                setLoadStatus(false)
+                setLoadStatus(false);
             }
-        }
-        fetchData()
-    }, [restPath])
+        };
+        fetchData();
+    }, [restPath]);
 
     return (
         <>
-            {isLoaded ?
+            {isLoaded ? (
                 <article id={`post-${restData.id}`}>
                     <h1>{restData.title.rendered}</h1>
                     <div className="entry-content">
                         <section>
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
                         </section>
+                    </div>
 
-                        <section class="social-media-icons">
+                    {/* Render the Work component after the Home content */}
+                    <Work restBase={restBase} />
+                    {/* social media icons */}
+                    <section class="social-media-icons">
                             <a href={`mailto:${restData.acf.email}`}>
                                 <span className="icon-wrapper">
                                     <FaEnvelope />
@@ -48,13 +53,13 @@ const Home = ({ restBase }) => {
                                 </span>
                             </a>
                         </section>
-                    </div>
                 </article>
-                :
+                
+            ) : (
                 <Loading />
-            }
+            )}
         </>
     );
 }
 
-export default Home
+export default Home;

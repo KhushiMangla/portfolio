@@ -31,19 +31,11 @@ const Work = ({ restBase, featuredImage }) => {
                             <figure className="featured-image" dangerouslySetInnerHTML={featuredImage(post._embedded['wp:featuredmedia'][0])}></figure>
                         }
                         <div>
-                            {post.title.rendered}
+                            <h3>{post.title.rendered}</h3>
                             
                             <div className="entry-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
-                            {/* {post._embedded['wp:term'][0][0].name} */}
-                            {post._embedded['wp:term'].map((terms, index) =>
-                            terms.length > 0 ?
-                                terms[0].taxonomy === 'work-category' ?
-                                    <p key={index}>Work Category: {terms[0].name}</p>
-                                :
-                                    null
-                            :
-                                null
-                        )}
+                          
+                            
                           
                         </div>
                     </article>
