@@ -31,30 +31,34 @@ const Home = ({ restBase }) => {
                         <section>
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
                         </section>
+                        <section className="toolkit">
+                            {restData.acf.toolkit.map((tool, index) => (
+                                <p key={index}>{tool.toolkit}</p>
+                            ))}
+                        </section>
                     </div>
 
                     {/* Render the Work component after the Home content */}
                     <Work restBase={restBase} />
                     {/* social media icons */}
-                    <section class="social-media-icons">
-                            <a href={`mailto:${restData.acf.email}`}>
-                                <span className="icon-wrapper">
-                                    <FaEnvelope />
-                                </span>
-                            </a>
-                            <a href={restData.acf.linkedin}>
-                                <span className="icon-wrapper">
-                                    <FaLinkedin />
-                                </span>
-                            </a>
-                            <a href={restData.acf.github}>
-                                <span className="icon-wrapper">
-                                    <FaGithub />
-                                </span>
-                            </a>
-                        </section>
+                    <section className="social-media-icons">
+                        <a href={`mailto:${restData.acf.email}`}>
+                            <span className="icon-wrapper">
+                                <FaEnvelope />
+                            </span>
+                        </a>
+                        <a href={restData.acf.linkedin}>
+                            <span className="icon-wrapper">
+                                <FaLinkedin />
+                            </span>
+                        </a>
+                        <a href={restData.acf.github}>
+                            <span className="icon-wrapper">
+                                <FaGithub />
+                            </span>
+                        </a>
+                    </section>
                 </article>
-                
             ) : (
                 <Loading />
             )}
