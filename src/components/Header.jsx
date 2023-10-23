@@ -5,14 +5,15 @@ const Header = () => {
   return (
     <header id="masthead" className="site-header">
         <div className="site-branding">
-          <p className="site-title">Khushi's Portfolio App</p>
+          <p className="site-title">Khushi</p>
+          <p>toggle</p>
         </div>
         <nav className="site-navigation">
           <ul>
-            <li><NavLink to='/' end>Home</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
-            <li><NavLink to='/work'>Work</NavLink></li>
-            <li><NavLink to='/contact'>Contact</NavLink></li>
+            <li><NavLink activeClassName="active" to="/" > Home </NavLink></li>
+            <li><NavLink activeClassName="active" to="/about"> About </NavLink></li>
+            <li><NavLink activeClassName="active" to="/work">Work</NavLink></li>
+            <li><button className='contact-btn'><NavLink to="/contact">Contact me</NavLink></button></li>
           </ul>
         </nav>
       </header>
