@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Loading from './Loading'
 
 const About= ({ restBase }) => {
-    const restPath = restBase + 'pages/12'
+    const restPath = restBase + 'pages/43'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
