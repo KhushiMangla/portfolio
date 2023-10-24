@@ -3,6 +3,7 @@ import Loading from './Loading';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Work from './Work'; // Import the Work component
 import { NavLink } from 'react-router-dom';
+import { motion } from "framer-motion"
 
 const Home = ({ restBase }) => {
     const restPath = restBase + 'pages/10';
@@ -23,40 +24,54 @@ const Home = ({ restBase }) => {
         fetchData();
     }, [restPath]);
 
+    const introVariants = {
+        initial: {
+            x: -500,
+            opacity: 0,
+        },
+        animate: {
+            x: 0,
+            opacity: 1,
+            transition: {
+                duration: 1,
+                staggerChildren: 0.1,
+            }
+        },
+    };
+
     return (
         <>
             {isLoaded ? (
-                <article id={`post-${restData.id}`}>
-                    <div className='intro'>
-                        <div className="intro-left">
-                            <section className="name">
+                <motion.article id={`post-${restData.id}`} initial="initial" animate="animate">
+                    <motion.div className='intro' variants={introVariants}>
+                        <motion.div className="intro-left">
+                            <motion.section className="name" variants={introVariants}>
                                 <h3>{restData.acf.intro}</h3>
-                            </section>
-                            <section className="tagline">{restData.acf.tagline}</section>
-                            <button className="mywork-btn">
+                            </motion.section>
+                            <motion.section className="tagline" variants={introVariants}>
+                                <p>{restData.acf.tagline}</p>
+                            </motion.section>
+                            <motion.button className="mywork-btn" variants={introVariants}>
                                 <NavLink activeClassName="active" to="/work">View my work</NavLink>
-                            </button>
-                        </div>
-                        <section className="profile">
+                            </motion.button>
+                        </motion.div>
+                        <motion.section className="profile" variants={introVariants}>
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
-                        </section>
-
-                    </div>
-
+                        </motion.section>
+                    </motion.div>
 
                     {/* Rendering work component */}
-                    <div className="custom__scroll">
+                    <motion.div className="custom__scroll">
                         <a href="#work" className="work-scroll">
-                            <div className="scroll"></div>
+                            <motion.div className="scroll"></motion.div>
                         </a>
-                    </div>
+                    </motion.div>
                     <section id="work">
                         <Work restBase={restBase} />
                     </section>
 
                     {/* social media icons */}
-
-                    <section className="social-media-icons">
+                    <motion.section className="social-media-icons" variants={introVariants}>
                         <a href={`mailto:${restData.acf.email}`}>
                             <span className="icon-wrapper">
                                 <FaEnvelope />
@@ -72,10 +87,8 @@ const Home = ({ restBase }) => {
                                 <FaGithub />
                             </span>
                         </a>
-                    </section>
-
-
-                </article>
+                    </motion.section>
+                </motion.article>
             ) : (
                 <Loading />
             )}
