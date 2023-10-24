@@ -1,9 +1,13 @@
 @use "variables" as *;
 
-.site-header{
+.site-header {
     display: flex;
     justify-content: space-between;
-}
+    position: sticky;
+    top: 0;
+    background: pink;
+    z-index:1000; /* Adjust the z-index to your needs */
+  }
 .site-branding{
    
     flex: 1;
