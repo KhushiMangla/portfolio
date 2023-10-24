@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 .active {
   color: hotpink !important;
 }
@@ -45,14 +49,19 @@
   margin: auto 2rem;
 }
 .intro-left .name {
-  font-weight: bold;
+  font-size: 2rem;
+  color: orange;
 }
 
-.mywork {
+.mywork-btn {
   padding: 0.5rem 1;
   margin: 1rem 0;
   text-align: center;
   background: skyblue;
+  background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+  border-radius: 25px;
+  border: none;
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

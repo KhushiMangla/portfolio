@@ -33,20 +33,26 @@
     margin: auto 2rem;
 
     .name{
-        font-weight:bold;
+        font-size: 2rem;
+        color:orange
     }
 }
 
-.wp-block-image{
-    img{
-        // set the border radius of the img
-    }
-}
+// .wp-block-image{
+//     img{
+//         // set the border radius of the img
+//     }
+// }
 
-.mywork{
+.mywork-btn{
     padding:0.5rem 1;
     margin:1rem 0;
     text-align: center;
     background: skyblue;
+    background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+    border-radius:25px;
+    border: none;
+    padding: 1rem;
+    // add box shadow later
 }
 

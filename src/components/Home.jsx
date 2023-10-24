@@ -33,7 +33,7 @@ const Home = ({ restBase }) => {
                                 <h3>{restData.acf.intro}</h3>
                             </section>
                             <section className="tagline">{restData.acf.tagline}</section>
-                            <button className="mywork">
+                            <button className="mywork-btn">
                             <NavLink activeClassName="active" to="/work">View my work</NavLink>
                             </button>
 
@@ -48,12 +48,11 @@ const Home = ({ restBase }) => {
                         </section>
                     </div>
 
-
-
-
-                    {/* Render the Work component after the Home content */}
+                    {/* Rendering work component */}
                     <Work restBase={restBase} />
+
                     {/* social media icons */}
+                  
                     <section className="social-media-icons">
                         <a href={`mailto:${restData.acf.email}`}>
                             <span className="icon-wrapper">
@@ -71,6 +70,8 @@ const Home = ({ restBase }) => {
                             </span>
                         </a>
                     </section>
+                
+
                 </article>
             ) : (
                 <Loading />
