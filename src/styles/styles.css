@@ -1,3 +1,107 @@
+* {
+  scroll-behavior: smooth;
+}
 
+.active {
+  color: hotpink !important;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: pink;
+  z-index: 100;
+  padding: 0 1rem;
+}
+
+.site-branding {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.site-navigation ul {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 1.5rem;
+}
+.site-navigation .contact-btn {
+  background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+  border-radius: 25px;
+  border: none;
+  padding: 1rem;
+}
+.site-navigation .contact-btn:hover {
+  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-left {
+  margin: auto 2rem;
+}
+.intro-left .name {
+  font-size: 2rem;
+  color: orange;
+}
+
+.mywork-btn {
+  padding: 0.5rem 1;
+  margin: 1rem 0;
+  text-align: center;
+  background: skyblue;
+  background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+  border-radius: 25px;
+  border: none;
+  padding: 1rem;
+}
+
+.custom__scroll {
+  display: flex;
+  justify-content: center;
+}
+.custom__scroll .work-scroll {
+  width: 3px;
+  padding: 10px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.custom__scroll .scroll {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #50b492;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

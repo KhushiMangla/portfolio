@@ -1,0 +1,101 @@
+@use "variables" as *;
+
+// .intro {
+//     display: flex;
+//     margin-top:6rem;
+//     height: 20vh;
+// }
+
+// .intro-left{
+//     position: relative;
+//     display: flex;
+//     flex:1;
+//     flex-direction: column;
+// }
+
+// .name, 
+// .tagline{
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .intro-right{
+//     flex:1;
+   
+// }
+
+.intro{
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.intro-left{
+    margin: auto 2rem;
+
+    .name{
+        font-size: 2rem;
+        color:orange
+    }
+}
+
+// .wp-block-image{
+//     img{
+//         // set the border radius of the img
+//     }
+// }
+
+.mywork-btn{
+    padding:0.5rem 1;
+    margin:1rem 0;
+    text-align: center;
+    background: skyblue;
+    background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+    border-radius:25px;
+    border: none;
+    padding: 1rem;
+    // add box shadow later
+}
+
+.custom__scroll{
+    display: flex;
+    justify-content: center;
+
+    .work-scroll{
+        width: 3px;
+        padding: 10px;
+        height: 20px;
+        border: 2px solid black;
+        border-radius: 25px;
+        opacity: .75;
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+    .scroll{
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: #50b492;
+        animation-name:scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+        animation-iteration-count:infinite;
+
+
+}
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,9 @@
+@use "variables" as *;
+
+*{
+    scroll-behavior: smooth;
+}
+
+.active {
+    color: hotpink !important;
+}
