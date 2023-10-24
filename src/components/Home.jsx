@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Work from './Work'; // Import the Work component
+import { NavLink } from 'react-router-dom';
 
 const Home = ({ restBase }) => {
     const restPath = restBase + 'pages/10';
@@ -26,17 +27,29 @@ const Home = ({ restBase }) => {
         <>
             {isLoaded ? (
                 <article id={`post-${restData.id}`}>
-                    <h1>{restData.title.rendered}</h1>
-                    <div className="entry-content">
-                        <section>
+                    <div className='intro'>
+                        <div className="intro-left">
+                            <section className="name">
+                                <h3>{restData.acf.intro}</h3>
+                            </section>
+                            <section className="tagline">{restData.acf.tagline}</section>
+                            <button className="mywork">
+                            <NavLink activeClassName="active" to="/work">View my work</NavLink>
+                            </button>
+
+                        </div>
+
+
+
+
+                        <section className="profile">
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
-                        </section>
-                        <section className="toolkit">
-                            {restData.acf.toolkit.map((tool, index) => (
-                                <p key={index}>{tool.toolkit}</p>
-                            ))}
+
                         </section>
                     </div>
+
+
+
 
                     {/* Render the Work component after the Home content */}
                     <Work restBase={restBase} />

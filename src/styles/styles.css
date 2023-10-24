@@ -5,6 +5,11 @@
 .site-header {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: pink;
+  z-index: 100;
+  padding: 0 1rem;
 }
 
 .site-branding {
@@ -30,6 +35,24 @@
 }
 .site-navigation .contact-btn:hover {
   background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+}
+
+.intro {
+  display: flex;
+}
+
+.intro-left {
+  margin: auto 2rem;
+}
+.intro-left .name {
+  font-weight: bold;
+}
+
+.mywork {
+  padding: 0.5rem 1;
+  margin: 1rem 0;
+  text-align: center;
+  background: skyblue;
 }
 
 /*# sourceMappingURL=styles.css.map */
