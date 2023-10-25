@@ -26,6 +26,12 @@
     justify-content: center;
     list-style-type: none;
     gap:1.5rem; 
+
+    li {
+        a{
+            color:white;
+        }
+    }
     }
     .contact-btn{
         // https://gradients.shecodes.io/gradients/109
