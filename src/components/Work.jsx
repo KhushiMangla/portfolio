@@ -27,14 +27,14 @@ const Work = ({ restBase, featuredImage }) => {
     return (
         <>
             {isLoaded ?
-                <div >
+                <div className="project-container">
 
                     {restData.map(post =>
                         <article key={post.id} id={`post-${post.id}`}>
                             {post.featured_media !== 0 && post._embedded &&
                                 <figure className="featured-image" dangerouslySetInnerHTML={featuredImage(post._embedded['wp:featuredmedia'][0])}></figure>
                             }
-                            <div>
+                            <div className="projects">
                                 <Link to={`/work/${post.slug}`}><h2>{post.title.rendered}</h2></Link>
                                 <div className="entry-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
 
