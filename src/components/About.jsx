@@ -32,6 +32,9 @@ const About= ({ restBase }) => {
                         <section>
                             <p>{restData.acf.beyondcoding}</p>
                         </section>
+                        <section>
+                            <p>{restData.acf.para3}</p>
+                        </section>
                     </div>
                  
                     
