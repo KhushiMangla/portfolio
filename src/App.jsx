@@ -2,8 +2,10 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 import Home from './components/Home'
 import Work from './components/Work'
+import SingleWork from './components/SingleWork'
 import Contact from './components/Contact'
 import About from './components/About'
+import Header from './components/Header'
 
 function App() {
   
@@ -12,24 +14,14 @@ function App() {
 
   return (
     <Router>
-      <header id="masthead" className="site-header">
-        <div className="site-branding">
-          <p className="site-title">Khushi's Portfolio App</p>
-        </div>
-        <nav className="site-navigation">
-          <ul>
-            <li><NavLink to='/' end>Home</NavLink></li>
-            <li><NavLink to='/about'>About</NavLink></li>
-            <li><NavLink to='/work'>Work</NavLink></li>
-            <li><NavLink to='/contact'>Contact</NavLink></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
+      
       <main id="main">
         <Routes>
           <Route path='/' element={<Home restBase={restBase} />} />
           <Route path='/about' element={<About restBase={restBase} />} />
           <Route path='/work' element={<Work restBase={restBase} />} />
+          <Route path='/work/:slug' element={<SingleWork restBase={restBase}  />} />
           <Route path='/contact' element={<Contact restBase={restBase} />} />
         </Routes>
       </main>
