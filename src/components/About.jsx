@@ -27,7 +27,10 @@ const About= ({ restBase }) => {
                     <h1>{restData.title.rendered}</h1>
                     <div className="entry-content">
                         <section>
-                            <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
+                            <p>{restData.acf.about}</p>
+                        </section>
+                        <section>
+                            <p>{restData.acf.beyondcoding}</p>
                         </section>
                     </div>
                  
