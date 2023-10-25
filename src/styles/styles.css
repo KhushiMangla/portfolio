@@ -4,10 +4,11 @@
 
 .site-header {
   display: flex;
+  justify-content: space-between;
   position: sticky;
   top: 0;
-  background: white; /* Add a background color to make the header visible */
-  z-index: 100; /* Adjust the z-index to your needs */
+  background: pink;
+  z-index: 1000; /* Adjust the z-index to your needs */
 }
 
 .site-branding {

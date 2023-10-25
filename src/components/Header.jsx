@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header id="masthead" className="site-header">
         <div className="site-branding">
-          <p className="site-title">Khushi</p>
-          <p>toggle</p>
+        <Link to="/">Khushi </Link>
+    
         </div>
         <nav className="site-navigation">
           <ul>
