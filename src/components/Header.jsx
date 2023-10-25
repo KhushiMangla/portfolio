@@ -5,8 +5,9 @@ const Header = () => {
   return (
     <header id="masthead" className="site-header">
         <div className="site-branding">
-        <Link to="/">Khushi </Link>
-    
+
+          <Link to="/"> Khushi</Link>
+
         </div>
         <nav className="site-navigation">
           <ul>
