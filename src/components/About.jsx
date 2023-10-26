@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Loading from './Loading'
 
 const About= ({ restBase }) => {
-    const restPath = restBase + 'pages/12'
+    const restPath = restBase + 'pages/43'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -27,10 +27,16 @@ const About= ({ restBase }) => {
                     <h1>{restData.title.rendered}</h1>
                     <div className="entry-content">
                         <section>
-                            <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
+                            <p>{restData.acf.about}</p>
+                        </section>
+                        <section>
+                            <p>{restData.acf.beyondcoding}</p>
                         </section>
                     </div>
+                 
+                    
                 </article>
+                
                 :
                 <Loading />
             }
