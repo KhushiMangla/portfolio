@@ -24,35 +24,50 @@ const SingleWork = ({ restBase, featuredImage }) => {
         fetchData()
     }, [restPath])
 
+
     return (
         <>
             {isLoaded ?
                 <>
                     <article id={`post-${restData.id}`}>
                         <h1>{restData.title.rendered}</h1>
+                        <div className="overview">{restData.acf.project_overview}</div>
+                        <img src={restData.acf.project_img} alt="project image" />
+                       
                         <div className="entry-content" dangerouslySetInnerHTML={{ __html: restData.content.rendered }}></div>
                     </article>
+
+                    <div className="drop-show">
+                        <h2>{restData.acf.learn_heading}</h2>
+                        <p> {restData.acf.learn_section}</p>
+                        <h2>{restData.acf.highlights_heading}</h2>
+                        <p>{restData.acf.highlights_section}</p>
+                        <h2>{restData.acf.process_heading}</h2>
+                        <p>{restData.acf.process_section}</p>
+
+                    </div>
+
                     <section class="social-media-icons">
-                            <a href={`mailto:${restData.acf.email}`}>
-                                <span className="icon-wrapper">
-                                    <FaEnvelope />
-                                </span>
-                            </a>
-                            <a href={restData.acf.linkedin}>
-                                <span className="icon-wrapper">
-                                    <FaLinkedin />
-                                </span>
-                            </a>
-                            <a href={restData.acf.github}>
-                                <span className="icon-wrapper">
-                                    <FaGithub />
-                                </span>
-                            </a>
-                        </section>
+                        <a href={`mailto:${restData.acf.email}`}>
+                            <span className="icon-wrapper">
+                                <FaEnvelope />
+                            </span>
+                        </a>
+                        <a href={restData.acf.linkedin}>
+                            <span className="icon-wrapper">
+                                <FaLinkedin />
+                            </span>
+                        </a>
+                        <a href={restData.acf.github}>
+                            <span className="icon-wrapper">
+                                <FaGithub />
+                            </span>
+                        </a>
+                    </section>
                 </>
                 :
                 <Loading />
-                
+
             }
         </>
     )
