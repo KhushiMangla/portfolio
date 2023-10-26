@@ -26,6 +26,9 @@
   list-style-type: none;
   gap: 1.5rem;
 }
+.site-navigation ul li a {
+  color: white;
+}
 .site-navigation .contact-btn {
   background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
   border-radius: 25px;

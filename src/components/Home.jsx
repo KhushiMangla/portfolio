@@ -66,6 +66,7 @@ const Home = ({ restBase }) => {
                             <motion.div className="scroll"></motion.div>
                         </a>
                     </motion.div>
+                    
                     <section id="work">
                         <Work restBase={restBase} />
                     </section>
