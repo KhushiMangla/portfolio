@@ -27,10 +27,13 @@ const About= ({ restBase }) => {
                     <h1>{restData.title.rendered}</h1>
                     <div className="entry-content">
                         <section>
-                            <p>{restData.acf.about}</p>
+                            <p>{restData.acf.para1}</p>
                         </section>
                         <section>
-                            <p>{restData.acf.beyondcoding}</p>
+                            <p>{restData.acf.para2}</p>
+                        </section>
+                        <section>
+                            <p>{restData.acf.para3}</p>
                         </section>
                     </div>
                  

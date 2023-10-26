@@ -31,18 +31,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
                     <article id={`post-${restData.id}`}>
                         <h1>{restData.title.rendered}</h1>
                         <div className="entry-content" dangerouslySetInnerHTML={{ __html: restData.content.rendered }}></div>
-                        {restData.featured_media !== 0 && restData._embedded &&
-                            <figure className="featured-image" dangerouslySetInnerHTML={featuredImage(restData._embedded['wp:featuredmedia'][0])}></figure>
-                        }
                     </article>
-                    <nav className="posts-navigation">
-                        {restData.previous_post && restData.previous_post['id'] &&
-                            <Link to={`/work/${restData.previous_post['slug']}`} className="prev-post">Previous: {restData.previous_post['title']}</Link>
-                        }
-                        {restData.next_post && restData.next_post['id'] &&
-                            <Link to={`/work/${restData.next_post['slug']}`} className="next-post">Next: {restData.next_post['title']}</Link>
-                        }
-                    </nav>
                     <section class="social-media-icons">
                             <a href={`mailto:${restData.acf.email}`}>
                                 <span className="icon-wrapper">

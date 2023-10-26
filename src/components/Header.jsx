@@ -9,7 +9,8 @@ const Header = () => {
         </div>
         <nav className="site-navigation">
           <ul>
-            <li><NavLink activeClassName="active" to="/" > Home </NavLink></li>
+            {/* remove the home from header */}
+            {/* <li><NavLink activeClassName="active" to="/" > Home </NavLink></li> */}
             <li><NavLink activeClassName="active" to="/about"> About </NavLink></li>
             <li><NavLink activeClassName="active" to="/work">Work</NavLink></li>
             <li><button className='contact-btn'><NavLink to="/contact">Contact me</NavLink></button></li>

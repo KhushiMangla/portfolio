@@ -34,17 +34,30 @@ const Contact = ({ restBase }) => {
                         <section class="social-media-icons">
                             <a href={`mailto:${restData.acf.email}`}>
                                 <span className="icon-wrapper">
-                                    <FaEnvelope />
+                                <img src="../src/images/email.png" alt="insta"
+                                style={{ height: '50px', width: "50px" }}/>
+                                   
                                 </span>
                             </a>
                             <a href={restData.acf.linkedin}>
                                 <span className="icon-wrapper">
-                                    <FaLinkedin />
+                                <img src="../src/images/linkedin.png" alt="insta"
+                                style={{ height: '50px', width: "50px" }}/>
+                              
                                 </span>
                             </a>
                             <a href={restData.acf.github}>
                                 <span className="icon-wrapper">
-                                    <FaGithub />
+                                <img src="../src/images/insta.png" alt="insta"
+                                style={{ height: '50px', width: "50px" }}/>
+                           
+                                </span>
+                            </a>
+                            <a href={restData.acf.instagram}>
+                                <span className="icon-wrapper">
+                                <img src="../src/images/github.png" alt="insta"
+                                style={{ height: '50px', width: "50px" }}/>
+                                  
                                 </span>
                             </a>
                         </section>
