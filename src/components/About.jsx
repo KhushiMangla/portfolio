@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import Loading from './Loading'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const About = ({ restBase }) => {
     const restPath = restBase + 'pages/43'
@@ -38,21 +40,34 @@ const About = ({ restBase }) => {
                     </div>
 
                     {/* toolkit */}
-                    <div className='inline-block'>
-                        {restData.acf.all.map((item, index) => (
-                            <div key={index}>{item.all}</div>
-                        ))}
-                        <br></br>
+                    <Tabs>
+                        <TabList>
+                            <Tab>{restData.acf.all_heading}</Tab>
+                            <Tab>{restData.acf.development_heading}</Tab>
+                            <Tab>{restData.acf.design_heading}</Tab>
+                        </TabList>
 
-                        {restData.acf.development.map((item, index) => (
-                            <div key={index}>{item.development}</div>
-                        ))}
+                       
+                            <TabPanel className='inline-block'>
+                                {restData.acf.all.map((item, index) => (
+                                    <div key={index}>{item.all}</div>
+                                ))}
 
-                        <br></br>
-                        {restData.acf.design.map((item, index) => (
-                            <div key={index}>{item.design}</div>
-                        ))}
-                    </div>
+                            </TabPanel>
+
+                            <TabPanel className='inline-block'>
+                                {restData.acf.development.map((item, index) => (
+                                    <div key={index}>{item.development}</div>
+                                ))}
+                            </TabPanel>
+                            <TabPanel className='inline-block'>
+                                {restData.acf.design.map((item, index) => (
+                                    <div key={index}>{item.design}</div>
+                                ))}
+                            </TabPanel>
+
+                    </Tabs>
+
 
 
                 </article>
