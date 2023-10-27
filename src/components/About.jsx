@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Loading from './Loading'
 
-const About= ({ restBase }) => {
+const About = ({ restBase }) => {
     const restPath = restBase + 'pages/43'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
@@ -36,10 +36,27 @@ const About= ({ restBase }) => {
                             <p>{restData.acf.para3}</p>
                         </section>
                     </div>
-                 
-                    
+
+                    {/* toolkit */}
+                    <div className='inline-block'>
+                        {restData.acf.all.map((item, index) => (
+                            <div key={index}>{item.all}</div>
+                        ))}
+                        <br></br>
+
+                        {restData.acf.development.map((item, index) => (
+                            <div key={index}>{item.development}</div>
+                        ))}
+
+                        <br></br>
+                        {restData.acf.design.map((item, index) => (
+                            <div key={index}>{item.design}</div>
+                        ))}
+                    </div>
+
+
                 </article>
-                
+
                 :
                 <Loading />
             }

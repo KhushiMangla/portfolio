@@ -108,5 +108,9 @@
     transform: translateY(0);
   }
 }
+.inline-block div {
+  display: inline;
+  margin: 5px;
+}
 
 /*# sourceMappingURL=styles.css.map */
