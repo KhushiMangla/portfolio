@@ -6,6 +6,7 @@
   color: hotpink !important;
 }
 
+/* Add any additional styling as needed for .cursor-three or other cursor elements. */
 .site-header {
   display: flex;
   justify-content: space-between;
