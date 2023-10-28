@@ -1,14 +1,23 @@
 * {
   scroll-behavior: smooth;
+  border: none;
+  outline: none;
 }
 
 .active {
   color: hotpink !important;
 }
 
+/* Add any additional styling as needed for .cursor-three or other cursor elements. */
 .site-header {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: black;
+  color: white;
+  z-index: 100;
+  padding: 0 1rem;
 }
 
 .site-branding {
@@ -16,6 +25,10 @@
   align-items: center;
   display: flex;
   gap: 2rem;
+}
+.site-branding .logo {
+  font-size: 2rem;
+  color: palevioletred;
 }
 
 .site-navigation ul {
@@ -28,6 +41,10 @@
 }
 .site-navigation ul li a {
   color: white;
+  font-size: 1.2rem;
+}
+.site-navigation ul li a:hover {
+  color: yellow;
 }
 .site-navigation .contact-btn {
   background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
@@ -37,6 +54,11 @@
 }
 .site-navigation .contact-btn:hover {
   background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+}
+
+.inline-block div {
+  display: inline;
+  margin: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */
