@@ -1,5 +1,7 @@
 * {
   scroll-behavior: smooth;
+  border: none;
+  outline: none;
 }
 
 .active {
@@ -24,6 +26,10 @@
   display: flex;
   gap: 2rem;
 }
+.site-branding .logo {
+  font-size: 2rem;
+  color: palevioletred;
+}
 
 .site-navigation ul {
   display: flex;
@@ -35,6 +41,10 @@
 }
 .site-navigation ul li a {
   color: white;
+  font-size: 1.2rem;
+}
+.site-navigation ul li a:hover {
+  color: yellow;
 }
 .site-navigation .contact-btn {
   background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);

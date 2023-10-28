@@ -31,7 +31,7 @@ const Contact = ({ restBase }) => {
                         <section>
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
                         </section>
-                        <section class="social-media-icons">
+                        <section className="social-media-icons">
                             <a href={`mailto:${restData.acf.email}`}>
                                 <span className="icon-wrapper">
                                 <img src="../src/images/email.png" alt="insta"
@@ -46,7 +46,7 @@ const Contact = ({ restBase }) => {
                               
                                 </span>
                             </a>
-                            <a href={restData.acf.github}>
+                            <a href={restData.acf.instagram}>
                                 <span className="icon-wrapper">
                                 <img src="../src/images/insta.png" alt="insta"
                                 style={{ height: '50px', width: "50px" }}/>

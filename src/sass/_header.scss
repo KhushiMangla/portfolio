@@ -9,6 +9,7 @@
     color: white;
     z-index: 100; 
     padding: 0 1rem;
+    
   }
 .site-branding{
    
@@ -16,6 +17,11 @@
     align-items: center;
     display:flex;
     gap: 2rem;
+
+    .logo{
+        font-size: 2rem;
+        color: palevioletred;
+    }
 }
 
 .site-navigation{
@@ -30,6 +36,11 @@
     li {
         a{
             color:$white;
+            font-size: 1.2rem;
+
+            &:hover{
+                color: yellow;
+            }
         }
     }
     }
