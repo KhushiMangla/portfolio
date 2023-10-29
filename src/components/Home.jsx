@@ -42,9 +42,9 @@ const Home = ({ restBase }) => {
     return (
         <>
             {isLoaded ? (
-                <motion.article id={`post-${restData.id}`} initial="initial" animate="animate">
-                    <motion.div className='intro' variants={introVariants}>
-                        <motion.div className="intro-left">
+                <article id={`post-${restData.id}`}>
+                    <div className='intro'>
+                        <motion.div className="intro-left" variants={introVariants} initial="initial" animate="animate">
                             <motion.section className="name" variants={introVariants}>
                                 <h3>{restData.acf.intro}</h3>
                             </motion.section>
@@ -55,24 +55,24 @@ const Home = ({ restBase }) => {
                                 <NavLink activeClassName="active" to="/work">View my work</NavLink>
                             </motion.button>
                         </motion.div>
-                        <motion.section className="profile" variants={introVariants}>
+                        <section className="profile">
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
-                        </motion.section>
-                    </motion.div>
+                        </section>
+                    </div>
 
                     {/* Rendering work component */}
-                    <motion.div className="custom__scroll">
+                    <div className="custom__scroll">
                         <a href="#work" className="work-scroll">
-                            <motion.div className="scroll"></motion.div>
+                            <div className="scroll"></div>
                         </a>
-                    </motion.div>
+                    </div>
 
                     <section id="work">
                         <Work restBase={restBase} />
                     </section>
 
                     {/* social media icons */}
-                    <motion.section className="social-media-icons" variants={introVariants}>
+                    <div className="social-media-icons">
                         <a href={`mailto:${restData.acf.email}`}>
                             <span className="icon-wrapper">
                                 <FaEnvelope />
@@ -88,8 +88,8 @@ const Home = ({ restBase }) => {
                                 <FaGithub />
                             </span>
                         </a>
-                    </motion.section>
-                </motion.article>
+                    </div>
+                </article>
             ) : (
                 <Loading />
             )}
