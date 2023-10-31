@@ -2,7 +2,8 @@
 
 .intro {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 4rem;
 }
 
 .intro-left {
@@ -49,118 +50,134 @@
             font-weight: 700;
             z-index: 99;
         }
+
         &::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width:0;
-            height:100%;            
-            background:#ff9248;
+            width: 0;
+            height: 100%;
+            background: #ff9248;
             // color: white;
             border: none;
             transition: 0.5s;
             z-index: 3;
         }
-    
+
         &:hover::before {
             width: 100%;
         }
     }
 
-    }
+}
 
-    .custom__scroll {
+.custom__scroll {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+
+    .work-scroll {
+        width: 3px;
+        padding: 10px;
+        position: relative;
+        height: 20px;
+        border: 2px solid black;
+        border-radius: 25px;
+        opacity: .75;
+        box-sizing: content-box;
         display: flex;
-        justify-content: center;
-        margin: 5rem;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        .work-scroll {
-            width: 3px;
-            padding: 10px;
-            height: 20px;
-            border: 2px solid black;
-            border-radius: 25px;
-            opacity: .75;
-            box-sizing: content-box;
+    .scroll {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 2;
+        bottom: 2;
+        border-radius: 50%;
+        background-color: orange;
+        ;
+        animation-name: scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+        animation-iteration-count: infinite;
+
+    }
+}
+
+.scroll-text {
+    margin-top: 10px;
+    margin-bottom: 3rem;
+    font-size: .75em;
+    text-align: center;
+    width: 100%;
+   a{
+    color: black;
+   }
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinking {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+// Mobile
+
+@media screen and (max-width:500px) {
+
+    .intro {
+        display: block;
+
+        .intro-left {
+            .name {
+                font-size: 32px;
+            }
+
+            .tagline {
+                font-size: 18px;
+            }
+        }
+
+        .profile {
             display: flex;
-            flex-direction: column;
             align-items: center;
-        }
-
-        .scroll {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background-color: orange;;
-            animation-name: scroll;
-            animation-duration: 2.2s;
-            animation-timing-function: cubic-bezier(.15, .41, .69, .94);
-            animation-iteration-count: infinite;
-
-
+            justify-content: center;
+            margin-top: 2rem;
         }
     }
-
-
-    @keyframes scroll {
-        0% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-10px);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes typing {
-        from {
-            width: 0;
-        }
-
-        to {
-            width: 100%;
-        }
-    }
-
-    @keyframes blinking {
-
-        from,
-        to {
-            border-color: transparent
-        }
-
-        50% {
-            border-color: orange;
-        }
-    }
-
-    // Mobile
-
-    @media screen and (max-width:500px) {
-
-        .intro {
-            display: block;
-
-            .intro-left {
-                .name {
-                    font-size: 32px;
-                }
-
-                .tagline {
-                    font-size: 18px;
-                }
-            }
-
-            .profile {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top: 2rem;
-            }
-        }
-    }
+}

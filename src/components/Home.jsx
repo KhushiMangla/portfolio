@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
-import Work from './Work'; // Import the Work component
+import Featured from './Featured'; // Import the Work component
 import { NavLink } from 'react-router-dom';
 import { motion } from "framer-motion"
 
@@ -68,10 +68,12 @@ const Home = ({ restBase }) => {
                         <a href="#work" className="work-scroll">
                             <div className="scroll"></div>
                         </a>
-                    </div>
-
+                        </div>
+                    <p className='scroll-text'> 
+                    <a href="#work">Scroll down to see more</a>  </p>
+                    
                     <section id="work">
-                        <Work restBase={restBase} />
+                        <Featured restBase={restBase} />
                     </section>
 
                     {/* social media icons */}
