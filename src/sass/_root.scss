@@ -5,6 +5,12 @@
     border: none;
     outline: none;
 }
+body{
+    font-family: $roboto;
+    // background-attachment: fixed;
+    // background-image: linear-gradient(to right bottom, #FFF0F5, #FFEBF0, #FFE6EB, #FFE1E6, #FFDCE1);
+ 
+}
 
 
 .active {

@@ -23,11 +23,11 @@ const Contact = ({ restBase }) => {
     }, [restPath]);
 
     return (
-        <>
+        <div className='contact-wrapper'>
             {isLoaded ? (
                 <article id={`post-${restData.id}`}>
                     <h1>{restData.title.rendered}</h1>
-                    <div className="entry-content">
+                    <div>
                         <section>
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
                         </section>
@@ -67,7 +67,7 @@ const Contact = ({ restBase }) => {
             ) : (
                 <Loading />
             )}
-        </>
+        </div>
     );
 };
 

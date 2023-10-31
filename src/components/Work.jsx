@@ -6,7 +6,7 @@ import Loading from './Loading'
 
 
 const Work = ({ restBase, featuredImage }) => {
-    const restPath = restBase + 'work?_embed'
+    const restPath = restBase + 'work?_embed&acf_format=standard'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
@@ -31,20 +31,20 @@ const Work = ({ restBase, featuredImage }) => {
 
                     {restData.map(post =>
                         <article key={post.id} id={`post-${post.id}`}>
-                            {post.featured_media !== 0 && post._embedded &&
-                                <figure className="featured-image" dangerouslySetInnerHTML={featuredImage(post._embedded['wp:featuredmedia'][0])}></figure>
-                            }
+
                             <div className="projects">
                                 <Link to={`/work/${post.slug}`}><h2>{post.title.rendered}</h2></Link>
-                                <div className="entry-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
-
+                                <div className="project-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
+                                <div className="img-container">
+                                    <img src={post.acf.project_img} alt="project image" />
+                                </div>
                             </div>
                         </article>
                     )}
 
 
                 </div>
-                
+
                 :
                 <Loading />
             }
