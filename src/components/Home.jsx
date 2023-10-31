@@ -46,7 +46,10 @@ const Home = ({ restBase }) => {
                     <div className='intro'>
                         <motion.div className="intro-left" variants={introVariants} initial="initial" animate="animate">
                             <motion.section className="name" variants={introVariants}>
-                                <h3>{restData.acf.intro}</h3>
+                                <div>{restData.acf.intro}</div>
+                            </motion.section>
+                            <motion.section className="frontend" variants={introVariants}>
+                                <div>{restData.acf.frontend}</div>
                             </motion.section>
                             <motion.section className="tagline" variants={introVariants}>
                                 <p>{restData.acf.tagline}</p>

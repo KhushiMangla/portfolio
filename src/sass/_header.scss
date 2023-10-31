@@ -25,9 +25,11 @@
             align-items: center;
             flex: 1;
             justify-content: center;
+            gap:1.5rem; 
+
 
             li {
-                margin-right: 2rem;
+                // margin-right: 2rem;
 
                 a {
                     color: $black;
