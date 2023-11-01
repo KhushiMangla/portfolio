@@ -23,20 +23,23 @@ const About = ({ restBase }) => {
     }, [restPath])
 
     return (
-        <>
+        <div className="about-container">
             {isLoaded ?
-                <article id={`post-${restData.id}`}>
+            <div>
                     <h1>{restData.title.rendered}</h1>
-                    <div className="entry-content">
+                    <div className="about-content">
                         <section>
                             <p>{restData.acf.para1}</p>
                         </section>
+                        <br></br>
                         <section>
                             <p>{restData.acf.para2}</p>
                         </section>
+                        <br></br>
                         <section>
                             <p>{restData.acf.para3}</p>
                         </section>
+                        <br></br>
                     </div>
 
                     {/* toolkit */}
@@ -70,12 +73,12 @@ const About = ({ restBase }) => {
 
 
 
-                </article>
+                </div>
 
                 :
                 <Loading />
             }
-        </>
+        </div>
     );
 }
 

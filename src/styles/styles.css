@@ -562,6 +562,45 @@ body {
   gap: 15px;
 }
 
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.8em;
+}
+.about-container h1 {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+.about-container .about-content {
+  text-align: center;
+}
+.about-container .about-content section {
+  margin: 10px 0;
+}
+.about-container .about-content section p {
+  font-size: 16px;
+}
+.about-container .react-tabs {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+.about-container .react-tabs .react-tabs__tab-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-bottom: none;
+}
+.about-container .react-tabs .react-tabs__tab-panel--selected {
+  padding: 1rem;
+  text-align: center;
+}
+
 .inline-block div {
   display: inline;
   margin: 5px;
