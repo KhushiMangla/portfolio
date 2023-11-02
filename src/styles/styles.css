@@ -326,6 +326,52 @@ body {
   color: hotpink !important;
 }
 
+/* Cursor.css */
+.cursor-one,
+.cursor-two,
+.cursor-three {
+  position: fixed;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cursor-one {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #ffb38a;
+  background: none;
+  z-index: 999;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes cursorAnim {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.cursor-two {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 179, 138, 0.5);
+  z-index: 300;
+  animation: cursorAnim 0.5s infinite alternate;
+}
+
 /* Add any additional styling as needed for .cursor-three or other cursor elements. */
 .site-header {
   height: 5rem;
@@ -389,8 +435,6 @@ body {
 }
 .intro-left .mywork-btn {
   position: relative;
-  width: 20%;
-  height: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -459,12 +503,12 @@ body {
 .scroll-text {
   margin-top: 10px;
   margin-bottom: 3rem;
-  font-size: 0.75em;
   text-align: center;
   width: 100%;
 }
 .scroll-text a {
-  color: black;
+  color: #213547;
+  font-size: 18px;
 }
 
 @keyframes scroll {
@@ -537,12 +581,37 @@ body {
   font-size: 18px;
 }
 .card .read-more-btn {
-  margin: 2rem 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
   background: #ffb38a;
+  border-radius: 25px;
+  border: none;
+  padding: 1rem;
+  overflow: hidden;
 }
 .card .read-more-btn p {
   color: white;
+  font-size: 1.2rem;
   font-weight: 700;
+  z-index: 99;
+}
+.card .read-more-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff9248;
+  border: none;
+  transition: 0.5s;
+  z-index: 3;
+}
+.card .read-more-btn:hover::before {
+  width: 100%;
 }
 
 .card:hover {

@@ -51,9 +51,11 @@ const Home = ({ restBase }) => {
                             <motion.section className="tagline" variants={introVariants}>
                                 <p>{restData.acf.tagline}</p>
                             </motion.section>
+                            <motion.div>
                             <motion.button className="mywork-btn" variants={introVariants}>
                                 <NavLink activeClassName="active" to="/work">View my work</NavLink>
                             </motion.button>
+                            </motion.div>
                         </motion.div>
                         <section className="profile">
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />

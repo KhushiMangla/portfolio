@@ -1,20 +1,21 @@
 @use "variables" as *;
 
-*{ 
+* {
     scroll-behavior: smooth;
     border: none;
     outline: none;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: $roboto;
-    overflow:hidden;
+    overflow: hidden;
     overflow-y: scroll;
     // background-attachment: fixed;
     // background-image: linear-gradient(to right bottom, #FFF0F5, #FFEBF0, #FFE6EB, #FFE1E6, #FFDCE1);
- 
+
 }
 
 
@@ -22,35 +23,3 @@ body{
     color: hotpink !important;
 }
 
-// /* Cursor.css */
-
-// .cursor-one,
-// .cursor-two,
-// .cursor-three {
-//   position: absolute;
-//   border-radius: 50%;
-//   cursor: pointer;
-// }
-
-// .cursor-one {
-//   width: 25px;
-//   height: 25px;
-//   border: 1px solid #50b492;
-//   background: none;
-// //   background-color: #eb5e28cc;
-//   z-index: 5;
-//   z-index: 999;
-//     transition-duration: .1s;
-//     transition-timing-function: ease-out;
-//     // pointer-events: none;
-//     animation: cursorAnim .5s infinite alternate;
-// }
-
-// // .cursor-two {
-// //   width: 40px;
-// //   height: 40px;
-// //   background-color: #ccc5b9aa;
-// //   z-index: 4;
-// // }
-
-/* Add any additional styling as needed for .cursor-three or other cursor elements. */

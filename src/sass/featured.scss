@@ -28,13 +28,43 @@
     }
 
     .read-more-btn {
-        margin: 2rem 0;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
         background: #ffb38a;
+        border-radius: 25px;
+        border: none;
+        padding: 1rem;
+        overflow: hidden;
+
         p{
-            color:white;
+            color: white;
+            font-size: 1.2rem;
             font-weight: 700;
+            z-index: 99;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #ff9248;
+            // color: white;
+            border: none;
+            transition: 0.5s;
+            z-index: 3;
+        }
+
+        &:hover::before {
+            width: 100%;
         }
     }
+
 }
 
 .card:hover {

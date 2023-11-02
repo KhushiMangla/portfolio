@@ -31,14 +31,14 @@
 
     .mywork-btn {
         position: relative;
-        width: 20%;
-        height: 50px;
+        // width: 20%;
+        // height: 50px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         padding: 0.5rem 1;
         margin: 1rem 0;
-        background: #ffb38a;
+        background: $light-orange;
         border-radius: 25px;
         border: none;
         padding: 1rem;
@@ -58,7 +58,7 @@
             left: 0;
             width: 0;
             height: 100%;
-            background: #ff9248;
+            background: $dark-orange;
             // color: white;
             border: none;
             transition: 0.5s;
@@ -111,12 +111,14 @@
 .scroll-text {
     margin-top: 10px;
     margin-bottom: 3rem;
-    font-size: .75em;
+   
     text-align: center;
     width: 100%;
 
     a {
-        color: black;
+        color: $text-color;
+        font-size: 18px;
+
     }
 }
 
