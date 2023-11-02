@@ -46,11 +46,11 @@ const SingleWork = ({ restBase, featuredImage }) => {
               </Collapsible>
 
               <Collapsible trigger={<div className="accordian">{restData.acf.highlights_heading}</div>}>
-                <p style={{padding: '1rem'}}>{restData.acf.highlights_section}</p>
+                <p style={{padding: '1.5rem'}}>{restData.acf.highlights_section}</p>
               </Collapsible>
 
               <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}</div>}>
-                <p style={{padding: '1rem'}}>{restData.acf.process_section}</p>
+                <p style={{padding: '1.5rem'}}>{restData.acf.process_section}</p>
               </Collapsible>
             </div>
           </div>
