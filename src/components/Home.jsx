@@ -40,7 +40,7 @@ const Home = ({ restBase }) => {
     };
 
     return (
-        <>
+        <div className="home-container">
             {isLoaded ? (
                 <article id={`post-${restData.id}`}>
                     <div className='intro'>
@@ -98,7 +98,7 @@ const Home = ({ restBase }) => {
             ) : (
                 <Loading />
             )}
-        </>
+        </div>
     );
 }
 
