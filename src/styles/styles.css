@@ -617,7 +617,7 @@ body {
 }
 
 .card:hover {
-  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(255, 179, 138, 0.5);
   border-radius: 7px;
   transform: translateY(-10px);
 }
