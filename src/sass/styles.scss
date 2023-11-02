@@ -1,8 +1,12 @@
 @use "variables";
+@use "normalize";
 @use "root";
+@use "cursor";
 @use "header";
 @use "home";
+@use "featured";
 @use "about";
 @use "work";
 @use "contact";
 @use "footer";
+@use "loading";

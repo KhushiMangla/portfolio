@@ -1,51 +1,56 @@
 @use "variables" as *;
 
 .site-header {
+    height: 5rem;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background: black;
-    color: white;
-    z-index: 100; 
-    padding: 0 1rem;
-  }
-.site-branding{
-   
-    flex: 1;
+    z-index: 100;
+    background: white;
     align-items: center;
-    display:flex;
-    gap: 2rem;
-}
 
-.site-navigation{
-    ul{
-    display: flex;
-    flex:1;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    gap:1.5rem; 
+    .logo {
+        object-fit: cover;
+        height: 3rem;
+    }
 
-    li {
-        a{
-            color:$white;
+    .site-navigation {
+        ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: center;
+            gap:1.5rem; 
+
+
+            li {
+                // margin-right: 2rem;
+
+                a {
+                    color: $black;
+
+                    &:hover {
+                        padding-bottom: 0.5rem;
+                        border-bottom: 2px solid $pink;
+                    }
+                }
+            }
+
+            // .contact-btn {
+            //     background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+            //     border-radius: 25px;
+            //     border: none;
+            //     padding: 1rem;
+
+            //     &:hover {
+            //         background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+            //     }
+            // }
         }
     }
-    }
-    .contact-btn{
-        // https://gradients.shecodes.io/gradients/109
-        background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
-        border-radius:25px;
-        border: none;
-        padding: 1rem;
-        // add box shadow later
-
-        &:hover{
-            background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
-        }
-    }
-
 }
-
-
