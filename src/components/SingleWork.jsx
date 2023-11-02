@@ -25,19 +25,16 @@ const SingleWork = ({ restBase, featuredImage }) => {
   }, [restPath]);
 
   return (
-    <>
+    <div className="single-work-container">
       {isLoaded ? (
         <>
-          <article id={`post-${restData.id}`}>
-            <h1>{restData.title.rendered}</h1>
-            <div className="overview">{restData.acf.project_overview}</div>
-            <img src={restData.acf.project_img} alt="project image" />
-            <div
-              className="entry-content"
-              dangerouslySetInnerHTML={{ __html: restData.content.rendered }}
-            ></div>
-          </article>
-
+          <h1>{restData.title.rendered}</h1>
+          <div className="overview">{restData.acf.project_overview}</div>
+          <img src={restData.acf.project_img} alt="project image" />
+          <div
+            className="entry-content"
+            dangerouslySetInnerHTML={{ __html: restData.content.rendered }}>
+          </div>
           <div className="drop-show">
             <Collapsible trigger={<h2>{restData.acf.learn_heading}</h2>}>
               <p>{restData.acf.learn_section}</p>
@@ -73,7 +70,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
       ) : (
         <Loading />
       )}
-    </>
+    </div>
   );
 };
 
