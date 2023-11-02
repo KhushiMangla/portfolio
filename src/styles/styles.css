@@ -422,6 +422,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.8;
+  width: 35%;
   color: orange;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   border-right: 2px solid;
@@ -527,7 +528,7 @@ body {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 40%;
   }
 }
 /* The typewriter cursor effect */
