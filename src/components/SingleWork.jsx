@@ -25,30 +25,36 @@ const SingleWork = ({ restBase, featuredImage }) => {
   }, [restPath]);
 
   return (
-    <div className="single-work-container">
+    <div>
       {isLoaded ? (
         <>
-          <h1>{restData.title.rendered}</h1>
-          <div className="overview">{restData.acf.project_overview}</div>
-          <img src={restData.acf.project_img} alt="project image" />
-          <div
-            className="entry-content"
-            dangerouslySetInnerHTML={{ __html: restData.content.rendered }}>
+          <div className="single-work-container">
+            <div className='image-title-overview-container'>
+              <img src={restData.acf.project_img} alt="project image" />
+              <div className="title-overview-container">
+                <h1 className="single-work-title">{restData.title.rendered}</h1>
+                <div className="single-work-overview">{restData.acf.project_overview}</div>
+              </div>
+            </div>
+            {/* <div
+              className="entry-content"
+              dangerouslySetInnerHTML={{ __html: restData.content.rendered }}>
+            </div> */}
+            <div className="drop-show">
+              <Collapsible trigger={<div className="accordian">{restData.acf.learn_heading}</div>}>
+                <p style={{padding: '1.5rem'}}>{restData.acf.learn_section}</p>
+              </Collapsible>
+
+              <Collapsible trigger={<div className="accordian">{restData.acf.highlights_heading}</div>}>
+                <p style={{padding: '1rem'}}>{restData.acf.highlights_section}</p>
+              </Collapsible>
+
+              <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}</div>}>
+                <p style={{padding: '1rem'}}>{restData.acf.process_section}</p>
+              </Collapsible>
+            </div>
           </div>
-          <div className="drop-show">
-            <Collapsible trigger={<h2>{restData.acf.learn_heading}</h2>}>
-              <p>{restData.acf.learn_section}</p>
-            </Collapsible>
-
-            <Collapsible trigger={<h2>{restData.acf.highlights_heading}</h2>}>
-              <p>{restData.acf.highlights_section}</p>
-            </Collapsible>
-
-            <Collapsible trigger={<h2>{restData.acf.process_heading}</h2>}>
-              <p>{restData.acf.process_section}</p>
-            </Collapsible>
-          </div>
-
+          {/* social media icons */}
           <section className="social-media-icons">
             <a href={`mailto:${restData.acf.email}`}>
               <span className="icon-wrapper">

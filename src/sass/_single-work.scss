@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+.single-work-container {
+    width: 75%;
+    padding: 1rem;
+    margin: 0 auto;
+    line-height: 1.8em;
+    text-align: center;
+
+    img {
+        margin: 1rem;
+    }
+
+    .single-work-overview {
+        max-width: 40rem;
+        margin: 0 auto;
+        text-align: center;
+        // padding: 1rem 3rem;
+    }
+
+    .drop-show {
+        margin: 2rem;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba($light-orange, 0.2);
+
+        .accordian {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $text-color;
+            font-weight: 700;
+            border-bottom: 1px solid $light-orange;
+            margin: 1rem;
+            padding: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:after {
+                content: '\142F';
+                float: right;
+            }
+            
+
+        }
+
+
+    }
+}
