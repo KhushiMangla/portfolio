@@ -48,9 +48,6 @@ const Home = ({ restBase }) => {
                             <motion.section className="name" variants={introVariants}>
                                 <div>{restData.acf.intro}</div>
                             </motion.section>
-                            <motion.section className="frontend" variants={introVariants}>
-                                <div>{restData.acf.frontend}</div>
-                            </motion.section>
                             <motion.section className="tagline" variants={introVariants}>
                                 <p>{restData.acf.tagline}</p>
                             </motion.section>
@@ -62,6 +59,7 @@ const Home = ({ restBase }) => {
                             <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
                         </section>
                     </div>
+                    
 
                     {/* Rendering work component */}
                     <div className="custom__scroll">

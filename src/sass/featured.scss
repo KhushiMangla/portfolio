@@ -23,11 +23,17 @@
         text-transform: uppercase;
     }
     .card-text{
-        color:#213547;
+        color:$text-color;
+        font-size: 18px;
     }
 
     .read-more-btn {
         margin: 2rem 0;
+        background: #ffb38a;
+        p{
+            color:white;
+            font-weight: 700;
+        }
     }
 }
 
