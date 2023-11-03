@@ -31,7 +31,7 @@
             align-items: center;
             justify-content: center;
             margin: 1rem 0;
-            background: #ffb38a;
+            background: $light-orange;
             border-radius: 25px;
             border: none;
             padding: 1rem;
@@ -51,7 +51,7 @@
                 left: 0;
                 width: 0;
                 height: 100%;
-                background: #ff9248;
+                background:$dark-orange;
                 // color: white;
                 border: none;
                 transition: 0.5s;

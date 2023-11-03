@@ -57,6 +57,15 @@ const SingleWork = ({ restBase, featuredImage }) => {
                     <button className="site-btn"><p>{githubSite.github_site_name}</p></button>
                   </a>
                 ))}
+
+                {restData.acf.tools_used.map((tool, index) => (
+                  <img
+                    key={index}
+                    src={tool.tools} 
+                    alt={`image of tool ${index + 1}`}/>
+    
+                  
+                ))}
               </div>
             </div>
             {/* <div
