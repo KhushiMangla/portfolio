@@ -35,6 +35,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 <h1 className="single-work-title">{restData.title.rendered}</h1>
                 <div className="single-work-overview">{restData.acf.project_overview}</div>
               </div>
+              {/* Site-button */}
               <div className="site-btn-container">
                 {restData.acf.live_site.map((liveSite, index) => (
                   <a
@@ -57,16 +58,20 @@ const SingleWork = ({ restBase, featuredImage }) => {
                     <button className="site-btn"><p>{githubSite.github_site_name}</p></button>
                   </a>
                 ))}
-
-                {restData.acf.tools_used.map((tool, index) => (
-                  <img
-                    key={index}
-                    src={tool.tools} 
-                    alt={`image of tool ${index + 1}`}/>
-    
-                  
-                ))}
               </div>
+              {/* Tools Used */}
+              <div className="tools-container">
+                  <div className='tools-used-heading'>{restData.acf.tools_used_heading}</div>
+                  {restData.acf.tools_used.map((tool, index) => (
+                    <img
+                      key={index}
+                      src={tool.tools}
+                      alt={`image of tool ${index + 1}`} />
+                    // for SEO purpose: this code will set the alt attribute for each image as "image of tool 1", "image of tool 2"
+
+
+                  ))}
+                </div>
             </div>
             {/* <div
               className="entry-content"

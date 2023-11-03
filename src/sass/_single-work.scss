@@ -51,7 +51,7 @@
                 left: 0;
                 width: 0;
                 height: 100%;
-                background:$dark-orange;
+                background: $dark-orange;
                 // color: white;
                 border: none;
                 transition: 0.5s;
@@ -64,6 +64,15 @@
         }
     }
 
+    .tools-container {
+        .tools-used-heading {
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin: 2rem 0;
+            text-align: center;
+            width: 100%;
+        }
+    }
 
     .drop-show {
         margin: 2rem;

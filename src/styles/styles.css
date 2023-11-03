@@ -741,6 +741,13 @@ body {
 .single-work-container .site-btn-container .site-btn:hover::before {
   width: 100%;
 }
+.single-work-container .tools-container .tools-used-heading {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
 .single-work-container .drop-show {
   margin: 2rem;
   padding: 1rem;
