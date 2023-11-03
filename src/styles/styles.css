@@ -701,6 +701,46 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+.single-work-container .site-btn-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 1rem 0;
+  padding: 1rem 0;
+}
+.single-work-container .site-btn-container .site-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  background: #ffb38a;
+  border-radius: 25px;
+  border: none;
+  padding: 1rem;
+  overflow: hidden;
+}
+.single-work-container .site-btn-container .site-btn p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  z-index: 99;
+}
+.single-work-container .site-btn-container .site-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff9248;
+  border: none;
+  transition: 0.5s;
+  z-index: 3;
+}
+.single-work-container .site-btn-container .site-btn:hover::before {
+  width: 100%;
+}
 .single-work-container .drop-show {
   margin: 2rem;
   padding: 1rem;

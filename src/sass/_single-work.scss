@@ -18,6 +18,53 @@
         // padding: 1rem 3rem;
     }
 
+    .site-btn-container {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin: 1rem 0;
+        padding: 1rem 0;
+
+        .site-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+            background: #ffb38a;
+            border-radius: 25px;
+            border: none;
+            padding: 1rem;
+            overflow: hidden;
+
+            p {
+                color: white;
+                font-size: 1.2rem;
+                font-weight: 700;
+                z-index: 99;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: #ff9248;
+                // color: white;
+                border: none;
+                transition: 0.5s;
+                z-index: 3;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+
+
     .drop-show {
         margin: 2rem;
         padding: 1rem;
@@ -40,7 +87,7 @@
                 content: '\142F';
                 float: right;
             }
-            
+
 
         }
 

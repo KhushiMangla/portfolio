@@ -35,6 +35,29 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 <h1 className="single-work-title">{restData.title.rendered}</h1>
                 <div className="single-work-overview">{restData.acf.project_overview}</div>
               </div>
+              <div className="site-btn-container">
+                {restData.acf.live_site.map((liveSite, index) => (
+                  <a
+                    key={index}
+                    href={liveSite.live_site}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    {/* noopener noreferrer makes it open on new tab */}
+                    <button className="site-btn"><p>{liveSite.live_site_name}</p></button>
+                  </a>
+                ))}
+
+                {restData.acf.github_site.map((githubSite, index) => (
+                  <a
+                    key={index}
+                    href={githubSite.github_site}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    {/* noopener noreferrer makes it open on new tab */}
+                    <button className="site-btn"><p>{githubSite.github_site_name}</p></button>
+                  </a>
+                ))}
+              </div>
             </div>
             {/* <div
               className="entry-content"
@@ -42,15 +65,15 @@ const SingleWork = ({ restBase, featuredImage }) => {
             </div> */}
             <div className="drop-show">
               <Collapsible trigger={<div className="accordian">{restData.acf.learn_heading}</div>}>
-                <p style={{padding: '1.5rem'}}>{restData.acf.learn_section}</p>
+                <p style={{ padding: '1.5rem' }}>{restData.acf.learn_section}</p>
               </Collapsible>
 
               <Collapsible trigger={<div className="accordian">{restData.acf.highlights_heading}</div>}>
-                <p style={{padding: '1.5rem'}}>{restData.acf.highlights_section}</p>
+                <p style={{ padding: '1.5rem' }}>{restData.acf.highlights_section}</p>
               </Collapsible>
 
               <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}</div>}>
-                <p style={{padding: '1.5rem'}}>{restData.acf.process_section}</p>
+                <p style={{ padding: '1.5rem' }}>{restData.acf.process_section}</p>
               </Collapsible>
             </div>
           </div>
