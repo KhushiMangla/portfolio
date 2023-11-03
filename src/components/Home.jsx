@@ -53,7 +53,8 @@ const Home = ({ restBase }) => {
                             </motion.section>
                             <motion.section>
                             <motion.button className="mywork-btn" variants={introVariants}>
-                                <NavLink activeClassName="active" to="/work">View my work</NavLink>
+                                <NavLink activeClassName="active" to="/work">
+                                    View my work</NavLink>
                             </motion.button>
                             </motion.section>
                         </motion.div>
