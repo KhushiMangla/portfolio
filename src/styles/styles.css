@@ -697,7 +697,7 @@ body {
   margin: 1rem;
 }
 .single-work-container .single-work-overview {
-  max-width: 40rem;
+  max-width: 50rem;
   margin: 0 auto;
   text-align: center;
 }
@@ -749,7 +749,8 @@ body {
   width: 100%;
 }
 .single-work-container .drop-show {
-  margin: 2rem;
+  margin: 0 auto;
+  width: 75%;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 179, 138, 0.2);
