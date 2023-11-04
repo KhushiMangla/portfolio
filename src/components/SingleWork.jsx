@@ -4,7 +4,17 @@ import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Loading from './Loading';
 import Collapsible from 'react-collapsible';
 
-const SingleWork = ({ restBase, featuredImage }) => {
+function formatContent(content) {
+  content = content.replace(/^\* (.+)$/gm, '<li>$1</li>');
+  content = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  content = content.replace(/  $/gm, '<br>');
+  content = '<ul>' + content + '</ul>';
+
+  return <div dangerouslySetInnerHTML={{ __html: content }} />;
+}
+
+
+const SingleWork = ({ restBase}) => {
   const { slug } = useParams();
   const restPath = restBase + `work?slug=${slug}&acf_format=standard`;
   const [restData, setData] = useState({});
@@ -83,11 +93,13 @@ const SingleWork = ({ restBase, featuredImage }) => {
               </Collapsible>
 
               <Collapsible trigger={<div className="accordian">{restData.acf.highlights_heading}</div>}>
-                <p style={{ padding: '1.5rem' }}>{restData.acf.highlights_section}</p>
+                <p style={{ padding: '1.5rem' }}> {formatContent(restData.acf.highlights_section)}</p>
               </Collapsible>
+
 
               <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}</div>}>
                 <p style={{ padding: '1.5rem' }}>{restData.acf.process_section}</p>
+            
               </Collapsible>
             </div>
           </div>
