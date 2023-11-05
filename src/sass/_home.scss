@@ -3,8 +3,9 @@
 .intro {
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
-}
+    margin: 5rem;
+    height: 50%;
+
 
 .intro-left {
     max-width: 80%;
@@ -16,7 +17,7 @@
         font-size: 2rem;
         font-weight: 700;
         line-height: 2.8;
-        width:35%;
+        width:50%;
         color: $orange;
         animation:typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         border-right: 2px solid;
@@ -28,6 +29,7 @@
         font-size: 1.3rem;
         width: 80%;
         margin-bottom: 1rem;
+        line-height: 1.8;
     }
 
     .mywork-btn {
@@ -72,11 +74,21 @@
     }
 
 }
+.profile{
+        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
 
 .custom__scroll {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: 5rem;
+    align-items: center;
+    margin: 2.5rem;
 
     .work-scroll {
         width: 3px;
@@ -90,9 +102,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+       margin: 0 auto;
     }
 
-    .scroll {
+    .ball {
         width: 5px;
         height: 5px;
         position: absolute;
@@ -100,7 +113,6 @@
         bottom:1rem;
         border-radius: 50%;
         background-color: orange;
-        ;
         animation-name: scroll;
         animation-duration: 2.2s;
         animation-timing-function: cubic-bezier(.15, .41, .69, .94);
@@ -110,8 +122,8 @@
 }
 
 .scroll-text {
-    margin-top: 10px;
-    margin-bottom: 3rem;
+    margin: 10px;
+    // margin-bottom: 3rem;
    
     text-align: center;
     width: 100%;
@@ -151,26 +163,61 @@
 
 // Mobile
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:$medium) {
 
+    .intro-scroll-container{
+      
     .intro {
         display: block;
-
+        height: auto;
+        
         .intro-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 100%;
+            
             .name {
-                font-size: 32px;
+                text-align: center;
+                  
             }
 
             .tagline {
-                font-size: 18px;
+                font-size: 1.125rem;
+                text-align: center;
+                
             }
+
+            .mywork-btn{
+               
+                margin: 1rem auto;
+                
+            }
+            
         }
 
         .profile {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 2rem;
+            margin: 2.5rem;
+        }   
+    }
+   
+    }  
+}
+
+@media screen and (max-width:$small) {
+    .intro{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        margin: 5rem auto;
+
+        .intro-left{
+
+            .name{
+                width: 100%;
+            }
         }
     }
 }
