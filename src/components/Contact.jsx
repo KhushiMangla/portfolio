@@ -47,13 +47,13 @@ const Contact = ({ restBase }) => {
 
                                 </span>
                             </a>
-                            <a href={restData.acf.instagram}>
+                            {/* <a href={restData.acf.instagram}>
                                 <span className="icon-wrapper">
                                     <img src="../src/images/insta.png" alt="insta"
                                         style={{ height: '50px', width: "50px" }} />
 
                                 </span>
-                            </a>
+                            </a> */}
                             <a href={restData.acf.instagram}>
                                 <span className="icon-wrapper">
                                     <img src="../src/images/github.png" alt="insta"

@@ -3,6 +3,7 @@ import Loading from './Loading';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Featured from './Featured'; // Import the Work component
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll'; // Import Link from react-scroll
 import { motion } from "framer-motion"
 
 const Home = ({ restBase }) => {
@@ -43,38 +44,44 @@ const Home = ({ restBase }) => {
         <div className="home-container">
             {isLoaded ? (
                 <article id={`post-${restData.id}`}>
-                    <div className='intro'>
-                        <motion.div className="intro-left" variants={introVariants} initial="initial" animate="animate">
-                            <motion.section  className="name" variants={introVariants}>
-                                <div>{restData.acf.intro}</div>
-                            </motion.section>
-                            <motion.section className="tagline" variants={introVariants}>
-                                <p>{restData.acf.tagline}</p>
-                            </motion.section>
-                            <motion.section>
-                            <motion.button className="mywork-btn" variants={introVariants}>
-                                <NavLink activeClassName="active" to="/work">
-                                    View my work</NavLink>
-                            </motion.button>
-                            </motion.section>
-                        </motion.div>
-                        <section className="profile">
-                            <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
-                        </section>
-                    </div>
-                    
-
-                    {/* Rendering work component */}
-                    <div className="custom__scroll">
-                        <a href="#work" className="work-scroll">
-                            <div className="scroll"></div>
-                        </a>
+                    <div className="intro-scroll-container" style={{ height: '80vh' }}>
+                        <div className='intro'>
+                            <motion.div className="intro-left" variants={introVariants} initial="initial" animate="animate">
+                                <motion.section className="name" variants={introVariants}>
+                                    <div>{restData.acf.intro}</div>
+                                </motion.section>
+                                <motion.section className="tagline" variants={introVariants}>
+                                    <p>{restData.acf.tagline}</p>
+                                </motion.section>
+                                <motion.section>
+                                    <motion.button className="mywork-btn" variants={introVariants}>
+                                        <Link to="work" smooth={true} duration={500}> {/* Use Link from react-scroll */}
+                                            View my work
+                                        </Link>
+                                    </motion.button>
+                                </motion.section>
+                            </motion.div>
+                            <section className="profile">
+                                <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
+                            </section>
                         </div>
-                    <p className='scroll-text'> 
-                    <a href="#work">Scroll down to see more</a>  </p>
-                    
+
+                        {/* Rendering work component */}
+                        <div className="custom__scroll">
+                            <a href="#work" className="work-scroll">
+                                <div className="ball"></div>
+                            </a>
+                            <p className='scroll-text'>
+                                <Link to="work" smooth={true} duration={500}> {/* Use Link from react-scroll */}
+                                    Scroll down to see more
+                                </Link>
+                            </p>
+                        </div>
+                    </div>
+
                     <section id="work">
-                        <Featured restBase={restBase} />
+                        <Featured restBase={restBase}
+                         />
                     </section>
 
                     {/* social media icons */}

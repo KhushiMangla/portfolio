@@ -1,10 +1,32 @@
 @use "variables" as *;
 
+.featured-work-container {
+    padding: 0 9%;
+   
+
+    .featured-work-title {
+        text-align: center;
+        color: $black;
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 2rem 0;
+        text-transform: uppercase;
+    }
+
+    .featured-work-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+    }
+
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 2rem 0;
+    justify-content: center;
 }
 
 .card {
@@ -14,6 +36,7 @@
     background: $white;
     transition: transform 0.2s;
     text-align: center;
+    
 
     .card-title {
         font-size: 1.3rem;
@@ -25,6 +48,12 @@
     .card-text{
         color:$text-color;
         font-size: 18px;
+        overflow: hidden;
+        max-width:80%;
+        margin: 0 auto;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+
     }
 
     .read-more-btn {
@@ -32,7 +61,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin: 1rem 0;
+        margin: 1rem auto;
         background:$light-orange;
         border-radius: 25px;
         border: none;
@@ -72,29 +101,53 @@
 
 .card:hover {
     // border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba($light-orange, 0.5);
-    border-radius: 7px;
-    transform: translateY(-10px);
+    @media screen and (min-width: $small) {
+        box-shadow: 0 0 10px rgba($light-orange, 0.5);
+        border-radius: 7px;
+        transform: translateY(-10px);
+    }
 
 }
 
-.featured-work-container {
-    padding: 15px 9%;
+// mobile
+
+@media screen and (max-width: $medium) {
+    .featured-work-container {
+        margin-top: 11rem;
+    }
 
     .featured-work-title {
-        text-align: center;
-        padding-bottom: 15px;
-        color: $black;
-        font-size: 1.8rem;
-        font-weight: 600;
-        padding: 2rem 0;
-        text-transform: uppercase;
+        font-size: 1.5rem;
     }
 
-    .featured-work-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 15px;
+    .card {
+        // Adjust styles for smaller screens
+        padding: 10px;
     }
+}
 
+@media screen and (max-width: $small) {
+    .featured-work-container {
+        .featured-work-title {
+            // Further adjustments for smaller screens
+            font-size: 1.2rem;
+        }
+        .featured-work-content{
+            display: grid;
+            grid-template-columns: 1fr;
+
+        }
+
+        .read-more-btn{
+            align-items: center;
+        }
+      
+        .card {
+            // Further adjustments for smaller screens
+            padding: 8px;
+        }
+       
+
+
+    }
 }
