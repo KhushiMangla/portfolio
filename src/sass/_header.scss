@@ -16,6 +16,7 @@
     .logo {
         object-fit: cover;
         height: 3rem;
+        margin-left: 1rem;
     }
 
     .site-navigation {
@@ -24,33 +25,52 @@
             display: flex;
             align-items: center;
             flex: 1;
-            justify-content: center;
-            gap:1.5rem; 
-
+            // justify-content: center;
+           
 
             li {
-                // margin-right: 2rem;
-
                 a {
                     color: $black;
-
+                    padding-bottom: 0.5rem;
+                    border-bottom: 2px solid transparent;
+                    margin: 0 1rem; // Add this line to set the initial border as transparent.
+                   
                     &:hover {
                         padding-bottom: 0.5rem;
                         border-bottom: 2px solid $pink;
                     }
                 }
             }
+        }
+    }
+}
 
-            // .contact-btn {
-            //     background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
-            //     border-radius: 25px;
-            //     border: none;
-            //     padding: 1rem;
+// Medium and small screens
 
-            //     &:hover {
-            //         background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
-            //     }
-            // }
+@media screen and (max-width: $medium) {
+    .site-navigation {
+        backdrop-filter: blur(5px);
+        background-color: rgb($light-orange, 35%);
+        border-top: 1px solid hsla(0, 0%, 100%, .8);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 90;
+        padding: 0.5rem 2rem;
+
+        ul {              
+                justify-content: space-between;
+                margin: 0 auto;
+            
+        }
+
+        a {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding: 0.25rem 1rem 0;
+            border-bottom: none !important;
         }
     }
 }

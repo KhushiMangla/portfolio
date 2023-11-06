@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
-import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Featured from './Featured'; // Import the Work component
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
 import { motion } from "framer-motion"
+import Footer from './Footer';
 
 const Home = ({ restBase }) => {
     const restPath = restBase + 'pages/10';
@@ -85,23 +85,8 @@ const Home = ({ restBase }) => {
                     </section>
 
                     {/* social media icons */}
-                    <div className="social-media-icons">
-                        <a href={`mailto:${restData.acf.email}`}>
-                            <span className="icon-wrapper">
-                                <FaEnvelope />
-                            </span>
-                        </a>
-                        <a href={restData.acf.linkedin}>
-                            <span className="icon-wrapper">
-                                <FaLinkedin />
-                            </span>
-                        </a>
-                        <a href={restData.acf.github}>
-                            <span className="icon-wrapper">
-                                <FaGithub />
-                            </span>
-                        </a>
-                    </div>
+                    <Footer restData={restData}  />
+                    
                 </article>
             ) : (
                 <Loading />
