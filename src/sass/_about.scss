@@ -81,3 +81,14 @@
         margin: 5px;
     }
 }
+
+.react-tabs__tab-panel {
+    opacity: 0; /* Initially set the opacity to 0 */
+    transition: opacity 0.3s; /* Add a transition for opacity changes */
+    text-align: center;
+}
+
+/* Set opacity to 1 when the TabPanel is selected */
+.react-tabs__tab-panel--selected {
+    opacity: 1;
+}
