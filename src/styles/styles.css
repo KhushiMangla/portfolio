@@ -449,12 +449,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.8;
-  width: fit-content;
   color: orange;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-  border-right: 2px solid;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .intro .intro-left .tagline {
   font-size: 1.3rem;
@@ -559,14 +554,6 @@ body {
     transform: translateY(0);
   }
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 40%;
-  }
-}
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to {
@@ -576,6 +563,15 @@ body {
     border-color: orange;
   }
 }
+.featured-work-title {
+  text-align: center;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 700px) {
   .intro-scroll-container .intro {
     display: block;
@@ -591,7 +587,6 @@ body {
   }
   .intro-scroll-container .intro .intro-left .name {
     text-align: center;
-    width: fit-content;
   }
   .intro-scroll-container .intro .intro-left .tagline {
     font-size: 1.125rem;
@@ -603,6 +598,9 @@ body {
   .intro-scroll-container .intro .profile {
     margin: 2.5rem;
   }
+  .featured-work-title {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .intro {
@@ -611,25 +609,12 @@ body {
     flex-direction: column;
     margin: 5rem auto;
   }
-  .intro .intro-left .name {
-    width: fit-content;
+  .featured-work-title {
+    font-size: 1.2rem;
   }
 }
 .featured-work-container {
   padding: 0 9%;
-}
-.featured-work-container .featured-work-title {
-  text-align: center;
-  color: black;
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 2rem 0;
-  text-transform: uppercase;
-}
-.featured-work-container .featured-work-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 15px;
 }
 
 .grid {
@@ -705,9 +690,6 @@ body {
 @media screen and (max-width: 700px) {
   .featured-work-container {
     margin-top: 11rem;
-  }
-  .featured-work-title {
-    font-size: 1.5rem;
   }
   .card {
     padding: 10px;

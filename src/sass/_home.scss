@@ -17,13 +17,13 @@
         font-size: 2rem;
         font-weight: 700;
         line-height: 2.8;
-        width:fit-content;
+        // width:fit-content;
 
         color: $orange;
-        animation:typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        border-right: 2px solid;
-        white-space: nowrap;
-        overflow: hidden;
+        // animation:typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        // border-right: 2px solid;
+        // white-space: nowrap;
+        // overflow: hidden;
     }
 
     .tagline {
@@ -151,10 +151,10 @@
     }
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 40%}
-  }
+// @keyframes typing {
+//     from { width: 0 }
+//     to { width: 40%}
+//   }
   
   /* The typewriter cursor effect */
   @keyframes blink-caret {
@@ -162,6 +162,15 @@
     50% { border-color: orange; }
   }
 
+
+  .featured-work-title {
+    text-align: center;
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
 // Mobile
 
 @media screen and (max-width:$medium) {
@@ -182,7 +191,7 @@
             
             .name {
                 text-align: center;
-                width:fit-content;
+                // width:fit-content;
                   
             }
 
@@ -206,6 +215,10 @@
     }
    
     }  
+
+    .featured-work-title {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width:$small) {
@@ -218,8 +231,13 @@
         .intro-left{
 
             .name{
-                width: fit-content;
+                // width: fit-content;
             }
         }
+    }
+
+    .featured-work-title {
+        // Further adjustments for smaller screens
+        font-size: 1.2rem;
     }
 }

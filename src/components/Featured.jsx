@@ -27,7 +27,7 @@ const Featured = ({ restBase }) => {
         <>
             {isLoaded ?
                 <div className="featured-work-container">
-                    <div className="featured-work-title"> Featured Work </div>
+                    
                     <div className="grid">
                         {restData.map(post =>
                             <article key={post.id} className="grid-item">

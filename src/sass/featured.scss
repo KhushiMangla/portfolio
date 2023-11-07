@@ -4,21 +4,6 @@
     padding: 0 9%;
    
 
-    .featured-work-title {
-        text-align: center;
-        color: $black;
-        font-size: 1.8rem;
-        font-weight: 600;
-        padding: 2rem 0;
-        text-transform: uppercase;
-    }
-
-    .featured-work-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 15px;
-    }
-
 }
 .grid {
     display: grid;
@@ -115,9 +100,9 @@
         margin-top: 11rem;
     }
 
-    .featured-work-title {
-        font-size: 1.5rem;
-    }
+    // .featured-work-title {
+    //     font-size: 1.5rem;
+    // }
 
     .card {
         // Adjust styles for smaller screens

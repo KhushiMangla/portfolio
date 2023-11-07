@@ -3,8 +3,9 @@ import Loading from './Loading';
 import Featured from './Featured'; // Import the Work component
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion';
 import Footer from './Footer';
+import Typewriter from 'typewriter-effect';
 
 const Home = ({ restBase }) => {
     const restPath = restBase + 'pages/10';
@@ -36,7 +37,7 @@ const Home = ({ restBase }) => {
             transition: {
                 duration: 1,
                 staggerChildren: 0.1,
-            }
+            },
         },
     };
 
@@ -45,17 +46,28 @@ const Home = ({ restBase }) => {
             {isLoaded ? (
                 <article id={`post-${restData.id}`}>
                     <div className="intro-scroll-container" style={{ height: '80vh' }}>
-                        <div className='intro'>
-                            <motion.div className="intro-left" variants={introVariants} initial="initial" animate="animate">
+                        <div className="intro">
+                            <motion.div
+                                className="intro-left"
+                                variants={introVariants}
+                                initial="initial"
+                                animate="animate"
+                            >
                                 <motion.section className="name" variants={introVariants}>
-                                    <div>{restData.acf.intro}</div>
+                                    <Typewriter
+                                        options={{
+                                            strings: [restData.acf.intro], // Displaying my name
+                                            autoStart: true,
+                                            loop: true,
+                                        }}
+                                    />
                                 </motion.section>
                                 <motion.section className="tagline" variants={introVariants}>
                                     <p>{restData.acf.tagline}</p>
                                 </motion.section>
                                 <motion.section>
                                     <motion.button className="mywork-btn" variants={introVariants}>
-                                        <Link to="work" smooth={true} duration={500}> {/* Use Link from react-scroll */}
+                                        <Link to="work" smooth={true} duration={500}>
                                             View my work
                                         </Link>
                                     </motion.button>
@@ -71,28 +83,27 @@ const Home = ({ restBase }) => {
                             <a href="#work" className="work-scroll">
                                 <div className="ball"></div>
                             </a>
-                            <p className='scroll-text'>
-                                <Link to="work" smooth={true} duration={500}> {/* Use Link from react-scroll */}
+                            <p className="scroll-text">
+                                <Link to="work" smooth={true} duration={500}>
                                     Scroll down to see more
                                 </Link>
                             </p>
                         </div>
                     </div>
+                    <div className="featured-work-title"> Featured Work </div>
 
                     <section id="work">
-                        <Featured restBase={restBase}
-                         />
+                        <Featured restBase={restBase} />
                     </section>
 
                     {/* social media icons */}
-                    <Footer restData={restData}  />
-                    
+                    <Footer restData={restData} />
                 </article>
             ) : (
                 <Loading />
             )}
         </div>
     );
-}
+};
 
 export default Home;
