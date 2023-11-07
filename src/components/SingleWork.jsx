@@ -6,7 +6,7 @@ import Collapsible from 'react-collapsible';
 
 const SingleWork = ({ restBase, featuredImage }) => {
   const { slug } = useParams();
-  const restPath = restBase + `work?slug=${slug}&acf_format=standard`;
+  const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -79,15 +79,22 @@ const SingleWork = ({ restBase, featuredImage }) => {
             </div> */}
             <div className="drop-show">
               <Collapsible trigger={<div className="accordian">{restData.acf.learn_heading}</div>}>
-                <p style={{ padding: '1.5rem' }}>{restData.acf.learn_section}</p>
+                <p style={{ padding: '1.5rem' }}>
+                <div dangerouslySetInnerHTML={{ __html: restData.acf.learn_section}} />
+                </p>
+                
               </Collapsible>
 
               <Collapsible trigger={<div className="accordian">{restData.acf.highlights_heading}</div>}>
-                <p style={{ padding: '1.5rem' }}>{restData.acf.highlights_section}</p>
+                <p style={{ padding: '1.5rem' }}>
+                <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section}} />
+                  </p>
               </Collapsible>
 
               <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}</div>}>
-                <p style={{ padding: '1.5rem' }}>{restData.acf.process_section}</p>
+                <p style={{ padding: '1.5rem' }}>
+                <div dangerouslySetInnerHTML={{ __html: restData.acf.process_section}} />
+                  </p>
               </Collapsible>
             </div>
           </div>
