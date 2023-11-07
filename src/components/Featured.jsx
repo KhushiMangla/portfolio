@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Loading from './Loading'
 
 const Featured = ({ restBase }) => {
-    const restPath = restBase + 'work?_embed&acf_format=standard'
+    const restPath = restBase + 'work?work_category=10&_embed&acf_format=standard'
     const [restData, setData] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
 
