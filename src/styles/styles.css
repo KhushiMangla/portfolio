@@ -506,6 +506,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: profile 2s infinite ease alternate;
+}
+@keyframes profile {
+  to {
+    transform: translateY(20px);
+  }
 }
 
 .custom__scroll {
