@@ -3,7 +3,7 @@ import Loading from './Loading';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Featured from './Featured'; // Import the Work component
 import { NavLink } from 'react-router-dom';
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const Home = ({ restBase }) => {
     const restPath = restBase + 'pages/10';
