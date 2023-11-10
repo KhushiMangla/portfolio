@@ -742,7 +742,7 @@ body {
   text-align: center;
 }
 .about-container .about-content {
-  text-align: center;
+  text-align: left;
 }
 .about-container .about-content section {
   margin: 10px 0;
@@ -753,8 +753,9 @@ body {
 .about-container .react-tabs {
   border: none;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255, 179, 138, 0.5);
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
   padding: 1.5rem;
+  background: linear-gradient(135deg, #ffcc99, #ff9966);
 }
 .about-container .react-tabs .react-tabs__tab-list {
   display: flex;
@@ -762,9 +763,26 @@ body {
   margin-bottom: 1rem;
   border-bottom: none;
 }
+.about-container .react-tabs .react-tabs__tab-list .react-tabs__tab {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  opacity: 0.8;
+  outline: 0;
+  padding: 10px 20px;
+  text-align: center;
+  transition: border-bottom 0.2s ease-out, opacity 0.2s ease-out;
+}
+.about-container .react-tabs .react-tabs__tab-list .react-tabs__tab--selected {
+  opacity: 1;
+}
 .about-container .react-tabs .react-tabs__tab-panel--selected {
   padding: 1rem;
   text-align: center;
+  line-height: 2.8rem;
+  text-align: center;
+  opacity: 1;
 }
 
 .inline-block div {
@@ -773,16 +791,38 @@ body {
 }
 
 .react-tabs__tab-panel {
-  opacity: 0; /* Initially set the opacity to 0 */
-  transition: opacity 0.3s; /* Add a transition for opacity changes */
+  opacity: 0;
+  transition: opacity 0.3s;
   text-align: center;
 }
 
-/* Set opacity to 1 when the TabPanel is selected */
-.react-tabs__tab-panel--selected {
-  opacity: 1;
+@media screen and (max-width: 700px) {
+  .about-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  h1 {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .about-content section {
+    text-align: left;
+  }
+  .react-tabs {
+    width: 100%;
+  }
+  .react-tabs__tab-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .react-tabs__tab-panel--selected {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
 .single-work-container {
   width: 75%;
   padding: 1rem;

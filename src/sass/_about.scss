@@ -11,14 +11,14 @@
     line-height: 1.8em;
 
     h1 {
-        margin: 2rem 0 ;
+        margin: 2rem 0;
         font-size: 2.5rem;
         text-align: center;
-    
+
     }
 
     .about-content {
-        text-align: center;
+        text-align: left;
 
         section {
             margin: 10px 0; // Adjust spacing as needed
@@ -30,46 +30,48 @@
     }
 
     .react-tabs {
-        //   background-color: #f9f9f9;
-        //   border-radius: 5px;
         border: none;
         border-radius: 5px;
-        box-shadow: 0 0 10px rgba($light-orange, 0.5);
+        box-shadow: 0 0 10px rgba($orange, 0.5);
         padding: 1.5rem;
-
-
+        background: linear-gradient(135deg, #ffcc99, #ff9966);
 
         .react-tabs__tab-list {
-            // background-color: #333;
-            // color: #fff;
             display: flex;
             justify-content: center;
             margin-bottom: 1rem;
             border-bottom: none;
 
             .react-tabs__tab {
-                //   padding: 10px 20px;
+
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                margin: 0 0.5rem;
+                opacity: .80;
+                outline: 0;
+                padding: 10px 20px;
+                text-align: center;
+                transition: border-bottom .2s ease-out, opacity .2s ease-out;
 
             }
 
             .react-tabs__tab--selected {
-                //   background-color: #555;
+                opacity: 1;
 
             }
         }
 
-        .react-tabs__tab-panel {
-            // background-color: #f9f9f9;
-            // padding: 20px;
-            // border: 1px solid #ddd;
-            // border-radius: 5px;
-            // margin-top: 10px;
-        }
 
         .react-tabs__tab-panel--selected {
 
             padding: 1rem;
             text-align: center;
+            line-height: 2.8rem;
+            text-align: center;
+            opacity: 1;
+            
+
         }
 
     }
@@ -83,12 +85,93 @@
 }
 
 .react-tabs__tab-panel {
-    opacity: 0; /* Initially set the opacity to 0 */
-    transition: opacity 0.3s; /* Add a transition for opacity changes */
+    opacity: 0;
+    transition: opacity 0.3s;
     text-align: center;
 }
 
-/* Set opacity to 1 when the TabPanel is selected */
-.react-tabs__tab-panel--selected {
-    opacity: 1;
+
+
+// @media screen and (max-width:$medium) {
+
+//     .about-container {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         width: 55%;
+//         padding: 1rem;
+//         margin: 0 auto;
+//         line-height: 1.8em;
+
+//         h1 {
+//             margin: 1.5rem 0;
+//             font-size: 2rem;
+//             text-align: center;
+
+//         }
+
+//         .about-content {
+//             text-align: center;
+
+//             section {
+//                 margin: 10px 0; // Adjust spacing as needed
+
+//                 p {
+//                     font-size: 16px; // Add font size
+//                 }
+//             }
+//         }
+
+//     }
+// }
+
+// for small and medium screens
+@media screen and (max-width:$medium) {
+//     .about-container {
+//         // display: flex;
+//         // flex-direction: column;
+//         // align-items: center;
+//         // justify-content: center;
+//         // width:75%;
+
+        .about-wrapper {
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        h1 {
+            margin: 1.5rem 0;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .about-content {
+            section {
+                text-align: left;
+            }
+        }
+        .react-tabs{
+            width:100%;
+           
+
+        }
+        .react-tabs__tab-list{
+            // display: flex;
+            // width:50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // flex-direction: row;
+            
+        }
+
+        .react-tabs__tab-panel--selected{
+           display:flex;
+           flex-direction: column;
+        }
+//     }
+
 }

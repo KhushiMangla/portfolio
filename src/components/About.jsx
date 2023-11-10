@@ -25,7 +25,7 @@ const About = ({ restBase }) => {
     return (
         <div className="about-container">
             {isLoaded ?
-            <div>
+            <div class="about-wrapper">
                     <h1>{restData.title.rendered}</h1>
                     <div className="about-content">
                         <section>
@@ -83,3 +83,5 @@ const About = ({ restBase }) => {
 }
 
 export default About
+
+// medium screens
