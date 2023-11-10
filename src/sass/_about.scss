@@ -91,41 +91,6 @@
 }
 
 
-
-// @media screen and (max-width:$medium) {
-
-//     .about-container {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: center;
-//         width: 55%;
-//         padding: 1rem;
-//         margin: 0 auto;
-//         line-height: 1.8em;
-
-//         h1 {
-//             margin: 1.5rem 0;
-//             font-size: 2rem;
-//             text-align: center;
-
-//         }
-
-//         .about-content {
-//             text-align: center;
-
-//             section {
-//                 margin: 10px 0; // Adjust spacing as needed
-
-//                 p {
-//                     font-size: 16px; // Add font size
-//                 }
-//             }
-//         }
-
-//     }
-// }
-
 // for small and medium screens
 @media screen and (max-width:$medium) {
 //     .about-container {
