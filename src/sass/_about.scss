@@ -35,6 +35,7 @@
     border: none;
     border-radius: 5px;
     padding: 1.5rem;
+    
 
     .react-tabs__tab-list {
       display: flex;
@@ -78,6 +79,8 @@
 
       .react-tabs__tab--selected {
         opacity: 1;
+        font-weight: 600;
+        color:$light-orange;
       }
     }
 

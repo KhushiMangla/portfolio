@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
-import Footer from './Footer';
+
 import Loading from './Loading'
 
 
@@ -40,6 +40,7 @@ const Work = ({ restBase, featuredImage }) => {
                                     <img src={post.acf.project_img} alt="project image" />
                                 </div>
                             </div>
+                             
                         </article>
                     )}
 
