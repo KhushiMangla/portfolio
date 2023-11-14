@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
 import Featured from './Featured'; // Import the Work component
-import { NavLink } from 'react-router-dom';
 import { Link } from 'react-scroll'; // Import Link from react-scroll
 import { motion } from 'framer-motion';
 import Footer from './Footer';

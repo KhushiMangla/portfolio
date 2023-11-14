@@ -23,7 +23,7 @@ const Footer = ({ restData }) => {
           </a>
         </div>
         <p className="copyright">
-          Created by <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">Khushi Mangla</a>.
+          <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">&copy; 2023 Khushi Mangla</a>.
         </p>
       </footer>
     </>

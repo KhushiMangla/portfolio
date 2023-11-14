@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
-
+import Footer from './Footer';
 import Loading from './Loading'
+
 
 
 const Work = ({ restBase, featuredImage }) => {
@@ -34,7 +35,7 @@ const Work = ({ restBase, featuredImage }) => {
 
                             <div className="projects">
                                 <Link to={`/work/${post.slug}`}><h2>{post.title.rendered}</h2></Link>
-                                <div className="project-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
+                                {/* <div className="project-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div> */}
                                 <div className="img-container">
                                     <img src={post.acf.project_img} alt="project image" />
                                 </div>
@@ -42,7 +43,7 @@ const Work = ({ restBase, featuredImage }) => {
                         </article>
                     )}
 
-
+                    {/* <Footer restData={restData} /> */}
                 </div>
 
                 :

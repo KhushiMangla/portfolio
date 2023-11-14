@@ -736,6 +736,9 @@ body {
   margin: 0 auto;
   line-height: 1.8em;
 }
+.about-container .about-wrapper {
+  margin: 0 auto;
+}
 .about-container h1 {
   margin: 2rem 0;
   font-size: 2.5rem;
