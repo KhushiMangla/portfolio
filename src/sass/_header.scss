@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 .site-header {
-  height: 5rem;
+  height: 7rem;
   width: 100vw;
   margin: 0 auto;
   padding: 1rem 2rem;
@@ -15,8 +15,19 @@
 
   .logo {
     object-fit: cover;
-    height: 3rem;
+    // height: 3rem;
     margin-left: 1rem;
+    display: block;
+    width: auto;
+    
+
+    .header-logo{
+      height: 60px;
+      margin-top: 10px;
+   
+     
+      
+    }
   }
 
   .site-navigation {
@@ -35,7 +46,7 @@
 
           &:hover {
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid $pink;
+            border-bottom: 2px solid $orange;
             transition: border-bottom 0.3s; // Add a smooth transition
           }
         }
@@ -49,6 +60,9 @@
 
   // Medium and small screens
   @media screen and (max-width: $medium) {
+ 
+
+
     .site-navigation {
       backdrop-filter: blur(5px);
       background-color: rgba($light-orange, 0.35);

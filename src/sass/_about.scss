@@ -1,146 +1,141 @@
 @use "variables" as *;
 
 .about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 75%;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  padding: 1rem;
+  margin: 0 auto;
+  line-height: 1.8em;
+
+  .about-wrapper {
     margin: 0 auto;
-    line-height: 1.8em;
+  }
 
-    .about-wrapper{
-        margin:0 auto;
+  h1 {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .about-content {
+    text-align: left;
+
+    section {
+      margin: 10px 0;
+      p {
+        font-size: 16px;
+      }
     }
+  }
 
-    h1 {
-        margin: 2rem 0;
-        font-size: 2.5rem;
-        text-align: center;
+  .react-tabs {
+    border: none;
+    border-radius: 5px;
+    padding: 1.5rem;
 
-    }
+    .react-tabs__tab-list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      position: relative;
 
-    .about-content {
-        text-align: left;
-
-        section {
-            margin: 10px 0; // Adjust spacing as needed
-
-            p {
-                font-size: 16px; // Add font size
-            }
-        }
-    }
-
-    .react-tabs {
+      .react-tabs__tab {
+        background: transparent;
         border: none;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba($orange, 0.5);
-        padding: 1.5rem;
-        background: linear-gradient(135deg, #ffcc99, #ff9966);
+        cursor: pointer;
+        margin: 0 0.5rem;
+        opacity: 0.80;
+        outline: 0;
+        padding: 10px 20px;
+        text-align: center;
+        transition: opacity 0.2s ease-out;
+        position: relative;
 
-        .react-tabs__tab-list {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1rem;
-            border-bottom: none;
-
-            .react-tabs__tab {
-
-                background: transparent;
-                border: none;
-                cursor: pointer;
-                margin: 0 0.5rem;
-                opacity: .80;
-                outline: 0;
-                padding: 10px 20px;
-                text-align: center;
-                transition: border-bottom .2s ease-out, opacity .2s ease-out;
-
-            }
-
-            .react-tabs__tab--selected {
-                opacity: 1;
-
-            }
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 4px; // Adjust the height as needed
+          background: linear-gradient(to right, #ffcc99, #ff9966); // Set your desired curve color
+          bottom: -5px; // Adjust the position of the curve
+          left: 0;
+          border-radius: 50%;
+          opacity: 0;
+          transform: scaleX(0); // Initially, the curve is not visible
+          transition: transform 0.3s, opacity 0.3s;
         }
 
-
-        .react-tabs__tab-panel--selected {
-
-            padding: 1rem;
-            text-align: center;
-            line-height: 2.8rem;
-            text-align: center;
-            opacity: 1;
-            
-
+        &:hover::after,
+        &.react-tabs__tab--selected::after {
+          transform: scaleX(1); // Expand the curve when selected or hovered
+          opacity: 1;
         }
+      }
 
+      .react-tabs__tab--selected {
+        opacity: 1;
+      }
     }
+
+    .react-tabs__tab-panel--selected {
+      padding: 1rem;
+      text-align: center;
+      line-height: 2.8rem;
+      text-align: center;
+      opacity: 1;
+    }
+  }
 }
 
 .inline-block {
-    div {
-        display: inline;
-        margin: 5px;
-    }
+  div {
+    display: inline;
+    margin: 5px;
+  }
 }
 
 .react-tabs__tab-panel {
-    opacity: 0;
-    transition: opacity 0.3s;
-    text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: center;
 }
 
-
 // for small and medium screens
-@media screen and (max-width:$medium) {
-//     .about-container {
-//         // display: flex;
-//         // flex-direction: column;
-//         // align-items: center;
-//         // justify-content: center;
-//         // width:75%;
+@media screen and (max-width: $medium) {
+  .about-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
 
-        .about-wrapper {
-            width: 100%;
-            margin: 0 auto;
+  h1 {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+  }
 
-        }
+  .about-content {
+    section {
+      text-align: left;
+    }
+  }
 
-        h1 {
-            margin: 1.5rem 0;
-            font-size: 2rem;
-            text-align: center;
-        }
+  .react-tabs {
+    width: 100%;
+  }
 
-        .about-content {
-            section {
-                text-align: left;
-            }
-        }
-        .react-tabs{
-            width:100%;
-           
+  .react-tabs__tab-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-        }
-        .react-tabs__tab-list{
-            // display: flex;
-            // width:50%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            // flex-direction: row;
-            
-        }
-
-        .react-tabs__tab-panel--selected{
-           display:flex;
-           flex-direction: column;
-        }
-//     }
-
+  .react-tabs__tab-panel--selected {
+    display: flex;
+    flex-direction: column;
+  }
 }

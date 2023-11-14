@@ -1,11 +1,14 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import logo from '../images/logo.svg';
 
 const Header = () => {
   return (
     <header id="masthead" className="site-header">
       <div className="site-branding">
-        <Link className="logo" to="/"> Khushi.</Link>
+        <Link className="logo" to="/">
+          <img className="header-logo" src={logo} alt="portfolio logo" />
+        </Link>
       </div>
       <nav className="site-navigation">
         <ul>
@@ -24,7 +27,7 @@ const Header = () => {
             <span className="circle"></span>
           </NavLink></li>
           <li><NavLink to="/contact">
-          <span className="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+            <span className="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
             <span className="text">Contact</span>
             <span className="circle"></span>
           </NavLink></li>

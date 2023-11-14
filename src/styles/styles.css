@@ -324,7 +324,7 @@ body {
 }
 
 .active {
-  color: hotpink !important;
+  color: orange !important;
 }
 
 /* Cursor.css */
@@ -375,7 +375,7 @@ body {
 
 /* Add any additional styling as needed for .cursor-three or other cursor elements. */
 .site-header {
-  height: 5rem;
+  height: 7rem;
   width: 100vw;
   margin: 0 auto;
   padding: 1rem 2rem;
@@ -389,8 +389,13 @@ body {
 }
 .site-header .logo {
   object-fit: cover;
-  height: 3rem;
   margin-left: 1rem;
+  display: block;
+  width: auto;
+}
+.site-header .logo .header-logo {
+  height: 60px;
+  margin-top: 10px;
 }
 .site-header .site-navigation ul {
   list-style-type: none;
@@ -406,7 +411,7 @@ body {
 }
 .site-header .site-navigation ul li a:hover {
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid hotpink;
+  border-bottom: 2px solid orange;
   transition: border-bottom 0.3s;
 }
 .site-header .site-navigation ul li .icon {
@@ -756,15 +761,14 @@ body {
 .about-container .react-tabs {
   border: none;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
   padding: 1.5rem;
-  background: linear-gradient(135deg, #ffcc99, #ff9966);
 }
 .about-container .react-tabs .react-tabs__tab-list {
   display: flex;
   justify-content: center;
   margin-bottom: 1rem;
   border-bottom: none;
+  position: relative;
 }
 .about-container .react-tabs .react-tabs__tab-list .react-tabs__tab {
   background: transparent;
@@ -775,7 +779,25 @@ body {
   outline: 0;
   padding: 10px 20px;
   text-align: center;
-  transition: border-bottom 0.2s ease-out, opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  position: relative;
+}
+.about-container .react-tabs .react-tabs__tab-list .react-tabs__tab::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #ffcc99, #ff9966);
+  bottom: -5px;
+  left: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s, opacity 0.3s;
+}
+.about-container .react-tabs .react-tabs__tab-list .react-tabs__tab:hover::after, .about-container .react-tabs .react-tabs__tab-list .react-tabs__tab.react-tabs__tab--selected::after {
+  transform: scaleX(1);
+  opacity: 1;
 }
 .about-container .react-tabs .react-tabs__tab-list .react-tabs__tab--selected {
   opacity: 1;
