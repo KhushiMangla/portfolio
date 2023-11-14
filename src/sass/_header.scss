@@ -61,7 +61,12 @@
   // Medium and small screens
   @media screen and (max-width: $medium) {
  
-
+   #masthead.site-header{
+    justify-content: center;
+    .site-branding {
+      margin: auto;
+    }
+   }
 
     .site-navigation {
       backdrop-filter: blur(5px);
@@ -99,3 +104,4 @@
     }
   }
 }
+

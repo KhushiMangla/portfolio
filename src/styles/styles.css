@@ -418,6 +418,12 @@ body {
   display: none;
 }
 @media screen and (max-width: 700px) {
+  .site-header #masthead.site-header {
+    justify-content: center;
+  }
+  .site-header #masthead.site-header .site-branding {
+    margin: auto;
+  }
   .site-header .site-navigation {
     backdrop-filter: blur(5px);
     background-color: white;
@@ -810,11 +816,11 @@ body {
   line-height: 2.8rem;
   text-align: center;
   opacity: 1;
-}
-
-.inline-block div {
-  display: inline;
-  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  row-gap: 0.5rem;
+  justify-content: center;
 }
 
 .react-tabs__tab-panel {

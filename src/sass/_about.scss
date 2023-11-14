@@ -90,14 +90,20 @@
       line-height: 2.8rem;
       text-align: center;
       opacity: 1;
+      display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    row-gap: 0.5rem;
+    justify-content: center;
     }
   }
 }
 
 .inline-block {
   div {
-    display: inline;
-    margin: 5px;
+    // display: inline;
+    // margin: 5px;
+    // display: block;
   }
 }
 

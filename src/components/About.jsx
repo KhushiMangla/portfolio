@@ -74,7 +74,7 @@ const About = ({ restBase }) => {
 
 
                     {/* social media icons */}
-                    <Footer restData={restData} />
+                    {/* <Footer restData={restData} /> */}
                 </div>
 
                 :

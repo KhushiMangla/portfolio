@@ -96,7 +96,7 @@ const Home = ({ restBase }) => {
                     </section>
 
                     {/* social media icons */}
-                    <Footer restData={restData} />
+                    {/* <Footer restData={restData} /> */}
                 </article>
             ) : (
                 <Loading />
