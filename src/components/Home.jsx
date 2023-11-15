@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import Loading from './Loading';
-import Featured from './Featured'; // Import the Work component
-import { Link } from 'react-scroll'; // Import Link from react-scroll
+import Featured from './Featured';
+import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import Footer from './Footer';
 import Typewriter from 'typewriter-effect';
+import Splash from './Splash';
 
 const Home = ({ restBase }) => {
     const restPath = restBase + 'pages/10';
     const [restData, setData] = useState([]);
-    const [isLoaded, setLoadStatus] = useState(false);
+    const [showSplash, setShowSplash] = useState(true);
+    const [isLoaded, setLoadStatus] = useState(false); // Add isLoaded state
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,10 +19,11 @@ const Home = ({ restBase }) => {
                 const data = await response.json();
                 setData(data);
                 setTimeout(() => {
-                setLoadStatus(true);
-                }, 1000);
-               
+                    setLoadStatus(true);
+                    setShowSplash(false); // Hide splash screen after 5 seconds
+                }, 5000);
             } else {
+                // Handle error if needed
                 setLoadStatus(false);
             }
         };
@@ -45,7 +47,8 @@ const Home = ({ restBase }) => {
 
     return (
         <div className="home-container">
-            {isLoaded ? (
+            {showSplash && <Splash />}
+            {!showSplash && (
                 <article id={`post-${restData.id}`}>
                     <div className="intro-scroll-container" style={{ height: '80vh' }}>
                         <div className="intro">
@@ -58,7 +61,7 @@ const Home = ({ restBase }) => {
                                 <motion.section className="name" variants={introVariants}>
                                     <Typewriter
                                         options={{
-                                            strings: [restData.acf.intro], // Displaying my name
+                                            strings: [restData.acf.intro],
                                             autoStart: true,
                                             loop: true,
                                         }}
@@ -101,8 +104,6 @@ const Home = ({ restBase }) => {
                     {/* social media icons */}
                     {/* <Footer restData={restData} /> */}
                 </article>
-            ) : (
-                <Loading />
             )}
         </div>
     );
