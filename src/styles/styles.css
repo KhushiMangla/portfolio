@@ -393,8 +393,8 @@ body {
   transition-timing-function: ease-out;
   animation: cursorAnim 0.5s infinite alternate;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  bottom: 10%;
+  left: 10%;
   transform: translate(-50%, -50%);
 }
 
@@ -417,6 +417,8 @@ body {
   height: 40px;
   background-color: rgba(255, 179, 138, 0.5);
   z-index: 300;
+  bottom: 10%;
+  left: 10%;
   animation: cursorAnim 0.5s infinite alternate;
 }
 

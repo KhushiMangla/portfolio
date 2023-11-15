@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Featured from './Featured';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import Footer from './Footer';
 import Typewriter from 'typewriter-effect';
 import Splash from './Splash';
 
@@ -101,8 +100,7 @@ const Home = ({ restBase }) => {
                         <Featured restBase={restBase} />
                     </section>
 
-                    {/* social media icons */}
-                    {/* <Footer restData={restData} /> */}
+               
                 </article>
             )}
         </div>
