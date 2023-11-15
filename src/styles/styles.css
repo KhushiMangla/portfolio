@@ -1192,4 +1192,39 @@ body {
   float: right;
 }
 
+/* Add this to your existing SCSS file */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+}
+.footer-container .social-media-icons {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 2.5rem;
+}
+.footer-container .social-media-icons .icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #ffb38a;
+  transition: background-color 0.3s ease-in-out;
+}
+.footer-container .social-media-icons .icon-wrapper:hover {
+  background-color: #ff9248;
+}
+.footer-container .social-media-icons .icon-wrapper svg {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.footer-container .social-media-icons .icon-wrapper:hover svg {
+  color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */

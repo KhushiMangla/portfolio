@@ -19,8 +19,8 @@ const Home = ({ restBase }) => {
                 setData(data);
                 setTimeout(() => {
                     setLoadStatus(true);
-                    setShowSplash(false); // Hide splash screen after 5 seconds
-                }, 5000);
+                    setShowSplash(false);
+                }, 1000);
             } else {
                 // Handle error if needed
                 setLoadStatus(false);
@@ -82,7 +82,7 @@ const Home = ({ restBase }) => {
                             </section>
                         </div>
 
-                        {/* Rendering work component */}
+                        {/* Rendering Featured work component */}
                         <div className="custom__scroll">
                             <a href="#work" className="work-scroll">
                                 <div className="ball"></div>
@@ -100,7 +100,10 @@ const Home = ({ restBase }) => {
                         <Featured restBase={restBase} />
                     </section>
 
-               
+
+
+
+
                 </article>
             )}
         </div>

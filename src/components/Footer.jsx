@@ -24,7 +24,7 @@ const Footer = ({ restBase }) => {
 
   return (
     <>
-      <footer id="contact">
+      <footer id="contact" className='footer-container'>
         <div className="social-media-icons">
           <a href={`mailto:${restData.acf?.email}`}>
             <span className="icon-wrapper">
