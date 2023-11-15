@@ -7,7 +7,7 @@ const Loading = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false); // Set loading to false after 5000 milliseconds (5 seconds)
-        }, 100000);
+        }, 5000);
     }, []);
 
     const override = `

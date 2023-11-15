@@ -17,7 +17,10 @@ const Home = ({ restBase }) => {
             if (response.ok) {
                 const data = await response.json();
                 setData(data);
+                setTimeout(() => {
                 setLoadStatus(true);
+                }, 1000);
+               
             } else {
                 setLoadStatus(false);
             }
