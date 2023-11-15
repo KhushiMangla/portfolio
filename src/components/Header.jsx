@@ -38,7 +38,7 @@ const Header = () => {
               <span className="icon">
                 <ion-icon name="chatbubble-outline"></ion-icon>
               </span>
-              <span className="text" style={{cursor:'pointer'}}>Contact</span>
+              <span className="text" style={{ cursor: 'pointer' }}>Contact</span>
               <span className="circle"></span>
             </ScrollLink>
           </li>

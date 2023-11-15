@@ -16,6 +16,7 @@ const Loading = () => {
     `;
 
     return (
+
         <ClipLoader class="loading" color="#ff9248" loading={loading} css={override} size={100} /> // Use "loading" from state
     );
 }

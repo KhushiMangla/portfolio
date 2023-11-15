@@ -44,6 +44,7 @@ const About = ({ restBase }) => {
                     </div>
 
                     {/* toolkit */}
+                    <div className='toolkit_heading'>{restData.acf.toolkit_heading}</div>
                     <Tabs>
                         <TabList>
                             <Tab>{restData.acf.all_heading}</Tab>
