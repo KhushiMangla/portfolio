@@ -38,4 +38,38 @@
             }
         }
     }
+
+    .copyright {
+        margin: 2rem;
+        font-size: 18px;
+
+
+        a {
+            color: $text-color;
+
+        }
+
+    }
 }
+
+// small screens
+
+
+@media screen and (max-width: $small) {
+    .footer-container {
+        .social-media-icons {
+            display: flex;
+            gap: 1.25rem;
+            font-size: 1.75rem;
+
+            .icon-wrapper {
+                width: none; // Set width to none
+                height: none; // Set height to none
+            }
+        }
+
+
+    }
+}
+
+;

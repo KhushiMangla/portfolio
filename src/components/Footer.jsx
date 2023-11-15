@@ -43,7 +43,7 @@ const Footer = ({ restBase }) => {
           </a>
         </div>
         <p className="copyright">
-          <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">&copy; 2023 Khushi Mangla</a>.
+          <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">&copy; Khushi Mangla 2023</a>.
         </p>
       </footer>
     </>

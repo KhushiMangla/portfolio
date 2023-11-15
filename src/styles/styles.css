@@ -1226,5 +1226,24 @@ body {
 .footer-container .social-media-icons .icon-wrapper:hover svg {
   color: white;
 }
+.footer-container .copyright {
+  margin: 2rem;
+  font-size: 18px;
+}
+.footer-container .copyright a {
+  color: #213547;
+}
+
+@media screen and (max-width: 500px) {
+  .footer-container .social-media-icons {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 1.75rem;
+  }
+  .footer-container .social-media-icons .icon-wrapper {
+    width: none;
+    height: none;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
