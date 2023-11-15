@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import logo from '../images/logo1.svg';
 
 const Header = () => {
@@ -26,11 +27,21 @@ const Header = () => {
             <span className="text">Work</span>
             <span className="circle"></span>
           </NavLink></li>
-          <li><NavLink to="/contact">
-            <span className="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
-            <span className="text">Contact</span>
-            <span className="circle"></span>
-          </NavLink></li>
+          <li>
+            <ScrollLink
+              to="contact" //Target ID
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <span className="icon">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </span>
+              <span className="text" style={{cursor:'pointer'}}>Contact</span>
+              <span className="circle"></span>
+            </ScrollLink>
+          </li>
           <div className="indicator"></div>
         </ul>
       </nav>

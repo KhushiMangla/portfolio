@@ -29,7 +29,7 @@ function App() {
           Created by <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">Khushi Mangla</a>.
         </p>
       </footer> */}
-      <Footer restBase={restBase}/>
+      <Footer restBase={restBase} />
     </Router>
   );
 }

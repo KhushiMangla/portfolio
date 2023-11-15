@@ -8,23 +8,23 @@ const Footer = ({ restBase }) => {
   const [isLoaded, setLoadStatus] = useState(false)
 
   useEffect(() => {
-      const fetchData = async () => {
-          const response = await fetch(restPath)
-          if (response.ok) {
-              const data = await response.json()
-              setData(data)
-              setLoadStatus(true)
-          } else {
-              setLoadStatus(false)
-          }
+    const fetchData = async () => {
+      const response = await fetch(restPath)
+      if (response.ok) {
+        const data = await response.json()
+        setData(data)
+        setLoadStatus(true)
+      } else {
+        setLoadStatus(false)
       }
-      fetchData()
+    }
+    fetchData()
   }, [restPath])
 
 
   return (
     <>
-      <footer>
+      <footer id="contact">
         <div className="social-media-icons">
           <a href={`mailto:${restData.acf?.email}`}>
             <span className="icon-wrapper">
