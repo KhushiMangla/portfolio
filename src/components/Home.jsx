@@ -18,7 +18,7 @@ const Home = ({ restBase }) => {
                 const data = await response.json();
                 setData(data);
                 setTimeout(() => {
-                    setLoadStatus(true);
+                    // setLoadStatus(true);
                     setShowSplash(false);
                 }, 1000);
             } else {

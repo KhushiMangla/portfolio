@@ -1201,7 +1201,7 @@ body {
   margin: 3rem auto;
 }
 .footer-container .connect {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 2rem;
   color: #ff9248;
   font-weight: 700;
@@ -1215,8 +1215,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
   padding: 0.5rem;
   border-radius: 50%;
   background-color: #ffb38a;
@@ -1241,6 +1239,10 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+  .footer-container .connect {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
   .footer-container .social-media-icons {
     display: flex;
     gap: 1.25rem;
