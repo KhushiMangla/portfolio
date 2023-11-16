@@ -8,6 +8,14 @@
     align-items: center;
     margin: 3rem auto;
 
+    .connect {
+        font-size: 1.5rem;
+        margin: 2rem;
+        color: $dark-orange;
+        font-weight: 700;
+
+    }
+
     .social-media-icons {
         display: flex;
         gap: 1.25rem;
@@ -40,8 +48,9 @@
     }
 
     .copyright {
-        margin: 2rem;
-        font-size: 18px;
+        margin: 5rem 0 5rem 0;
+        font-size: 16px;
+
 
 
         a {

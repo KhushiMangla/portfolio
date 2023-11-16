@@ -25,6 +25,9 @@ const Footer = ({ restBase }) => {
   return (
     <>
       <footer id="contact" className='footer-container'>
+        <div className="connect">
+          {restData.acf?.connect}
+        </div>
         <div className="social-media-icons">
           <a href={`mailto:${restData.acf?.email}`}>
             <span className="icon-wrapper">
@@ -43,7 +46,7 @@ const Footer = ({ restBase }) => {
           </a>
         </div>
         <p className="copyright">
-          <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">&copy; Khushi Mangla 2023</a>.
+          <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">&copy; Khushi 2023</a>.
         </p>
       </footer>
     </>

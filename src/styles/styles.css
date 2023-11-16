@@ -1200,6 +1200,12 @@ body {
   align-items: center;
   margin: 3rem auto;
 }
+.footer-container .connect {
+  font-size: 1.5rem;
+  margin: 2rem;
+  color: #ff9248;
+  font-weight: 700;
+}
 .footer-container .social-media-icons {
   display: flex;
   gap: 1.25rem;
@@ -1227,8 +1233,8 @@ body {
   color: white;
 }
 .footer-container .copyright {
-  margin: 2rem;
-  font-size: 18px;
+  margin: 5rem 0 5rem 0;
+  font-size: 16px;
 }
 .footer-container .copyright a {
   color: #213547;
