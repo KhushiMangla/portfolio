@@ -1,0 +1,249 @@
+@use "variables" as *;
+
+.intro {
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+    height: 50%;
+
+
+.intro-left {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .name {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.8;
+        // width:fit-content;
+
+        color: $orange;
+        // animation:typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        // border-right: 2px solid;
+        // white-space: nowrap;
+        // overflow: hidden;
+    }
+
+    .tagline {
+        font-size: 1.3rem;
+        width: 80%;
+        margin-bottom: 1rem;
+        line-height: 1.8;
+    }
+
+    .mywork-btn {
+        position: relative;
+        // width: 20%;
+        // height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1;
+        margin: 1rem 0;
+        background: $light-orange;
+        border-radius: 25px;
+        border: none;
+        padding: 1rem;
+        overflow: hidden;
+
+        a {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            z-index: 99;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $dark-orange;
+            // color: white;
+            border: none;
+            transition: 0.5s;
+            z-index: 3;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+
+}
+.profile{
+        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: profile 2s infinite ease alternate;
+}
+@keyframes profile{
+    to{
+        transform: translateY(20px);
+    }
+}
+}
+
+.custom__scroll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem;
+
+    .work-scroll {
+        width: 3px;
+        padding: 10px;
+        position: relative;
+        height: 20px;
+        border: 2px solid black;
+        border-radius: 25px;
+        opacity: .75;
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       margin: 0 auto;
+    }
+
+    .ball {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 1.5rem;
+        bottom:1rem;
+        border-radius: 50%;
+        background-color: orange;
+        animation-name: scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+        animation-iteration-count: infinite;
+
+    }
+}
+
+.scroll-text {
+    margin: 10px;
+    // margin-bottom: 3rem;
+   
+    text-align: center;
+    width: 100%;
+
+    a {
+        color: $text-color;
+        font-size: 18px;
+
+    }
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+// @keyframes typing {
+//     from { width: 0 }
+//     to { width: 40%}
+//   }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
+
+  .featured-work-title {
+    text-align: center;
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 2rem 0;
+    text-transform: uppercase;
+}
+// Mobile
+
+@media screen and (max-width:$medium) {
+
+    .intro-scroll-container{
+      
+    .intro {
+        display: block;
+        height: auto;
+        
+        .intro-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 100%;
+            
+            .name {
+                text-align: center;
+                // width:fit-content;
+                  
+            }
+
+            .tagline {
+                font-size: 1.125rem;
+                text-align: center;
+                
+            }
+
+            .mywork-btn{
+               
+                margin: 1rem auto;
+                
+            }
+            
+        }
+
+        .profile {
+            margin: 2.5rem;
+        }   
+    }
+   
+    }  
+
+    .featured-work-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:$small) {
+    .intro{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        margin: 5rem auto;
+
+        .intro-left{
+
+            .name{
+                // width: fit-content;
+            }
+        }
+    }
+
+    .featured-work-title {
+        // Further adjustments for smaller screens
+        font-size: 1.2rem;
+    }
+}

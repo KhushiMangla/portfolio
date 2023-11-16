@@ -1,0 +1,106 @@
+@use "variables" as *;
+
+.single-work-container {
+    width: 75%;
+    padding: 1rem;
+    margin: 0 auto;
+    line-height: 1.8em;
+    text-align: center;
+
+    img {
+        margin: 1rem;
+    }
+
+    .single-work-overview {
+        max-width: 50rem;
+        margin: 0 auto;
+        text-align: center;
+        // padding: 1rem 3rem;
+    }
+
+    .site-btn-container {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin: 1rem 0;
+        padding: 1rem 0;
+
+        .site-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+            background: $light-orange;
+            border-radius: 25px;
+            border: none;
+            padding: 1rem;
+            overflow: hidden;
+
+            p {
+                color: white;
+                font-size: 1.2rem;
+                font-weight: 700;
+                z-index: 99;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: $dark-orange;
+                // color: white;
+                border: none;
+                transition: 0.5s;
+                z-index: 3;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+
+    .tools-container {
+        .tools-used-heading {
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin: 2rem 0;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .drop-show {
+        margin: 0 auto;
+        width:75%;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba($light-orange, 0.2);
+
+        .accordian {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $text-color;
+            font-weight: 700;
+            border-bottom: 1px solid $light-orange;
+            margin: 1rem;
+            padding: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:after {
+                content: '\142F';
+                float: right;
+            }
+            
+
+        }
+
+
+    }
+}

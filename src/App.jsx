@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Work from './components/Work';
+import SingleWork from './components/SingleWork';
+import Contact from './components/Contact';
+import About from './components/About';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Cursor from './components/Cursor'; // Import the Cursor component
 
 function App() {
-  const [count, setCount] = useState(0)
+  const restBase = 'http://localhost:8888/portfolio/server/wp-json/wp/v2/';
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <Router>
+      <Header />
+      <Cursor /> {/* Include the Cursor component */}
+      <main id="main">
+        <Routes>
+          <Route path='/' element={<Home restBase={restBase} />} />
+          <Route path='/about' element={<About restBase={restBase} />} />
+          <Route path='/work' element={<Work restBase={restBase} />} />
+          <Route path='/work/:slug' element={<SingleWork restBase={restBase} />} />
+          <Route path='/contact' element={<Contact restBase={restBase} />} />
+        </Routes>
+      </main>
+      {/* <footer>
+        <p className="copyright">
+          Created by <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">Khushi Mangla</a>.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      </footer> */}
+      <Footer restBase={restBase} />
+    </Router>
+  );
 }
 
-export default App
+export default App;
