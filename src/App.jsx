@@ -5,6 +5,7 @@ import SingleWork from './components/SingleWork';
 import Contact from './components/Contact';
 import About from './components/About';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Cursor from './components/Cursor'; // Import the Cursor component
 
 function App() {
@@ -23,11 +24,12 @@ function App() {
           <Route path='/contact' element={<Contact restBase={restBase} />} />
         </Routes>
       </main>
-      <footer>
+      {/* <footer>
         <p className="copyright">
-          Created by <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">Khushi</a>.
+          Created by <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">Khushi Mangla</a>.
         </p>
-      </footer>
+      </footer> */}
+      <Footer restBase={restBase} />
     </Router>
   );
 }
