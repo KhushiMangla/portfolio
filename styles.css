@@ -9,6 +9,7 @@
   top: 0;
   background: pink; /* Add a background color to make the header visible */
   z-index: 100; /* Adjust the z-index to your needs */
+
 }
 
 .site-branding {

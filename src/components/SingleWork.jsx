@@ -6,7 +6,7 @@ import Collapsible from 'react-collapsible';
 
 const SingleWork = ({ restBase, featuredImage }) => {
   const { slug } = useParams();
-  const restPath = restBase + `work?slug=${slug}&acf_format=standard`;
+  const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
 
@@ -61,17 +61,17 @@ const SingleWork = ({ restBase, featuredImage }) => {
               </div>
               {/* Tools Used */}
               <div className="tools-container">
-                  <div className='tools-used-heading'>{restData.acf.tools_used_heading}</div>
-                  {restData.acf.tools_used.map((tool, index) => (
-                    <img
-                      key={index}
-                      src={tool.tools}
-                      alt={`image of tool ${index + 1}`} />
-                    // for SEO purpose: this code will set the alt attribute for each image as "image of tool 1", "image of tool 2"
+                <div className='tools-used-heading'>{restData.acf.tools_used_heading}</div>
+                {restData.acf.tools_used.map((tool, index) => (
+                  <img
+                    key={index}
+                    src={tool.tools}
+                    alt={`image of tool ${index + 1}`} />
+                  // for SEO purpose: this code will set the alt attribute for each image as "image of tool 1", "image of tool 2"
 
 
-                  ))}
-                </div>
+                ))}
+              </div>
             </div>
             {/* <div
               className="entry-content"
@@ -79,19 +79,26 @@ const SingleWork = ({ restBase, featuredImage }) => {
             </div> */}
             <div className="drop-show">
               <Collapsible trigger={<div className="accordian">{restData.acf.learn_heading}</div>}>
-                <p style={{ padding: '1.5rem' }}>{restData.acf.learn_section}</p>
+                <p style={{ padding: '1.5rem' }}>
+                  <div dangerouslySetInnerHTML={{ __html: restData.acf.learn_section }} />
+                </p>
+
               </Collapsible>
 
               <Collapsible trigger={<div className="accordian">{restData.acf.highlights_heading}</div>}>
-                <p style={{ padding: '1.5rem' }}>{restData.acf.highlights_section}</p>
+                <p style={{ padding: '1.5rem' }}>
+                  <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section }} />
+                </p>
               </Collapsible>
 
-              <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}</div>}>
-                <p style={{ padding: '1.5rem' }}>{restData.acf.process_section}</p>
+              <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}+</div>}>
+                <p style={{ padding: '1.5rem' }}>
+                  <div dangerouslySetInnerHTML={{ __html: restData.acf.process_section }} />
+                </p>
               </Collapsible>
             </div>
           </div>
-          {/* social media icons */}
+          {/* social media icons
           <section className="social-media-icons">
             <a href={`mailto:${restData.acf.email}`}>
               <span className="icon-wrapper">
@@ -108,7 +115,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 <FaGithub />
               </span>
             </a>
-          </section>
+          </section> */}
         </>
       ) : (
         <Loading />

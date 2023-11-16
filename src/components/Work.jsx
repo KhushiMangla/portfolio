@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react'
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Footer from './Footer';
+
 
 import Loading from './Loading'
+
 
 
 const Work = ({ restBase, featuredImage }) => {
@@ -32,13 +35,20 @@ const Work = ({ restBase, featuredImage }) => {
                     {restData.map(post =>
                         <article key={post.id} id={`post-${post.id}`}>
 
-                            <div className="projects">
-                                <Link to={`/work/${post.slug}`}><h2>{post.title.rendered}</h2></Link>
-                                <div className="project-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div>
-                                <div className="img-container">
-                                    <img src={post.acf.project_img} alt="project image" />
-                                </div>
+                            <div className="project">
+                                <Link to={`/work/${post.slug}`}>
+                                    <div className="project-work-container">
+                                        <div className="project-title">{post.title.rendered}</div>
+                                        <img src={post.acf.project_img} alt="project image" />
+                                    </div>
+                                    <div class="project-text">{post.acf.card_text}</div>
+                                    <button className="read-more-btn" aria-label={`Read more about ${post.title.rendered}`}>
+                                        <p>{post.acf.read_more}</p>
+                                    </button>
+                                </Link>
+
                             </div>
+
                         </article>
                     )}
 

@@ -25,45 +25,46 @@ const Contact = ({ restBase }) => {
     return (
         <div className='contact-wrapper'>
             {isLoaded ? (
-                <article id={`post-${restData.id}`}>
-                    <h1>{restData.title.rendered}</h1>
-                    <div>
-                        <section>
-                            <div dangerouslySetInnerHTML={{ __html: restData.content.rendered }} />
-                        </section>
+                <div>
+                    {/* <section>
+                        <div className="contact-heading">{restData.acf.contact_heading}</div>
+                        <div className="contact-section">{restData.acf.contact_section}</div>
+                    </section> */}
+                    {/* social media icons  */}
+                    <div className="contact-social-media-wrapper">
                         <section className="social-media-icons">
-                            <a href={`mailto:${restData.acf.email}`}>
+                            {/* <a href={`mailto:${restData.acf.email}`}>
                                 <span className="icon-wrapper">
-                                <img src="../src/images/email.png" alt="insta"
-                                style={{ height: '50px', width: "50px" }}/>
-                                   
-                                </span>
-                            </a>
-                            <a href={restData.acf.linkedin}>
-                                <span className="icon-wrapper">
-                                <img src="../src/images/linkedin.png" alt="insta"
-                                style={{ height: '50px', width: "50px" }}/>
-                              
-                                </span>
-                            </a>
-                            <a href={restData.acf.instagram}>
-                                <span className="icon-wrapper">
-                                <img src="../src/images/insta.png" alt="insta"
-                                style={{ height: '50px', width: "50px" }}/>
-                           
-                                </span>
-                            </a>
-                            <a href={restData.acf.instagram}>
-                                <span className="icon-wrapper">
-                                <img src="../src/images/github.png" alt="insta"
-                                style={{ height: '50px', width: "50px" }}/>
-                                  
-                                </span>
-                            </a>
-                        </section>
+                                    <img src="../src/images/email.png" alt="insta"
+                                        style={{ height: '50px', width: "50px" }} />
 
+                                </span>
+                            </a> */}
+                            {/* <a href={restData.acf.linkedin}>
+                                <span className="icon-wrapper">
+                                    <img src="../src/images/linkedin.png" alt="insta"
+                                        style={{ height: '50px', width: "50px" }} />
+
+                                </span>
+                            </a> */}
+                            {/* <a href={restData.acf.instagram}>
+                                <span className="icon-wrapper">
+                                    <img src="../src/images/insta.png" alt="insta"
+                                        style={{ height: '50px', width: "50px" }} />
+
+                                </span>
+                            </a> */}
+                            {/* <a href={restData.acf.instagram}>
+                                <span className="icon-wrapper">
+                                    <img src="../src/images/github.png" alt="insta"
+                                        style={{ height: '50px', width: "50px" }} />
+
+                                </span>
+                            </a> */}
+                        </section>
                     </div>
-                </article>
+
+                </div>
             ) : (
                 <Loading />
             )}
