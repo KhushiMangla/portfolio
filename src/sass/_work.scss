@@ -8,13 +8,14 @@
 .project-container {
     margin: 0 3rem;
     display: grid;
+    // change this to flex in order to wrap the projects.
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 2rem 0;
     justify-content: center;
 
     .project {
-        
+
         padding: 20px;
         background: $white;
         transition: transform 0.2s;

@@ -21,7 +21,7 @@ function App() {
           <Route path='/about' element={<About restBase={restBase} />} />
           <Route path='/work' element={<Work restBase={restBase} />} />
           <Route path='/work/:slug' element={<SingleWork restBase={restBase} />} />
-          <Route path='/contact' element={<Contact restBase={restBase} />} />
+          {/* <Route path='/contact' element={<Contact restBase={restBase} />} /> */}
         </Routes>
       </main>
       {/* <footer>

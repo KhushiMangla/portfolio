@@ -1,27 +1,33 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
+import Splash from './Splash'; // Import the Splash component
 
 const About = ({ restBase }) => {
-    const restPath = restBase + 'pages/43'
-    const [restData, setData] = useState([])
+    const restPath = restBase + 'pages/43';
+    const [restData, setData] = useState([]);
+    const [showSplash, setShowSplash] = useState(true); // Add state for splash screen
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(restPath)
+            const response = await fetch(restPath);
             if (response.ok) {
-                const data = await response.json()
-                setData(data)
+                const data = await response.json();
+                setData(data);
+                setTimeout(() => {
+                    // setLoadStatus(true);
+                    setShowSplash(false);
+                }, 1000); // Hide the splash screen when data is loaded
             } else {
                 // Handle error if needed
             }
-        }
-        fetchData()
-    }, [restPath])
+        };
+        fetchData();
+    }, [restPath]);
 
-    if (!restData.title) {
-        return null; // Render nothing until data is loaded
+    if (showSplash || !restData.title) {
+        // Render the splash screen or nothing until data is loaded
+        return <Splash />;
     }
 
     return (
