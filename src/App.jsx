@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import Cursor from './components/Cursor'; // Import the Cursor component
 
 function App() {
-  const restBase = 'http://localhost:8888/portfolio/server/wp-json/wp/v2/';
+  const restBase = 'https://khushimangla.com/portfolio/wp-json/wp/v2/';
 
   return (
     <Router>

@@ -10,7 +10,13 @@ const SingleWork = ({ restBase, featuredImage }) => {
   const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
-  const [showSplash, setShowSplash] = useState(true); // Add state for splash screen
+  const [showSplash, setShowSplash] = useState(true);
+  const [isCollapsed, setCollapsed] = useState(true);
+  const toggleCollapsible = () => {
+    setCollapsed(!isCollapsed);
+  };
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -86,20 +92,31 @@ const SingleWork = ({ restBase, featuredImage }) => {
               dangerouslySetInnerHTML={{ __html: restData.content.rendered }}>
             </div> */}
             <div className="drop-show">
-              <Collapsible trigger={<div className="accordian">{restData.acf.learn_heading}</div>}>
+              <Collapsible trigger={<div className="accordian" onClick={toggleCollapsible}>{restData.acf.learn_heading}
+                <div className="test"> {isCollapsed ? '+' : '-'}</div>
+              </div>} open={!isCollapsed}>
                 <p style={{ padding: '1.5rem' }}>
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.learn_section }} />
                 </p>
 
               </Collapsible>
 
-              <Collapsible trigger={<div className="accordian">{restData.acf.highlights_heading}</div>}>
+              <Collapsible trigger={<div className="accordian" onClick={toggleCollapsible}>{restData.acf.highlights_heading}
+                <div className="test"> {isCollapsed ? '+' : '-'}</div>
+              </div>}
+                open={!isCollapsed}>
                 <p style={{ padding: '1.5rem' }}>
+
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section }} />
                 </p>
               </Collapsible>
 
-              <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}+</div>}>
+              <Collapsible trigger={
+                <div className="accordian" onClick={toggleCollapsible}>
+                  {restData.acf.process_heading}
+                  <div className="test"> {isCollapsed ? '+' : '-'}</div>
+                </div>
+              } open={!isCollapsed}>
                 <p style={{ padding: '1.5rem' }}>
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.process_section }} />
                 </p>

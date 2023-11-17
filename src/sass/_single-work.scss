@@ -76,7 +76,7 @@
 
     .drop-show {
         margin: 0 auto;
-        width:75%;
+        width: 75%;
         padding: 1rem;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba($light-orange, 0.2);
@@ -93,11 +93,12 @@
             cursor: pointer;
             transition: 0.3s;
 
-            &:after {
-                content: '\142F';
+            .test {
                 float: right;
+                font-weight: 400;
+                font-size: 25px;
             }
-            
+
 
         }
 
