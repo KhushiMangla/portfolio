@@ -27,12 +27,13 @@ const Featured = ({ restBase }) => {
         <>
             {isLoaded ?
                 <div className="featured-work-container">
-                    
+
                     <div className="grid">
                         {restData.map(post =>
                             <article key={post.id} className="grid-item">
-                                <div className="card">
-                                    <Link to={`/work/${post.slug}`}>
+                                <Link to={`/work/${post.slug}`}>
+                                    <div className="card">
+
                                         <div className="featured-work-content">
                                             <div className="card-title">{post.title.rendered}</div>
                                             <div className="img-container"> <img src={post.acf.project_img} alt="project image" /></div>
@@ -40,19 +41,16 @@ const Featured = ({ restBase }) => {
                                             {/* <div className="project-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div> */}
                                         </div>
                                         <button className="read-more-btn" aria-label={`Read more about ${post.title.rendered}`}>
-                                           <p>{post.acf.read_more}</p> 
+                                            <p>{post.acf.read_more}</p>
                                         </button>
+                                    </div>
 
-                                    </Link>
-
-
-
-                                </div>
+                                </Link>
                             </article>
                         )}
 
                     </div>
-                </div>
+                </div >
 
                 :
                 <Loading />

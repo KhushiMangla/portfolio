@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Loading from './Loading';
+import Splash from './Splash'; // Import the Splash component
 import Collapsible from 'react-collapsible';
 
 const SingleWork = ({ restBase, featuredImage }) => {
@@ -9,6 +10,13 @@ const SingleWork = ({ restBase, featuredImage }) => {
   const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
+  const [isCollapsed, setCollapsed] = useState(true);
+  const toggleCollapsible = () => {
+    setCollapsed(!isCollapsed);
+  };
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,6 +25,10 @@ const SingleWork = ({ restBase, featuredImage }) => {
         const data = await response.json();
         setData(data[0]);
         setLoadStatus(true);
+        setTimeout(() => {
+          // setLoadStatus(true);
+          setShowSplash(false);
+        }, 1000); // Hide the splash screen when data is loaded
       } else {
         setLoadStatus(false);
       }
@@ -26,7 +38,9 @@ const SingleWork = ({ restBase, featuredImage }) => {
 
   return (
     <div>
-      {isLoaded ? (
+      {showSplash ? (
+        <Splash />
+      ) : isLoaded ? (
         <>
           <div className="single-work-container">
             <div className='image-title-overview-container'>
@@ -78,20 +92,31 @@ const SingleWork = ({ restBase, featuredImage }) => {
               dangerouslySetInnerHTML={{ __html: restData.content.rendered }}>
             </div> */}
             <div className="drop-show">
-              <Collapsible trigger={<div className="accordian">{restData.acf.learn_heading}</div>}>
+              <Collapsible trigger={<div className="accordian" onClick={toggleCollapsible}>{restData.acf.learn_heading}
+                <div className="test"> {isCollapsed ? '+' : '-'}</div>
+              </div>} open={!isCollapsed}>
                 <p style={{ padding: '1.5rem' }}>
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.learn_section }} />
                 </p>
 
               </Collapsible>
 
-              <Collapsible trigger={<div className="accordian">{restData.acf.highlights_heading}</div>}>
+              <Collapsible trigger={<div className="accordian" onClick={toggleCollapsible}>{restData.acf.highlights_heading}
+                <div className="test"> {isCollapsed ? '+' : '-'}</div>
+              </div>}
+                open={!isCollapsed}>
                 <p style={{ padding: '1.5rem' }}>
+
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section }} />
                 </p>
               </Collapsible>
 
-              <Collapsible trigger={<div className="accordian">{restData.acf.process_heading}+</div>}>
+              <Collapsible trigger={
+                <div className="accordian" onClick={toggleCollapsible}>
+                  {restData.acf.process_heading}
+                  <div className="test"> {isCollapsed ? '+' : '-'}</div>
+                </div>
+              } open={!isCollapsed}>
                 <p style={{ padding: '1.5rem' }}>
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.process_section }} />
                 </p>

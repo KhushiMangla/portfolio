@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 import Cursor from './components/Cursor'; // Import the Cursor component
 
 function App() {
-  const restBase = 'http://localhost:8888/portfolio/server/wp-json/wp/v2/';
+  const restBase = 'https://khushimangla.com/portfolio/wp-json/wp/v2/';
 
   return (
     <Router>
@@ -21,7 +21,7 @@ function App() {
           <Route path='/about' element={<About restBase={restBase} />} />
           <Route path='/work' element={<Work restBase={restBase} />} />
           <Route path='/work/:slug' element={<SingleWork restBase={restBase} />} />
-          <Route path='/contact' element={<Contact restBase={restBase} />} />
+          {/* <Route path='/contact' element={<Contact restBase={restBase} />} /> */}
         </Routes>
       </main>
       {/* <footer>

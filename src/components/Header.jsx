@@ -28,7 +28,7 @@ const Header = () => {
             <span className="circle"></span>
           </NavLink></li>
           <li>
-            <ScrollLink
+            {/* <ScrollLink
               to="contact" //Target ID
               spy={true}
               smooth={true}
@@ -40,7 +40,10 @@ const Header = () => {
               </span>
               <span className="text" style={{ cursor: 'pointer' }}>Contact</span>
               <span className="circle"></span>
-            </ScrollLink>
+            </ScrollLink> */}
+            {/* <a href='' */}
+            {/* <Link to="contact" smooth={true} duration={500}>Contact </Link> */}
+            <a href="#contact" className="">Contact </a>
           </li>
           <div className="indicator"></div>
         </ul>
