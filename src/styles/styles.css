@@ -1186,10 +1186,10 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.single-work-container .drop-show .accordian .test {
+.single-work-container .drop-show .accordian .sign {
   float: right;
-  font-weight: 400;
-  font-size: 25px;
+  font-size: 1.5em;
+  margin-left: 0.5em;
 }
 
 /* Add this to your existing SCSS file */
