@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
+import WorlCarousel from './WorlCarousel';
 import Loading from './Loading';
 import Collapsible from 'react-collapsible';
+import Splash from './Splash';
 
-const SingleWork = ({ restBase, featuredImage }) => {
+const SingleWork = ({ restBase }) => {
   const { slug } = useParams();
   const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
   const [openSections, setOpenSections] = useState([]);
 
   useEffect(() => {
@@ -18,6 +20,10 @@ const SingleWork = ({ restBase, featuredImage }) => {
         const data = await response.json();
         setData(data[0]);
         setLoadStatus(true);
+        setTimeout(() => {
+          // setLoadStatus(true);
+          setShowSplash(false);
+        }, 1000);
       } else {
         setLoadStatus(false);
       }
@@ -27,7 +33,9 @@ const SingleWork = ({ restBase, featuredImage }) => {
 
   return (
     <div>
-      {isLoaded ? (
+      {showSplash ? (
+        <Splash />
+      ) : isLoaded ? (
         <>
           <div className="single-work-container">
             <div className='image-title-overview-container'>
@@ -100,6 +108,9 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 </p>
               </Collapsible>
             </div>
+            <section className ="carousel-container">
+              <WorlCarousel restBase={restBase} />
+            </section>
           </div>
         </>
       ) : (
