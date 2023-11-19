@@ -75,9 +75,6 @@ const About = ({ restBase }) => {
                         ))}
                     </TabPanel>
                 </Tabs>
-
-                {/* social media icons */}
-                {/* <Footer restData={restData} /> */}
             </div>
         </div>
     );

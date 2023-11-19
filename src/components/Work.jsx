@@ -7,7 +7,7 @@ const Work = ({ restBase, featuredImage }) => {
     const restPath = restBase + 'work?_embed&acf_format=standard';
     const [restData, setData] = useState([]);
     const [isLoaded, setLoadStatus] = useState(false);
-    const [showSplash, setShowSplash] = useState(true); // Add state for splash screen
+    const [showSplash, setShowSplash] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -32,27 +32,30 @@ const Work = ({ restBase, featuredImage }) => {
             {showSplash ? (
                 <Splash />
             ) : isLoaded ? (
-                <div className="project-container">
-                    {restData.map((post) => (
-                        <article key={post.id} id={`post-${post.id}`}>
-                            <div className="project">
-                                <Link to={`/work/${post.slug}`}>
-                                    <div className="project-work-container">
-                                        <div className="project-title">{post.title.rendered}</div>
-                                        <img src={post.acf.project_img} alt="project image" />
-                                    </div>
-                                    <div className="project-text">{post.acf.card_text}</div>
-                                    <button
-                                        className="read-more-btn"
-                                        aria-label={`Read more about ${post.title.rendered}`}
-                                    >
-                                        <p>{post.acf.read_more}</p>
-                                    </button>
-                                </Link>
-                            </div>
-                        </article>
-                    ))}
-                </div>
+                <>
+                    <div>All Projects</div>
+                    <div className="project-container">
+                        {restData.map((post) => (
+                            <article key={post.id} id={`post-${post.id}`}>
+                                <div className="project">
+                                    <Link to={`/work/${post.slug}`}>
+                                        <div className="project-work-container">
+                                            <div className="project-title">{post.title.rendered}</div>
+                                            <img src={post.acf.project_img} alt="project image" />
+                                        </div>
+                                        <div className="project-text">{post.acf.card_text}</div>
+                                        <button
+                                            className="read-more-btn"
+                                            aria-label={`Read more about ${post.title.rendered}`}
+                                        >
+                                            <p>{post.acf.read_more}</p>
+                                        </button>
+                                    </Link>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </>
             ) : (
                 <Loading />
             )}

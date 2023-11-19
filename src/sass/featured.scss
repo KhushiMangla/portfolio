@@ -120,6 +120,10 @@
             font-size: 1.2rem;
         }
 
+        .card-text {
+            font-size: 16px;
+        }
+
         .featured-work-content {
             display: grid;
             grid-template-columns: 1fr;
@@ -128,6 +132,7 @@
 
         .read-more-btn {
             align-items: center;
+            // font-size: 16px;
         }
 
         .card {

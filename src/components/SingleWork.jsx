@@ -31,9 +31,9 @@ const SingleWork = ({ restBase, featuredImage }) => {
         <>
           <div className="single-work-container">
             <div className='image-title-overview-container'>
+              <h1 className="single-work-title">{restData.title.rendered}</h1>
               <img src={restData.acf.project_img} alt="project image" />
               <div className="title-overview-container">
-                <h1 className="single-work-title">{restData.title.rendered}</h1>
                 <div className="single-work-overview">{restData.acf.project_overview}</div>
               </div>
               <div className="site-btn-container">
@@ -95,7 +95,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
               </div>}
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 2])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 2))}>
-                <p style={{ padding: '1.5rem',textAlign: 'left' }}>
+                <p style={{ padding: '1.5rem', textAlign: 'left' }}>
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.process_section }} />
                 </p>
               </Collapsible>
