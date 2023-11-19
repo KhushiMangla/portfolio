@@ -13,7 +13,7 @@
 
     .single-work-overview {
         max-width: 50rem;
-        margin: 0 auto;
+        margin: 2rem auto;
         text-align: center;
         // padding: 1rem 3rem;
     }
@@ -65,6 +65,7 @@
     }
 
     .tools-container {
+        margin: 2rem;
         .tools-used-heading {
             font-weight: 600;
             font-size: 1.3rem;
@@ -93,10 +94,11 @@
             cursor: pointer;
             transition: 0.3s;
 
-            .test {
+            .sign {
                 float: right;
-                font-weight: 400;
-                font-size: 25px;
+                font-size: 1.5em;
+                margin-left: 0.5em;
+
             }
 
 

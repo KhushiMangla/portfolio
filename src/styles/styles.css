@@ -769,6 +769,9 @@ body {
   .featured-work-container .card-title {
     font-size: 1.2rem;
   }
+  .featured-work-container .card-text {
+    font-size: 16px;
+  }
   .featured-work-container .featured-work-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -1112,7 +1115,7 @@ body {
 }
 .single-work-container .single-work-overview {
   max-width: 50rem;
-  margin: 0 auto;
+  margin: 2rem auto;
   text-align: center;
 }
 .single-work-container .site-btn-container {
@@ -1155,6 +1158,9 @@ body {
 .single-work-container .site-btn-container .site-btn:hover::before {
   width: 100%;
 }
+.single-work-container .tools-container {
+  margin: 2rem;
+}
 .single-work-container .tools-container .tools-used-heading {
   font-weight: 600;
   font-size: 1.3rem;
@@ -1181,10 +1187,10 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.single-work-container .drop-show .accordian .test {
+.single-work-container .drop-show .accordian .sign {
   float: right;
-  font-weight: 400;
-  font-size: 25px;
+  font-size: 1.5em;
+  margin-left: 0.5em;
 }
 
 /* Add this to your existing SCSS file */
