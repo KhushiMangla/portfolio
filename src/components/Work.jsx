@@ -41,7 +41,7 @@ const Work = ({ restBase, featuredImage }) => {
                                     <Link to={`/work/${post.slug}`}>
                                         <div className="project-work-container">
                                             <div className="project-title">{post.title.rendered}</div>
-                                            <img src={post.acf.project_img} alt="project image" />
+                                            <img className="project-img"src={post.acf.project_img} alt="project image" />
                                         </div>
                                         <div className="project-text">{post.acf.card_text}</div>
                                         <button

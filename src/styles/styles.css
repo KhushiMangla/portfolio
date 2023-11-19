@@ -452,7 +452,7 @@ body {
   flex: 1;
 }
 .site-header .site-navigation ul li a {
-  color: black;
+  color: #213547;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid transparent;
   margin: 0 1rem;
@@ -635,7 +635,7 @@ body {
 }
 .featured-work-title {
   text-align: center;
-  color: black;
+  color: #213547;
   font-size: 1.8rem;
   font-weight: 600;
   padding: 2rem 0;
@@ -704,9 +704,16 @@ body {
 .card .card-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: black;
+  color: #213547;
   padding: 2rem 0;
   text-transform: uppercase;
+}
+.card .img-container {
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 100%;
 }
 .card .card-text {
   color: #213547;
@@ -1034,6 +1041,13 @@ body {
   padding: 2rem 0;
   text-transform: uppercase;
 }
+.project-container .project .project-img {
+  width: 400px;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 100%;
+}
 .project-container .project .project-text {
   color: #213547;
   font-size: 18px;
@@ -1110,12 +1124,21 @@ body {
   line-height: 1.8em;
   text-align: center;
 }
-.single-work-container img {
+.single-work-container .single-work-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.single-work-container .single-work-img {
   margin: 1rem;
+  width: 600px;
+  height: auto;
+  overflow: hidden;
+  margin: 1rem auto;
+  max-width: 100%;
 }
 .single-work-container .single-work-overview {
   max-width: 50rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
   text-align: center;
 }
 .single-work-container .site-btn-container {
@@ -1179,7 +1202,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #213547;
   font-weight: 700;
   border-bottom: 1px solid #ffb38a;
   margin: 1rem;
@@ -1187,10 +1209,14 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+.single-work-container .drop-show .accordian .accordian_heading {
+  color: #213547;
+}
 .single-work-container .drop-show .accordian .sign {
   float: right;
   font-size: 1.5em;
   margin-left: 0.5em;
+  color: #213547;
 }
 
 /* Add this to your existing SCSS file */
