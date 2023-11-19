@@ -6,7 +6,7 @@ import Collapsible from 'react-collapsible';
 
 const SingleWork = ({ restBase, featuredImage }) => {
   const { slug } = useParams();
-  const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed`;
+  const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed?1=2`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
   const [openSections, setOpenSections] = useState([]);
@@ -73,7 +73,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
               </div>}
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 0])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 0))}>
-                <p style={{ padding: '1.5rem' }}>
+                <p style={{ padding: '1.5rem', textAlign: 'left' }}>
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.learn_section }} />
                 </p>
               </Collapsible>
@@ -84,7 +84,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
               </div>}
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 1])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 1))}>
-                <p style={{ padding: '1.5rem' }}>
+                <p style={{ padding: '1.5rem', textAlign: 'left' }}>
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section }} />
                 </p>
               </Collapsible>
@@ -95,7 +95,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
               </div>}
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 2])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 2))}>
-                <p style={{ padding: '1.5rem' }}>
+                <p style={{ padding: '1.5rem',textAlign: 'left' }}>
                   <div dangerouslySetInnerHTML={{ __html: restData.acf.process_section }} />
                 </p>
               </Collapsible>
