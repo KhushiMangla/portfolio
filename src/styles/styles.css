@@ -457,11 +457,6 @@ body {
   border-bottom: 2px solid transparent;
   margin: 0 1rem;
 }
-.site-header .site-navigation ul li a:hover {
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid orange;
-  transition: border-bottom 0.3s;
-}
 .site-header .site-navigation ul li .icon {
   display: none;
 }
