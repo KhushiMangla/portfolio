@@ -1,9 +1,5 @@
 @use "variables" as *;
 
-// .project-container {
-//     padding: 0 9%;
-
-// }
 
 .project-container {
     margin: 0 3rem;
@@ -28,7 +24,13 @@
             padding: 2rem 0;
             text-transform: uppercase;
         }
-
+        .project-img{
+            width: 400px;
+            height: auto;
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 100%;
+        }
         .project-text {
             color: $text-color;
             font-size: 18px;

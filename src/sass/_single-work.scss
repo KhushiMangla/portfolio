@@ -7,13 +7,24 @@
     line-height: 1.8em;
     text-align: center;
 
-    img {
+    .single-work-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+
+    }
+
+    .single-work-img {
         margin: 1rem;
+        width: 600px;
+        height: auto;
+        overflow: hidden;
+        margin: 1rem auto;
+        max-width: 100%;
     }
 
     .single-work-overview {
         max-width: 50rem;
-        margin: 2rem auto;
+        margin: 1rem auto;
         text-align: center;
         // padding: 1rem 3rem;
     }
@@ -66,6 +77,7 @@
 
     .tools-container {
         margin: 2rem;
+
         .tools-used-heading {
             font-weight: 600;
             font-size: 1.3rem;
@@ -86,7 +98,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: $text-color;
+            // color: $text-color;
             font-weight: 700;
             border-bottom: 1px solid $light-orange;
             margin: 1rem;
@@ -94,10 +106,15 @@
             cursor: pointer;
             transition: 0.3s;
 
+            .accordian_heading {
+                color: $text-color;
+            }
+
             .sign {
                 float: right;
                 font-size: 1.5em;
                 margin-left: 0.5em;
+                color: $text-color;
 
             }
 

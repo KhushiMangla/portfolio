@@ -31,8 +31,8 @@ const SingleWork = ({ restBase, featuredImage }) => {
         <>
           <div className="single-work-container">
             <div className='image-title-overview-container'>
-              <h1 className="single-work-title">{restData.title.rendered}</h1>
-              <img src={restData.acf.project_img} alt="project image" />
+              <div className="single-work-title">{restData.title.rendered}</div>
+              <img className="single-work-img" src={restData.acf.project_img} alt="project image" />
               <div className="title-overview-container">
                 <div className="single-work-overview">{restData.acf.project_overview}</div>
               </div>
@@ -67,10 +67,11 @@ const SingleWork = ({ restBase, featuredImage }) => {
               </div>
             </div>
             <div className="drop-show">
-              <Collapsible trigger={<div className="accordian">
-                {restData.acf.learn_heading}
-                <div className="sign">{openSections.includes(0) ? '-' : '+'}</div>
-              </div>}
+              <Collapsible trigger=
+                {<div className="accordian">
+                  <div className='accordian_heading'>{restData.acf.learn_heading}</div>
+                  <div className="sign">{openSections.includes(0) ? '-' : '+'}</div>
+                </div>}
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 0])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 0))}>
                 <p style={{ padding: '1.5rem', textAlign: 'left' }}>
@@ -78,10 +79,11 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 </p>
               </Collapsible>
 
-              <Collapsible trigger={<div className="accordian">
-                {restData.acf.highlights_heading}
-                <div className="sign">{openSections.includes(1) ? '-' : '+'}</div>
-              </div>}
+              <Collapsible trigger=
+                {<div className="accordian">
+                  <div accordian_heading>{restData.acf.highlights_heading}</div>
+                  <div className="sign">{openSections.includes(1) ? '-' : '+'}</div>
+                </div>}
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 1])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 1))}>
                 <p style={{ padding: '1.5rem', textAlign: 'left' }}>
@@ -89,10 +91,11 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 </p>
               </Collapsible>
 
-              <Collapsible trigger={<div className="accordian">
-                {restData.acf.process_heading}
-                <div className="sign">{openSections.includes(2) ? '-' : '+'}</div>
-              </div>}
+              <Collapsible trigger=
+                {<div className="accordian">
+                  <div className='accordian_heading'>{restData.acf.process_heading}</div>
+                  <div className="sign">{openSections.includes(2) ? '-' : '+'}</div>
+                </div>}
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 2])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 2))}>
                 <p style={{ padding: '1.5rem', textAlign: 'left' }}>

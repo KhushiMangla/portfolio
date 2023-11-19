@@ -36,7 +36,7 @@ const Featured = ({ restBase }) => {
 
                                         <div className="featured-work-content">
                                             <div className="card-title">{post.title.rendered}</div>
-                                            <div className="img-container"> <img src={post.acf.project_img} alt="project image" /></div>
+                                            <div> <img src={post.acf.project_img} alt="project image" className="img-container" /></div>
                                             <div class="card-text">{post.acf.card_text}</div>
                                             {/* <div className="project-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div> */}
                                         </div>

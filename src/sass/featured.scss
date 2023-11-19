@@ -25,9 +25,22 @@
     .card-title {
         font-size: 1.3rem;
         font-weight: 600;
-        color: $black;
+        color: $text-color;
         padding: 2rem 0;
         text-transform: uppercase;
+    }
+
+    .img-container {
+        width:400px;
+        height: auto;
+        overflow: hidden;
+        margin: 0 auto;
+        max-width: 100%;
+        // width: 400px;
+        // overflow: hidden;
+        // height: auto;
+        // max-width: 80%;
+        // margin: 0 auto;
     }
 
     .card-text {
