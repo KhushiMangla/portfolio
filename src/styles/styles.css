@@ -373,6 +373,19 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  #cool-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0;
+  }
+  #cool-loader .react-spinner-loader-svg {
+    margin-top: 0;
+    /* Adjust margin-top as needed */
+  }
+}
 /* Cursor.css */
 .cursor-one,
 .cursor-two,
@@ -1037,7 +1050,7 @@ body {
 .project-container .project .project-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: black;
+  color: #213547;
   padding: 2rem 0;
   text-transform: uppercase;
 }
@@ -1190,6 +1203,9 @@ body {
   margin: 2rem 0;
   text-align: center;
   width: 100%;
+}
+.single-work-container .tools-container img {
+  margin: 1rem;
 }
 .single-work-container .drop-show {
   margin: 0 auto;
