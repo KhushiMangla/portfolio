@@ -94,9 +94,10 @@ const Home = ({ restBase }) => {
                             </p>
                         </div>
                     </div>
-                    <div className="featured-work-title"> Featured Work </div>
+
 
                     <section id="work">
+                        <div className="featured-work-title"> Featured Work </div>
                         <Featured restBase={restBase} />
                     </section>
 

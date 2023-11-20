@@ -24,11 +24,6 @@ function App() {
           {/* <Route path='/contact' element={<Contact restBase={restBase} />} /> */}
         </Routes>
       </main>
-      {/* <footer>
-        <p className="copyright">
-          Created by <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">Khushi Mangla</a>.
-        </p>
-      </footer> */}
       <Footer restBase={restBase} />
     </Router>
   );
