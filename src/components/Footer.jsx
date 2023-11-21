@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 
+
 const Footer = ({ restBase }) => {
   const restPath = restBase + 'pages/14?_embed'
   const [restData, setData] = useState([])

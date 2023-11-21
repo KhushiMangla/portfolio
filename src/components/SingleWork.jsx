@@ -4,6 +4,8 @@ import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Loading from './Loading';
 import Splash from './Splash';
 import Collapsible from 'react-collapsible';
+import aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 const SingleWork = ({ restBase, featuredImage }) => {
@@ -33,13 +35,22 @@ const SingleWork = ({ restBase, featuredImage }) => {
     fetchData();
   }, [restPath]);
 
+  useEffect(() => {
+    aos.init();
+  })
+
   return (
     <div>
       {showSplash ? (
         <Splash />
       ) : isLoaded ? (
         <>
-          <div className="single-work-container">
+          <div className="single-work-container"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1200"
+          >
             <div className='image-title-overview-container'>
               <div className="single-work-title">{restData.title.rendered}</div>
               <img className="single-work-img" src={restData.acf.project_img} alt="project image" />
@@ -66,7 +77,8 @@ const SingleWork = ({ restBase, featuredImage }) => {
                   </a>
                 ))}
               </div>
-              <div className="tools-container">
+              <div className="tools-container"
+                data-aos="fade-up">
                 <div className='tools-used-heading'>{restData.acf.tools_used_heading}</div>
                 {restData.acf.tools_used.map((tool, index) => (
                   <img
@@ -76,7 +88,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 ))}
               </div>
             </div>
-            <div className="drop-show">
+            <div className="drop-show" data-aos="fade-up">
               <Collapsible trigger=
                 {<div className="accordian">
                   <div className='accordian_heading'>{restData.acf.learn_heading}</div>

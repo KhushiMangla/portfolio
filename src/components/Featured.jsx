@@ -25,6 +25,7 @@ const Featured = ({ restBase }) => {
         }
         fetchData()
     }, [restPath])
+
     useEffect(() => {
         aos.init();
     })
@@ -32,8 +33,12 @@ const Featured = ({ restBase }) => {
     return (
         <>
             {isLoaded ?
-                <div className="featured-work-container" 
-                data-aos="fade-up">
+                <div className="featured-work-container"
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1200"
+                >
 
                     <div className="grid">
                         {restData.map(post =>

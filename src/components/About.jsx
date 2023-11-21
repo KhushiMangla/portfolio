@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Splash from './Splash'; // Import the Splash component
+import aos from 'aos';
+import 'aos/dist/aos.css';
 
 const About = ({ restBase }) => {
     const restPath = restBase + 'pages/43';
@@ -25,13 +27,22 @@ const About = ({ restBase }) => {
         fetchData();
     }, [restPath]);
 
+    useEffect(() => {
+        aos.init();
+    })
+
     if (showSplash || !restData.title) {
         // Render the splash screen or nothing until data is loaded
         return <Splash />;
     }
 
     return (
-        <div className="about-container">
+        <div className="about-container"
+            data-aos="fade-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1200"
+            data-aos-easing="ease-in-out">
             <div className="about-wrapper">
                 <h1>{restData.title.rendered}</h1>
                 <div className="about-content">
@@ -50,6 +61,7 @@ const About = ({ restBase }) => {
                 </div>
 
                 {/* toolkit */}
+
                 <div className='toolkit_heading'>{restData.acf.toolkit_heading}</div>
                 <Tabs>
                     <TabList>

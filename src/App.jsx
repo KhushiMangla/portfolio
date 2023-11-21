@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor'; // Import the Cursor component
 
+
 function App() {
   const restBase = 'https://khushimangla.com/portfolio/wp-json/wp/v2/';
 
