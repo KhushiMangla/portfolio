@@ -7,6 +7,9 @@ import Collapsible from 'react-collapsible';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 
 const SingleWork = ({ restBase, featuredImage }) => {
   const { slug } = useParams();
@@ -15,6 +18,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
   const [isLoaded, setLoadStatus] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
   const [openSections, setOpenSections] = useState([]);
+  // const codeString = '(num) => num + 1';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,12 +28,10 @@ const SingleWork = ({ restBase, featuredImage }) => {
         setData(data[0]);
         setLoadStatus(true);
         setTimeout(() => {
-          // setLoadStatus(true);
           setShowSplash(false);
         }, 1000);
       } else {
         setLoadStatus(false);
-
       }
     };
     fetchData();
@@ -37,7 +39,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
 
   useEffect(() => {
     aos.init();
-  })
+  }, []);
 
   return (
     <div>
@@ -109,7 +111,10 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 1])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 1))}>
                 <p style={{ padding: '1.5rem', textAlign: 'left' }}>
-                  <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section }} />
+                  <SyntaxHighlighter language="javascript" style={okaidia}>
+                    {restData.acf.highlights_section}
+                  </SyntaxHighlighter>
+
                 </p>
               </Collapsible>
 
