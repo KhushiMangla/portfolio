@@ -1,6 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 import Loading from './Loading'
 
@@ -23,10 +26,19 @@ const Featured = ({ restBase }) => {
         fetchData()
     }, [restPath])
 
+    useEffect(() => {
+        aos.init();
+    })
+
     return (
         <>
             {isLoaded ?
-                <div className="featured-work-container">
+                <div className="featured-work-container"
+                    data-aos="fade-up"
+                    data-aos-offset="200"
+                    data-aos-delay="50"
+                    data-aos-duration="1200"
+                >
 
                     <div className="grid">
                         {restData.map(post =>

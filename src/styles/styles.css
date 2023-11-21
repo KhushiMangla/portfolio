@@ -373,6 +373,19 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  #cool-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0;
+  }
+  #cool-loader .react-spinner-loader-svg {
+    margin-top: 0;
+    /* Adjust margin-top as needed */
+  }
+}
 /* Cursor.css */
 .cursor-one,
 .cursor-two,
@@ -495,6 +508,10 @@ body {
     text-align: center;
     transition: color 0.3s;
   }
+}
+
+.intro-scroll-container {
+  height: 80vh;
 }
 
 .intro {
@@ -643,6 +660,9 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  .intro-scroll-container {
+    height: auto;
+  }
   .intro-scroll-container .intro {
     display: block;
     height: auto;
@@ -673,13 +693,16 @@ body {
   }
 }
 @media screen and (max-width: 500px) {
-  .intro {
+  .intro-scroll-container {
+    height: auto;
+  }
+  .intro-scroll-container .intro {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin: 5rem auto;
   }
-  .featured-work-title {
+  .intro-scroll-container .featured-work-title {
     font-size: 1.2rem;
   }
 }
@@ -765,9 +788,6 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .featured-work-container {
-    margin-top: 11rem;
-  }
   .card {
     padding: 10px;
   }
@@ -1037,7 +1057,7 @@ body {
 .project-container .project .project-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: black;
+  color: #213547;
   padding: 2rem 0;
   text-transform: uppercase;
 }
@@ -1190,6 +1210,9 @@ body {
   margin: 2rem 0;
   text-align: center;
   width: 100%;
+}
+.single-work-container .tools-container img {
+  margin: 1rem;
 }
 .single-work-container .drop-show {
   margin: 0 auto;

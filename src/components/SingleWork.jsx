@@ -2,14 +2,23 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Loading from './Loading';
+import Splash from './Splash';
 import Collapsible from 'react-collapsible';
+import aos from 'aos';
+import 'aos/dist/aos.css';
+
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 
 const SingleWork = ({ restBase, featuredImage }) => {
   const { slug } = useParams();
   const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed?1=2`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
   const [openSections, setOpenSections] = useState([]);
+  // const codeString = '(num) => num + 1';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +27,9 @@ const SingleWork = ({ restBase, featuredImage }) => {
         const data = await response.json();
         setData(data[0]);
         setLoadStatus(true);
+        setTimeout(() => {
+          setShowSplash(false);
+        }, 1000);
       } else {
         setLoadStatus(false);
       }
@@ -25,11 +37,22 @@ const SingleWork = ({ restBase, featuredImage }) => {
     fetchData();
   }, [restPath]);
 
+  useEffect(() => {
+    aos.init();
+  }, []);
+
   return (
     <div>
-      {isLoaded ? (
+      {showSplash ? (
+        <Splash />
+      ) : isLoaded ? (
         <>
-          <div className="single-work-container">
+          <div className="single-work-container"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1200"
+          >
             <div className='image-title-overview-container'>
               <div className="single-work-title">{restData.title.rendered}</div>
               <img className="single-work-img" src={restData.acf.project_img} alt="project image" />
@@ -56,7 +79,8 @@ const SingleWork = ({ restBase, featuredImage }) => {
                   </a>
                 ))}
               </div>
-              <div className="tools-container">
+              <div className="tools-container"
+                data-aos="fade-up">
                 <div className='tools-used-heading'>{restData.acf.tools_used_heading}</div>
                 {restData.acf.tools_used.map((tool, index) => (
                   <img
@@ -66,7 +90,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 ))}
               </div>
             </div>
-            <div className="drop-show">
+            <div className="drop-show" data-aos="fade-up">
               <Collapsible trigger=
                 {<div className="accordian">
                   <div className='accordian_heading'>{restData.acf.learn_heading}</div>
@@ -87,7 +111,10 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 1])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 1))}>
                 <p style={{ padding: '1.5rem', textAlign: 'left' }}>
-                  <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section }} />
+                  <SyntaxHighlighter language="javascript" style={okaidia}>
+                    {restData.acf.highlights_section}
+                  </SyntaxHighlighter>
+
                 </p>
               </Collapsible>
 

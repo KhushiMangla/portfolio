@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor'; // Import the Cursor component
 
+
 function App() {
   const restBase = 'https://khushimangla.com/portfolio/wp-json/wp/v2/';
 
@@ -24,11 +25,6 @@ function App() {
           {/* <Route path='/contact' element={<Contact restBase={restBase} />} /> */}
         </Routes>
       </main>
-      {/* <footer>
-        <p className="copyright">
-          Created by <a href="https://Khushimangla.com/" target="_blank" rel="noopener noreferrer">Khushi Mangla</a>.
-        </p>
-      </footer> */}
       <Footer restBase={restBase} />
     </Router>
   );

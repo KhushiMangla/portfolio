@@ -49,7 +49,7 @@ const Home = ({ restBase }) => {
             {showSplash && <Splash />}
             {!showSplash && (
                 <article id={`post-${restData.id}`}>
-                    <div className="intro-scroll-container" style={{ height: '80vh' }}>
+                    <div className="intro-scroll-container">
                         <div className="intro">
                             <motion.div
                                 className="intro-left"
@@ -94,16 +94,10 @@ const Home = ({ restBase }) => {
                             </p>
                         </div>
                     </div>
-                    <div className="featured-work-title"> Featured Work </div>
-
                     <section id="work">
+                        <div className="featured-work-title"> Featured Work </div>
                         <Featured restBase={restBase} />
                     </section>
-
-
-
-
-
                 </article>
             )}
         </div>

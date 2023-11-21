@@ -32,7 +32,7 @@ const Header = () => {
           <li>
             {/* Use ScrollLink for smooth scrolling to the contact section */}
             <ScrollLink
-              activeClass="active"
+              activeClassName="active"
               to="contact"
               spy={true}
               smooth={true}
