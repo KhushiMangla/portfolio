@@ -510,6 +510,10 @@ body {
   }
 }
 
+.intro-scroll-container {
+  height: 80vh;
+}
+
 .intro {
   display: flex;
   justify-content: center;
@@ -656,6 +660,9 @@ body {
 }
 
 @media screen and (max-width: 700px) {
+  .intro-scroll-container {
+    height: auto;
+  }
   .intro-scroll-container .intro {
     display: block;
     height: auto;
@@ -686,13 +693,16 @@ body {
   }
 }
 @media screen and (max-width: 500px) {
-  .intro {
+  .intro-scroll-container {
+    height: auto;
+  }
+  .intro-scroll-container .intro {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin: 5rem auto;
   }
-  .featured-work-title {
+  .intro-scroll-container .featured-work-title {
     font-size: 1.2rem;
   }
 }
@@ -778,9 +788,6 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .featured-work-container {
-    margin-top: 11rem;
-  }
   .card {
     padding: 10px;
   }

@@ -1,5 +1,9 @@
 @use "variables" as *;
 
+.intro-scroll-container {
+    height: 80vh;
+}
+
 .intro {
     display: flex;
     justify-content: center;
@@ -90,7 +94,7 @@
             transform: translateY(20px);
         }
     }
-    
+
 }
 
 .custom__scroll {
@@ -194,6 +198,7 @@
 @media screen and (max-width:$medium) {
 
     .intro-scroll-container {
+        height: auto;
 
         .intro {
             display: block;
@@ -240,22 +245,26 @@
 }
 
 @media screen and (max-width:$small) {
-    .intro {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin: 5rem auto;
+    .intro-scroll-container {
+        height: auto;
 
-        .intro-left {
+        .intro {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 5rem auto;
 
-            .name {
-                // width: fit-content;
+            .intro-left {
+
+                .name {
+                    // width: fit-content;
+                }
             }
         }
-    }
 
-    .featured-work-title {
-        // Further adjustments for smaller screens
-        font-size: 1.2rem;
+        .featured-work-title {
+            // Further adjustments for smaller screens
+            font-size: 1.2rem;
+        }
     }
 }

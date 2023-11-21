@@ -2,13 +2,16 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import Loading from './Loading';
+import Splash from './Splash';
 import Collapsible from 'react-collapsible';
+
 
 const SingleWork = ({ restBase, featuredImage }) => {
   const { slug } = useParams();
   const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed?1=2`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
   const [openSections, setOpenSections] = useState([]);
 
   useEffect(() => {
@@ -18,8 +21,13 @@ const SingleWork = ({ restBase, featuredImage }) => {
         const data = await response.json();
         setData(data[0]);
         setLoadStatus(true);
+        setTimeout(() => {
+          // setLoadStatus(true);
+          setShowSplash(false);
+        }, 1000);
       } else {
         setLoadStatus(false);
+
       }
     };
     fetchData();
@@ -27,7 +35,9 @@ const SingleWork = ({ restBase, featuredImage }) => {
 
   return (
     <div>
-      {isLoaded ? (
+      {showSplash ? (
+        <Splash />
+      ) : isLoaded ? (
         <>
           <div className="single-work-container">
             <div className='image-title-overview-container'>
