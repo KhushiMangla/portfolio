@@ -1,24 +1,23 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Loading from './Loading';
 import Splash from './Splash';
 import Collapsible from 'react-collapsible';
 import aos from 'aos';
 import 'aos/dist/aos.css';
-
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
-const SingleWork = ({ restBase, featuredImage }) => {
+const SingleWork = ({ restBase }) => {
   const { slug } = useParams();
   const restPath = restBase + `work?slug=${slug}&acf_format=standard&embed?1=2`;
   const [restData, setData] = useState({});
   const [isLoaded, setLoadStatus] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
   const [openSections, setOpenSections] = useState([]);
-  // const codeString = '(num) => num + 1';
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -66,7 +65,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
                     href={liveSite.live_site}
                     target="_blank"
                     rel="noopener noreferrer">
-                    <button className="site-btn"><p>{liveSite.live_site_name}</p></button>
+                    <button className="site-btn btn"><p>{liveSite.live_site_name}</p></button>
                   </a>
                 ))}
                 {restData.acf.github_site.map((githubSite, index) => (
@@ -75,7 +74,7 @@ const SingleWork = ({ restBase, featuredImage }) => {
                     href={githubSite.github_site}
                     target="_blank"
                     rel="noopener noreferrer">
-                    <button className="site-btn"><p>{githubSite.github_site_name}</p></button>
+                    <button className="site-btn btn"><p>{githubSite.github_site_name}</p></button>
                   </a>
                 ))}
               </div>
@@ -130,6 +129,11 @@ const SingleWork = ({ restBase, featuredImage }) => {
                 </p>
               </Collapsible>
             </div>
+            <Link to="/work">
+              <button className="view_all_btn btn ">
+                <p>View all work</p>
+              </button>
+            </Link>
           </div>
         </>
       ) : (

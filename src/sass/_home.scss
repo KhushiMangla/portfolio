@@ -24,10 +24,6 @@
             // width:fit-content;
 
             color: $orange;
-            // animation:typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-            // border-right: 2px solid;
-            // white-space: nowrap;
-            // overflow: hidden;
         }
 
         .tagline {
@@ -37,46 +33,46 @@
             line-height: 1.8;
         }
 
-        .mywork-btn {
-            position: relative;
-            // width: 20%;
-            // height: 50px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.5rem 1;
-            margin: 1rem 0;
-            background: $light-orange;
-            border-radius: 25px;
-            border: none;
-            padding: 1rem;
-            overflow: hidden;
+        // .mywork-btn {
+        //     position: relative;
+        //     // width: 20%;
+        //     // height: 50px;
+        //     display: inline-flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     padding: 0.5rem 1;
+        //     margin: 1rem 0;
+        //     background: $light-orange;
+        //     border-radius: 25px;
+        //     border: none;
+        //     padding: 1rem;
+        //     overflow: hidden;
 
-            a {
-                color: white;
-                font-size: 1.2rem;
-                font-weight: 700;
-                z-index: 99;
-            }
+        //     a {
+        //         color: white;
+        //         font-size: 1.2rem;
+        //         font-weight: 700;
+        //         z-index: 99;
+        //     }
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 0;
-                height: 100%;
-                background: $dark-orange;
-                // color: white;
-                border: none;
-                transition: 0.5s;
-                z-index: 3;
-            }
+        //     &::before {
+        //         content: '';
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         width: 0;
+        //         height: 100%;
+        //         background: $dark-orange;
+        //         // color: white;
+        //         border: none;
+        //         transition: 0.5s;
+        //         z-index: 3;
+        //     }
 
-            &:hover::before {
-                width: 100%;
-            }
-        }
+        //     &:hover::before {
+        //         width: 100%;
+        //     }
+        // }
 
     }
 

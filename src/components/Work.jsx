@@ -37,8 +37,8 @@ const Work = ({ restBase, featuredImage }) => {
             {showSplash ? (
                 <Splash />
             ) : isLoaded ? (
-                <>
-                    <div>All Projects</div>
+                <div className="work_page_container">
+                    <div className='work-title'>Work</div>
                     <div className="project-container"
                         data-aos="fade-up"
                         data-aos-duration="1200"
@@ -53,7 +53,7 @@ const Work = ({ restBase, featuredImage }) => {
                                         </div>
                                         <div className="project-text">{post.acf.card_text}</div>
                                         <button
-                                            className="read-more-btn"
+                                            className="read-more-btn btn"
                                             aria-label={`Read more about ${post.title.rendered}`}
                                         >
                                             <p>{post.acf.read_more}</p>
@@ -63,7 +63,7 @@ const Work = ({ restBase, featuredImage }) => {
                             </article>
                         ))}
                     </div>
-                </>
+                </div>
             ) : (
                 <Loading />
             )}
