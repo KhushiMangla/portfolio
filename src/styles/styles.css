@@ -1167,7 +1167,6 @@ body {
   text-transform: capitalize;
 }
 
-/* Add this to your existing SCSS file */
 .footer-container {
   display: flex;
   flex-direction: column;
