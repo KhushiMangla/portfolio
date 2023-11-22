@@ -14,8 +14,6 @@
 }
 
 .card {
-    // border: 1px solid #ccc;
-    // border-radius: 5px;
     padding: 20px;
     background: $white;
     transition: transform 0.2s;
@@ -36,11 +34,6 @@
         overflow: hidden;
         margin: 0 auto;
         max-width: 100%;
-        // width: 400px;
-        // overflow: hidden;
-        // height: auto;
-        // max-width: 80%;
-        // margin: 0 auto;
     }
 
     .card-text {
@@ -49,50 +42,11 @@
         overflow: hidden;
         max-width: 80%;
         margin: 0 auto;
-        // text-overflow: ellipsis;
-        // white-space: nowrap;
 
     }
 
     .read-more-btn {
-        // position: relative;
-        // display: inline-flex;
-        // align-items: center;
-        // justify-content: center;
         margin: 1rem auto;
-        // background: $light-orange;
-        // border-radius: 25px;
-        // border: none;
-        // padding: 1rem;
-        // overflow: hidden;
-
-        // p {
-        //     color: white;
-        //     font-size: 1.2rem;
-        //     font-weight: 700;
-        //     z-index: 99;
-        // }
-
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 0;
-        //     height: 100%;
-        //     background: $dark-orange;
-        //     // color: white;
-        //     border: none;
-        //     transition: 0.5s;
-        //     z-index: 3;
-
-        // }
-
-        // &:hover::before {
-        //     width: 100%;
-
-
-        // }
     }
 
 }
@@ -111,14 +65,6 @@
 // mobile
 
 @media screen and (max-width: $medium) {
-    // .featured-work-container {
-    //     margin-top: 11rem;
-    // }
-
-    // .featured-work-title {
-    //     font-size: 1.5rem;
-    // }
-
 
     .card {
         // Adjust styles for smaller screens
@@ -152,8 +98,6 @@
             // Further adjustments for smaller screens
             padding: 8px;
         }
-
-
 
     }
 }
