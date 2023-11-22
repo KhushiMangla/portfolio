@@ -1011,7 +1011,17 @@ body {
     font-size: 16px;
   }
 }
-.project-container {
+.work_page_container {
+  width: 75%;
+  margin: 0 auto;
+}
+.work_page_container .work-title {
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+.work_page_container .project-container {
   margin: 0 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1019,39 +1029,38 @@ body {
   padding: 2rem 0;
   justify-content: center;
 }
-.project-container .project {
+.work_page_container .project-container .project {
   padding: 20px;
   background: white;
   transition: transform 0.2s;
   text-align: center;
 }
-.project-container .project .project-title {
+.work_page_container .project-container .project .project-title {
   font-size: 1.3rem;
   font-weight: 600;
   color: #213547;
   padding: 2rem 0;
   text-transform: uppercase;
 }
-.project-container .project .project-img {
+.work_page_container .project-container .project .project-img {
   width: 400px;
   height: auto;
   overflow: hidden;
   margin: 0 auto;
   max-width: 100%;
 }
-.project-container .project .project-text {
+.work_page_container .project-container .project .project-text {
   color: #213547;
   font-size: 18px;
   overflow: hidden;
   max-width: 80%;
   margin: 0 auto;
 }
-.project-container .read-more-btn {
+.work_page_container .project-container .read-more-btn {
   margin: 1rem auto;
 }
-
 @media screen and (min-width: 500px) {
-  .project:hover {
+  .work_page_container .project:hover {
     box-shadow: 0 0 10px rgba(255, 179, 138, 0.5);
     border-radius: 7px;
     transform: translateY(-10px);
@@ -1059,22 +1068,27 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .project {
+  .work_page_container .work-title {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    text-align: center;
+  }
+  .work_page_container .project-container .project {
     padding: 10px;
   }
 }
 @media screen and (max-width: 500px) {
-  .project-work-container {
+  .work_page_container .project-work-container {
     display: grid;
     grid-template-columns: 1fr;
   }
-  .project-work-container .project-title {
+  .work_page_container .project-work-container .project-title {
     font-size: 1.2rem;
   }
-  .project-work-container .read-more-btn {
+  .work_page_container .project-work-container .read-more-btn {
     align-items: center;
   }
-  .project-work-container .project {
+  .work_page_container .project-work-container .project {
     padding: 8px;
   }
 }

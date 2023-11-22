@@ -37,8 +37,8 @@ const Work = ({ restBase, featuredImage }) => {
             {showSplash ? (
                 <Splash />
             ) : isLoaded ? (
-                <>
-                    <div>All Projects</div>
+                <div className="work_page_container">
+                    <div className='work-title'>Work</div>
                     <div className="project-container"
                         data-aos="fade-up"
                         data-aos-duration="1200"
@@ -63,7 +63,7 @@ const Work = ({ restBase, featuredImage }) => {
                             </article>
                         ))}
                     </div>
-                </>
+                </div>
             ) : (
                 <Loading />
             )}
