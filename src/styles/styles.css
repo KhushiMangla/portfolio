@@ -469,7 +469,6 @@ body {
   animation: cursorAnim 0.5s infinite alternate;
 }
 
-/* Add any additional styling as needed for .cursor-three or other cursor elements. */
 .site-header {
   height: 7rem;
   width: 100vw;
