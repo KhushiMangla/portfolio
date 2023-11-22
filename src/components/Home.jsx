@@ -70,11 +70,11 @@ const Home = ({ restBase }) => {
                                     <p>{restData.acf.tagline}</p>
                                 </motion.section>
                                 <motion.section>
-                                    <motion.button className="mywork-btn" variants={introVariants}>
-                                        <Link to="work" smooth={true} duration={500}>
-                                            View my work
-                                        </Link>
-                                    </motion.button>
+                                    <Link to="work" smooth={true} duration={500}>
+                                        <motion.button className="mywork-btn btn" variants={introVariants}>
+                                            <p>View my work</p>
+                                        </motion.button>
+                                    </Link>
                                 </motion.section>
                             </motion.div>
                             <section className="profile">

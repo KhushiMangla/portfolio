@@ -52,7 +52,7 @@ const Featured = ({ restBase }) => {
                                             <div class="card-text">{post.acf.card_text}</div>
                                             {/* <div className="project-content" dangerouslySetInnerHTML={{ __html: post.content.rendered }}></div> */}
                                         </div>
-                                        <button className="read-more-btn" aria-label={`Read more about ${post.title.rendered}`}>
+                                        <button className="read-more-btn btn" aria-label={`Read more about ${post.title.rendered}`}>
                                             <p>{post.acf.read_more}</p>
                                         </button>
                                     </div>

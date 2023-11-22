@@ -326,6 +326,41 @@ body {
   color: orange !important;
 }
 
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1;
+  margin: 1rem 0;
+  background: #ffb38a;
+  border-radius: 25px;
+  border: none;
+  padding: 1rem;
+  overflow: hidden;
+}
+.btn p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  z-index: 99;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff9248;
+  border: none;
+  transition: 0.5s;
+  z-index: 3;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
 #cool-loader {
   position: fixed;
   height: 100%;
@@ -538,40 +573,6 @@ body {
   margin-bottom: 1rem;
   line-height: 1.8;
 }
-.intro .intro-left .mywork-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 1;
-  margin: 1rem 0;
-  background: #ffb38a;
-  border-radius: 25px;
-  border: none;
-  padding: 1rem;
-  overflow: hidden;
-}
-.intro .intro-left .mywork-btn a {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 700;
-  z-index: 99;
-}
-.intro .intro-left .mywork-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff9248;
-  border: none;
-  transition: 0.5s;
-  z-index: 3;
-}
-.intro .intro-left .mywork-btn:hover::before {
-  width: 100%;
-}
 .intro .profile {
   display: flex;
   flex-direction: column;
@@ -746,37 +747,7 @@ body {
   margin: 0 auto;
 }
 .card .read-more-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   margin: 1rem auto;
-  background: #ffb38a;
-  border-radius: 25px;
-  border: none;
-  padding: 1rem;
-  overflow: hidden;
-}
-.card .read-more-btn p {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 700;
-  z-index: 99;
-}
-.card .read-more-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff9248;
-  border: none;
-  transition: 0.5s;
-  z-index: 3;
-}
-.card .read-more-btn:hover::before {
-  width: 100%;
 }
 
 @media screen and (min-width: 500px) {
@@ -823,10 +794,11 @@ body {
 .about-container .about-wrapper {
   margin: 0 auto;
 }
-.about-container h1 {
+.about-container .about-title {
   margin: 2rem 0;
   font-size: 2.5rem;
   text-align: center;
+  font-weight: 700;
 }
 .about-container .about-content {
   text-align: left;
@@ -1007,36 +979,35 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .about-wrapper {
+  .about-container .about-wrapper {
     width: 100%;
     margin: 0 auto;
   }
-  h1 {
+  .about-container .about-title {
     margin: 1.5rem 0;
     font-size: 2rem;
-    text-align: center;
   }
-  .about-content section {
+  .about-container .about-content section {
     text-align: left;
   }
-  .tool {
+  .about-container .tool {
     font-size: 1rem;
   }
-  .react-tabs {
+  .about-container .react-tabs {
     width: 100%;
   }
-  .react-tabs__tab-list {
+  .about-container .react-tabs__tab-list {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .react-tabs__tab-panel--selected {
+  .about-container .react-tabs__tab-panel--selected {
     display: flex;
     flex-direction: column;
   }
-  .react-tabs__tab-panel--selected div {
+  .about-container .react-tabs__tab-panel--selected div {
     font-size: 16px;
   }
 }
@@ -1076,37 +1047,7 @@ body {
   margin: 0 auto;
 }
 .project-container .read-more-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   margin: 1rem auto;
-  background: #ffb38a;
-  border-radius: 25px;
-  border: none;
-  padding: 1rem;
-  overflow: hidden;
-}
-.project-container .read-more-btn p {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 700;
-  z-index: 99;
-}
-.project-container .read-more-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff9248;
-  border: none;
-  transition: 0.5s;
-  z-index: 3;
-}
-.project-container .read-more-btn:hover::before {
-  width: 100%;
 }
 
 @media screen and (min-width: 500px) {
@@ -1168,39 +1109,6 @@ body {
   margin: 1rem 0;
   padding: 1rem 0;
 }
-.single-work-container .site-btn-container .site-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0;
-  background: #ffb38a;
-  border-radius: 25px;
-  border: none;
-  padding: 1rem;
-  overflow: hidden;
-}
-.single-work-container .site-btn-container .site-btn p {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 700;
-  z-index: 99;
-}
-.single-work-container .site-btn-container .site-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff9248;
-  border: none;
-  transition: 0.5s;
-  z-index: 3;
-}
-.single-work-container .site-btn-container .site-btn:hover::before {
-  width: 100%;
-}
 .single-work-container .tools-container {
   margin: 2rem;
 }
@@ -1240,6 +1148,10 @@ body {
   font-size: 1.5em;
   margin-left: 0.5em;
   color: #213547;
+}
+.single-work-container .view_all_btn {
+  margin: 2rem;
+  text-transform: capitalize;
 }
 
 /* Add this to your existing SCSS file */

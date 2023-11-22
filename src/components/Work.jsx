@@ -53,7 +53,7 @@ const Work = ({ restBase, featuredImage }) => {
                                         </div>
                                         <div className="project-text">{post.acf.card_text}</div>
                                         <button
-                                            className="read-more-btn"
+                                            className="read-more-btn btn"
                                             aria-label={`Read more about ${post.title.rendered}`}
                                         >
                                             <p>{post.acf.read_more}</p>

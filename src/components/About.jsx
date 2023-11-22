@@ -44,7 +44,7 @@ const About = ({ restBase }) => {
             data-aos-duration="1200"
             data-aos-easing="ease-in-out">
             <div className="about-wrapper">
-                <h1>{restData.title.rendered}</h1>
+                <div className='about-title'>{restData.title.rendered}</div>
                 <div className="about-content">
                     <section>
                         <p>{restData.acf.para1}</p>
