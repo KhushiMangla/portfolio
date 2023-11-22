@@ -109,12 +109,13 @@ const SingleWork = ({ restBase }) => {
                 </div>}
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 1])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 1))}>
-                <p style={{ padding: '1.5rem', textAlign: 'left' }}>
-                  <SyntaxHighlighter language="javascript" style={okaidia}>
-                    {restData.acf.highlights_section}
-                  </SyntaxHighlighter>
+                {/* <p style={{ padding: '1.5rem', textAlign: 'left' }}> */}
+                {restData.acf.highlights_section}
+                {/* <SyntaxHighlighter language="javascript" style={okaidia}>
 
-                </p>
+                  </SyntaxHighlighter> */}
+
+                {/* </p> */}
               </Collapsible>
 
               <Collapsible trigger=
