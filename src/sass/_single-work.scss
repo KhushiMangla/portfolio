@@ -41,7 +41,7 @@
 
         .tools-used-heading {
             font-weight: 600;
-            font-size: 1.3rem;
+            font-size: 1.8rem;
             margin: 2rem 0;
             text-align: center;
             width: 100%;
@@ -91,4 +91,23 @@
         text-transform: capitalize;
 
     }
+}
+
+// for small and medium screens
+@media screen and (max-width: $medium) {
+
+    .single-work-container {
+        .single-work-title {
+            font-size: 2rem;
+        }
+
+        .tools-container {
+
+            .tools-used-heading {
+                font-size: 1.5rem;
+            }
+
+        }
+    }
+
 }
