@@ -3,7 +3,7 @@ import React from 'react'
 
 const Splash = () => {
     return (
-        <div>
+        <div >
             <div id="cool-loader">
                 <div className="react-spinner-loader-svg">
                     <svg id="triangle" width="128" height="128" viewBox="-3 -4 39 39">

@@ -56,15 +56,12 @@
 
 @media screen and (max-width: $small) {
 	#cool-loader {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+
 		height: 100vh;
-		margin-top: 0;
 	}
 
 	#cool-loader .react-spinner-loader-svg {
-		margin-top: 0;
+		margin-top: 25vh;
 		/* Adjust margin-top as needed */
 	}
 }

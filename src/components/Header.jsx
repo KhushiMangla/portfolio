@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, Events, scrollSpy } from 'react-scroll';
 import logo from '../images/logo1.svg';
 
 const Header = () => {
+  const [contactClicked, setContactClicked] = useState(false);
+
+  const handleContactClick = () => {
+    setContactClicked(true);
+  };
+
+  useEffect(() => {
+    // Add event listeners for scroll events
+    Events.scrollEvent.register('end', (to, element) => {
+      // Set contactClicked to false when the scroll position is at the Contact section
+      if (to === 'contact') {
+        setContactClicked(false);
+      }
+    });
+
+    // Activate the scroll spy
+    scrollSpy.update();
+
+    // Cleanup event listeners when the component is unmounted
+    return () => {
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
+
   return (
     <header id="masthead" className="site-header">
       <div className="site-branding">
@@ -13,8 +37,6 @@ const Header = () => {
       </div>
       <nav className="site-navigation">
         <ul>
-          {/* remove the home from header */}
-          {/* <li><NavLink activeClassName="active" to="/" > Home </NavLink></li> */}
           <li>
             <NavLink activeClassName="active" to="/about">
               <span className="icon"><ion-icon name="person-outline"></ion-icon></span>
@@ -30,14 +52,18 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            {/* Use ScrollLink for smooth scrolling to the contact section */}
             <ScrollLink
-              activeClassName="active"
               to="contact"
               spy={true}
               smooth={true}
               offset={-70} // Adjust the offset as needed
               duration={500}
+              onClick={handleContactClick}
+              // Add a custom class only when the Contact link is clicked
+              className={contactClicked ? 'active' : ''}
+              // Set onSetActive and onSetInactive handlers
+              onSetActive={() => setContactClicked(true)}
+              onSetInactive={() => setContactClicked(false)}
             >
               <span className="icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
               <span className="text" style={{ cursor: 'pointer' }}>Contact </span>

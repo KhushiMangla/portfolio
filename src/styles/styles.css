@@ -410,14 +410,10 @@ body {
 
 @media screen and (max-width: 500px) {
   #cool-loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
-    margin-top: 0;
   }
   #cool-loader .react-spinner-loader-svg {
-    margin-top: 0;
+    margin-top: 25vh;
     /* Adjust margin-top as needed */
   }
 }
@@ -667,6 +663,7 @@ body {
   .intro-scroll-container .intro {
     display: block;
     height: auto;
+    margin: 3.5rem auto;
   }
   .intro-scroll-container .intro .intro-left {
     display: flex;
@@ -701,7 +698,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 5rem auto;
+    margin: 1rem auto 2.5rem auto;
   }
   .intro-scroll-container .featured-work-title {
     font-size: 1.2rem;
