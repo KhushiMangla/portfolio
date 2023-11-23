@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Joke from './Joke';
 import 'react-tabs/style/react-tabs.css';
 import Splash from './Splash'; // Import the Splash component
 import aos from 'aos';
 import 'aos/dist/aos.css';
+
 
 const About = ({ restBase }) => {
     const restPath = restBase + 'pages/43';
@@ -88,6 +90,7 @@ const About = ({ restBase }) => {
                     </TabPanel>
                 </Tabs>
             </div>
+            <Joke />
         </div>
     );
 }

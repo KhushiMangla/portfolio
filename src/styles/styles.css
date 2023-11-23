@@ -360,6 +360,9 @@ body {
 .btn:hover::before {
   width: 100%;
 }
+.btn:focus {
+  outline: none;
+}
 
 #cool-loader {
   position: fixed;
@@ -1009,6 +1012,17 @@ body {
     font-size: 16px;
   }
 }
+.joke {
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+}
+
 .work_page_container {
   width: 75%;
   margin: 0 auto;
