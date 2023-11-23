@@ -364,6 +364,16 @@ body {
   outline: none;
 }
 
+@media screen and (max-width: 768px) {
+  .btn:hover::before {
+    width: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .btn:hover::before {
+    width: 0;
+  }
+}
 #cool-loader {
   position: fixed;
   height: 100%;
@@ -411,7 +421,7 @@ body {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   #cool-loader {
     height: 100vh;
   }
@@ -468,6 +478,20 @@ body {
   animation: cursorAnim 0.5s infinite alternate;
 }
 
+@media screen and (max-width: 768px) {
+  .cursor-one,
+  .cursor-two,
+  .cursor-three {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .cursor-one,
+  .cursor-two,
+  .cursor-three {
+    display: none;
+  }
+}
 .site-header {
   height: 7rem;
   width: 100vw;
@@ -507,7 +531,7 @@ body {
 .site-header .site-navigation ul li .icon {
   display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .site-header #masthead.site-header {
     justify-content: center;
   }
@@ -659,7 +683,7 @@ body {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .intro-scroll-container {
     height: auto;
   }
@@ -693,7 +717,7 @@ body {
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .intro-scroll-container {
     height: auto;
   }
@@ -750,7 +774,7 @@ body {
   margin: 1rem auto;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 576px) {
   .card:hover {
     box-shadow: 0 0 10px rgba(255, 179, 138, 0.5);
     border-radius: 7px;
@@ -758,12 +782,12 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .card {
     padding: 10px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .featured-work-container .card-title {
     font-size: 1.2rem;
   }
@@ -979,7 +1003,7 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .about-container .about-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -1000,13 +1024,18 @@ body {
   .about-container .react-tabs__tab-list {
     text-align: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .about-container .react-tabs__tab {
+    margin: 0.5rem;
+    padding: 10px 15px;
   }
   .about-container .react-tabs__tab-panel--selected {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .about-container .react-tabs__tab-panel--selected div {
     font-size: 16px;
@@ -1070,7 +1099,7 @@ body {
 .work_page_container .project-container .read-more-btn {
   margin: 1rem auto;
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 576px) {
   .work_page_container .project:hover {
     box-shadow: 0 0 10px rgba(255, 179, 138, 0.5);
     border-radius: 7px;
@@ -1078,7 +1107,7 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .work_page_container .work-title {
     margin: 1.5rem 0;
     font-size: 2rem;
@@ -1088,7 +1117,7 @@ body {
     padding: 10px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .work_page_container .project-work-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -1113,6 +1142,7 @@ body {
 .single-work-container .single-work-title {
   font-size: 2.5rem;
   font-weight: 700;
+  margin: 1.5rem 0;
 }
 .single-work-container .single-work-img {
   margin: 1rem;
@@ -1125,7 +1155,7 @@ body {
 .single-work-container .single-work-overview {
   max-width: 50rem;
   margin: 1rem auto;
-  text-align: center;
+  text-align: left;
 }
 .single-work-container .site-btn-container {
   display: flex;
@@ -1179,12 +1209,30 @@ body {
   text-transform: capitalize;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+  .single-work-container {
+    width: 90%;
+    padding: 1.75rem;
+  }
   .single-work-container .single-work-title {
     font-size: 2rem;
   }
   .single-work-container .tools-container .tools-used-heading {
     font-size: 1.5rem;
+  }
+  .single-work-container .drop-show {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .single-work-container {
+    width: 100%;
+    padding: 1.75rem;
+  }
+  .single-work-container .drop-show {
+    margin: 0 auto;
+    width: 100%;
   }
 }
 .footer-container {
@@ -1232,7 +1280,7 @@ body {
   color: #213547;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .footer-container .connect {
     font-size: 1.5rem;
     font-weight: 600;

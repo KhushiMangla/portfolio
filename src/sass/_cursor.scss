@@ -51,3 +51,20 @@
     animation: cursorAnim .5s infinite alternate;
 }
 
+@media screen and (max-width: $medium) {
+
+    .cursor-one,
+    .cursor-two,
+    .cursor-three {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $small) {
+
+    .cursor-one,
+    .cursor-two,
+    .cursor-three {
+        display: none;
+    }
+}

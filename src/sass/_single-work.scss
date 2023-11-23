@@ -10,6 +10,7 @@
     .single-work-title {
         font-size: 2.5rem;
         font-weight: 700;
+        margin: 1.5rem 0;
 
     }
 
@@ -25,7 +26,7 @@
     .single-work-overview {
         max-width: 50rem;
         margin: 1rem auto;
-        text-align: center;
+        text-align: left;
     }
 
     .site-btn-container {
@@ -97,6 +98,9 @@
 @media screen and (max-width: $medium) {
 
     .single-work-container {
+        width: 90%;
+        padding: 1.75rem;
+
         .single-work-title {
             font-size: 2rem;
         }
@@ -107,6 +111,25 @@
                 font-size: 1.5rem;
             }
 
+        }
+
+        .drop-show {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: $small) {
+
+    .single-work-container {
+        width: 100%;
+        padding: 1.75rem;
+
+        .drop-show {
+            margin: 0 auto;
+            width: 100%;
         }
     }
 
