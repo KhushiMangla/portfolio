@@ -14,6 +14,7 @@ const Joke = () => {
     return (
         <div className="joke">
             <div className="joke-heading">Don't Miss the Fun!</div>
+            <span>&#128514;</span>
             {/* <Button callApi={fetchApi} /> */}
             <button
                 className="btn"
@@ -21,6 +22,7 @@ const Joke = () => {
             >
                 <p>Get a Random Joke</p>
             </button>
+
             <p>{joke}</p>
         </div>
     );
