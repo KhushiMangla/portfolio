@@ -110,7 +110,8 @@ const SingleWork = ({ restBase }) => {
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 1])}
                 onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 1))}>
                 {/* <p style={{ padding: '1.5rem', textAlign: 'left' }}> */}
-                {restData.acf.highlights_section}
+                <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section }} />
+                {/* {restData.acf.highlights_section} */}
                 {/* <SyntaxHighlighter language="javascript" style={okaidia}>
 
                   </SyntaxHighlighter> */}
