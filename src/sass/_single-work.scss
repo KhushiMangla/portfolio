@@ -98,6 +98,9 @@
 @media screen and (max-width: $medium) {
 
     .single-work-container {
+        width: 90%;
+        padding: 1.75rem;
+
         .single-work-title {
             font-size: 2rem;
         }

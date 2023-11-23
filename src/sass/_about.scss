@@ -181,22 +181,37 @@
     }
 
     .react-tabs__tab-list {
-
       text-align: center;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
 
+    .react-tabs__tab {
+      margin: 0.5rem;
+      padding: 10px 15px;
     }
 
     .react-tabs__tab-panel--selected {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
 
       div {
         font-size: 16px;
       }
     }
   }
+}
+
+.joke {
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: blue;
 }
