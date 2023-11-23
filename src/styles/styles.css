@@ -364,6 +364,16 @@ body {
   outline: none;
 }
 
+@media screen and (max-width: 700px) {
+  .btn:hover::before {
+    width: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .btn:hover::before {
+    width: 0;
+  }
+}
 #cool-loader {
   position: fixed;
   height: 100%;

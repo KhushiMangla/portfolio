@@ -20,7 +20,7 @@ body {
     color: $orange !important;
 }
 
-
+// Primary button styles
 .btn {
     position: relative;
     display: inline-flex;
@@ -61,5 +61,21 @@ body {
 
     &:focus {
         outline: none;
+    }
+}
+
+// btn styles on medium and small screens
+
+@media screen and (max-width: $medium) {
+    .btn:hover::before {
+        width: 0;
+
+    }
+}
+
+@media screen and (max-width: $small) {
+    .btn:hover::before {
+        width: 0;
+
     }
 }
