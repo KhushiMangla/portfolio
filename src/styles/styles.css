@@ -1138,7 +1138,7 @@ body {
 .single-work-container .single-work-overview {
   max-width: 50rem;
   margin: 1rem auto;
-  text-align: center;
+  text-align: left;
 }
 .single-work-container .site-btn-container {
   display: flex;
