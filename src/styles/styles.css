@@ -468,6 +468,20 @@ body {
   animation: cursorAnim 0.5s infinite alternate;
 }
 
+@media screen and (max-width: 700px) {
+  .cursor-one,
+  .cursor-two,
+  .cursor-three {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cursor-one,
+  .cursor-two,
+  .cursor-three {
+    display: none;
+  }
+}
 .site-header {
   height: 7rem;
   width: 100vw;
