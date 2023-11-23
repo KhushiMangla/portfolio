@@ -360,6 +360,9 @@ body {
 .btn:hover::before {
   width: 100%;
 }
+.btn:focus {
+  outline: none;
+}
 
 #cool-loader {
   position: fixed;

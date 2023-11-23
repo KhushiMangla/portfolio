@@ -58,4 +58,8 @@ body {
     &:hover::before {
         width: 100%;
     }
+
+    &:focus {
+        outline: none;
+    }
 }
