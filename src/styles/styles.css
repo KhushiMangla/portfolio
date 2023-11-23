@@ -1199,6 +1199,16 @@ body {
   .single-work-container .tools-container .tools-used-heading {
     font-size: 1.5rem;
   }
+  .single-work-container .drop-show {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .single-work-container .drop-show {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 .footer-container {
   display: flex;

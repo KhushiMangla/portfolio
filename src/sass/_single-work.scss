@@ -108,6 +108,23 @@
             }
 
         }
+
+        .drop-show {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: $small) {
+
+    .single-work-container {
+
+        .drop-show {
+            margin: 0 auto;
+            width: 100%;
+        }
     }
 
 }
