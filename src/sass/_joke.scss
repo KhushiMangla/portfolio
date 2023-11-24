@@ -3,7 +3,7 @@
 .joke_wrapper {
     text-align: center;
     margin: 2.5rem;
-    width: 70%;
+    width: 100%;
     height: auto;
     background: oldlace;
     padding: 2.5rem;
@@ -29,7 +29,6 @@
 
 @media screen and (max-width: $medium) {
     .joke_wrapper {
-        width: 90%;
 
         .joke_heading {
             font-size: 1rem;

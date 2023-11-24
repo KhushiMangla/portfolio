@@ -1056,7 +1056,7 @@ body {
 .joke_wrapper {
   text-align: center;
   margin: 2.5rem;
-  width: 70%;
+  width: 100%;
   height: auto;
   background: oldlace;
   padding: 2.5rem;
@@ -1076,9 +1076,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .joke_wrapper {
-    width: 90%;
-  }
   .joke_wrapper .joke_heading {
     font-size: 1rem;
     margin-bottom: 10px;
