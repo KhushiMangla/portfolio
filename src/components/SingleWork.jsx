@@ -102,20 +102,22 @@ const SingleWork = ({ restBase }) => {
                 </p>
               </Collapsible>
 
-              <Collapsible trigger=
-                {<div className="accordian">
-                  <div accordian_heading>{restData.acf.highlights_heading}</div>
-                  <div className="sign">{openSections.includes(1) ? '-' : '+'}</div>
-                </div>}
+              <Collapsible
+                trigger={
+                  <div className="accordian">
+                    <div className="accordian_heading">{restData.acf.highlights_heading}</div>
+                    <div className="sign">{openSections.includes(1) ? '-' : '+'}</div>
+                  </div>
+                }
                 onOpen={() => setOpenSections((prevOpenSections) => [...prevOpenSections, 1])}
-                onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 1))}>
-                {/* <p style={{ padding: '1.5rem', textAlign: 'left' }}> */}
-                {restData.acf.highlights_section}
-                {/* <SyntaxHighlighter language="javascript" style={okaidia}>
-
-                  </SyntaxHighlighter> */}
-
-                {/* </p> */}
+                onClose={() => setOpenSections((prevOpenSections) => prevOpenSections.filter((openIndex) => openIndex !== 1))}
+              >
+                <p style={{ padding: '1.5rem', textAlign: 'left' }}>
+                  <div dangerouslySetInnerHTML={{ __html: restData.acf.highlights_section }} />
+                  {/* <SyntaxHighlighter style={okaidia}>
+                  {restData.acf.highlights_section}
+                </SyntaxHighlighter> */}
+                </p>
               </Collapsible>
 
               <Collapsible trigger=
