@@ -22,7 +22,7 @@ function App() {
           <Route path='/about' element={<About restBase={restBase} />} />
           <Route path='/work' element={<Work restBase={restBase} />} />
           <Route path='/work/:slug' element={<SingleWork restBase={restBase} />} />
-          <Route path="*" element={< Error />} />
+          <Route path="*" element={< Error restBase={restBase} />} />
         </Routes>
       </main>
       <Footer restBase={restBase} />
