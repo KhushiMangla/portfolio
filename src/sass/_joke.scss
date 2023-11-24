@@ -1,0 +1,49 @@
+@use "variables" as *;
+
+.joke_wrapper {
+    text-align: center;
+    margin: 2.5rem;
+    width: 70%;
+    height: auto;
+    background: oldlace;
+    padding: 2.5rem;
+    border-radius: 10px;
+    /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+    .joke_heading {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: $text-color;
+    }
+
+
+    .joke_text {
+        font-size: 1.2em;
+        margin-top: 10px;
+        color: $text-color;
+    }
+}
+
+
+@media screen and (max-width: $medium) {
+    .joke_wrapper {
+        width: 90%;
+
+        .joke_heading {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: $text-color;
+        }
+
+
+        .joke_text {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: $text-color;
+        }
+
+    }
+}
+

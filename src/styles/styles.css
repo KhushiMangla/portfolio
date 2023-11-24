@@ -844,6 +844,8 @@ body {
   border-radius: 5px;
   padding: 1.5rem;
   background-color: oldlace;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .about-container .react-tabs .react-tabs__tab-list {
   display: flex;
@@ -1050,6 +1052,43 @@ body {
   color: blue;
 }
 
+.joke_wrapper {
+  text-align: center;
+  margin: 2.5rem;
+  width: 70%;
+  height: auto;
+  background: oldlace;
+  padding: 2.5rem;
+  border-radius: 10px;
+  /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.joke_wrapper .joke_heading {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #213547;
+}
+.joke_wrapper .joke_text {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #213547;
+}
+
+@media screen and (max-width: 768px) {
+  .joke_wrapper {
+    width: 90%;
+  }
+  .joke_wrapper .joke_heading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #213547;
+  }
+  .joke_wrapper .joke_text {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #213547;
+  }
+}
 .work_page_container {
   width: 75%;
   margin: 0 auto;
