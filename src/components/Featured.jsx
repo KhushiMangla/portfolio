@@ -44,7 +44,12 @@ const Featured = ({ restBase }) => {
                         {restData.map(post =>
                             <article key={post.id} className="grid-item">
                                 <Link to={`/work/${post.slug}`}>
-                                    <div className="card">
+                                    <div className="card"
+                                        data-aos="fade-up"
+                                        data-aos-offset="200"
+                                        data-aos-delay="50"
+                                        data-aos-duration="1200"
+                                    >
 
                                         <div className="featured-work-content">
                                             <div className="card-title">{post.title.rendered}</div>
