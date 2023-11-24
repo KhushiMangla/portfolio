@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.error__container {
+    height: 100%; // Set height to 100% of the viewport
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.err_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.error__img {
+    width: 30%;
+}
+
+.error {
+    margin: 0 auto;
+    height: auto;
+}
+
+@media screen and (max-width: $medium) {
+    .error__img {
+        width: 60vw;
+    }
+}

@@ -1329,5 +1329,35 @@ body {
     height: none;
   }
 }
+.error__container {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.err_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error__img {
+  width: 30%;
+}
+
+.error {
+  margin: 0 auto;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .error__img {
+    width: 60vw;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

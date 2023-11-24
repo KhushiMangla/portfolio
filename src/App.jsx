@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Work from './components/Work';
 import SingleWork from './components/SingleWork';
-// import Contact from './components/Contact';
+import Error from './components/Error';
 import About from './components/About';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -22,6 +22,7 @@ function App() {
           <Route path='/about' element={<About restBase={restBase} />} />
           <Route path='/work' element={<Work restBase={restBase} />} />
           <Route path='/work/:slug' element={<SingleWork restBase={restBase} />} />
+          <Route path="*" element={< Error />} />
         </Routes>
       </main>
       <Footer restBase={restBase} />
