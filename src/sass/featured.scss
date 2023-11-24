@@ -5,7 +5,7 @@
 
 }
 
-.grid {
+.featured_wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -65,6 +65,17 @@
 // mobile
 
 @media screen and (max-width: $medium) {
+    .featured-work-container {
+        padding: 0 9%;
+
+    }
+
+    .featured_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 
     .card {
         // Adjust styles for smaller screens

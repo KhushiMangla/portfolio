@@ -733,7 +733,7 @@ body {
   padding: 0 9%;
 }
 
-.grid {
+.featured_wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -781,6 +781,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  .featured-work-container {
+    padding: 0 9%;
+  }
+  .featured_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .card {
     padding: 10px;
   }
@@ -1064,14 +1072,15 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .joke_wrapper .joke_heading {
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 10px;
   color: #213547;
 }
 .joke_wrapper .joke_text {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-top: 10px;
   color: #213547;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
@@ -1079,12 +1088,11 @@ body {
     width: 90%;
   }
   .joke_wrapper .joke_heading {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 10px;
     color: #213547;
   }
   .joke_wrapper .joke_text {
-    font-size: 1rem;
     margin-top: 10px;
     color: #213547;
   }

@@ -40,9 +40,9 @@ const Featured = ({ restBase }) => {
                     data-aos-duration="1200"
                 >
 
-                    <div className="grid">
+                    <div className="featured_wrapper">
                         {restData.map(post =>
-                            <article key={post.id} className="grid-item">
+                            <article key={post.id} className="featured-item">
                                 <Link to={`/work/${post.slug}`}>
                                     <div className="card">
 

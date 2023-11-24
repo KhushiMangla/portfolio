@@ -15,7 +15,7 @@ const Joke = () => {
 
     return (
         <div className="joke_wrapper">
-            <div className="joke_heading">Laugh with Me: Latest Jokes Await! 😄</div>
+            <div className="joke_heading">Laugh with Me: Latest Jokes Await! 😆 </div>
             <button className="btn joke_btn" onClick={fetchApi}>
                 <p> Press for a Smile!</p>
             </button>
