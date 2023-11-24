@@ -56,12 +56,10 @@ const Header = () => {
               to="contact"
               spy={true}
               smooth={true}
-              offset={-70} // Adjust the offset as needed
+              offset={-70}
               duration={500}
               onClick={handleContactClick}
-              // Add a custom class only when the Contact link is clicked
               className={contactClicked ? 'active' : ''}
-              // Set onSetActive and onSetInactive handlers
               onSetActive={() => setContactClicked(true)}
               onSetInactive={() => setContactClicked(false)}
             >

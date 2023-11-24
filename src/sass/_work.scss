@@ -15,7 +15,6 @@
     .project-container {
         margin: 0 3rem;
         display: grid;
-        // change this to flex in order to wrap the projects.
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
         justify-content: center;

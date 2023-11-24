@@ -9,7 +9,7 @@ import 'aos/dist/aos.css';
 const About = ({ restBase }) => {
     const restPath = restBase + 'pages/43';
     const [restData, setData] = useState([]);
-    const [showSplash, setShowSplash] = useState(true); // Add state for splash screen
+    const [showSplash, setShowSplash] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,10 +18,8 @@ const About = ({ restBase }) => {
                 const data = await response.json();
                 setData(data);
                 setTimeout(() => {
-                    // setLoadStatus(true);
                     setShowSplash(false);
-                }, 1000); // Hide the splash screen when data is loaded
-            } else {
+                }, 1000);
                 // Handle error if needed
             }
         };

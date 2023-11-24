@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from './Loading';
-import Splash from './Splash'; // Import the Splash component
+import Splash from './Splash';
 import aos from 'aos';
 import 'aos/dist/aos.css';
 

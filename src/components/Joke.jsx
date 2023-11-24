@@ -8,10 +8,6 @@ const Joke = () => {
             .then((res) => res.json())
             .then((data) => setJoke(data.joke));
     };
-    // useEffect(() => {
-    //     // Fetch a joke when the component mounts
-    //     fetchApi();
-    // }, []);
 
     return (
         <div className="joke_wrapper">

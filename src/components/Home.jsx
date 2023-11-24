@@ -9,7 +9,7 @@ const Home = ({ restBase }) => {
     const restPath = restBase + 'pages/10';
     const [restData, setData] = useState([]);
     const [showSplash, setShowSplash] = useState(true);
-    const [isLoaded, setLoadStatus] = useState(false); // Add isLoaded state
+    const [isLoaded, setLoadStatus] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {

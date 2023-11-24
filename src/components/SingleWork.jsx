@@ -6,8 +6,6 @@ import Splash from './Splash';
 import Collapsible from 'react-collapsible';
 import aos from 'aos';
 import 'aos/dist/aos.css';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
 const SingleWork = ({ restBase }) => {
