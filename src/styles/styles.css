@@ -601,12 +601,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: profile 2s infinite ease alternate;
 }
-@keyframes profile {
-  to {
-    transform: translateY(20px);
-  }
+.intro .profile img {
+  border-radius: 5%;
+  transition: 0.3s ease;
 }
 
 .custom__scroll {

@@ -42,14 +42,19 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        animation: profile 2s infinite ease alternate;
-    }
+        // animation: profile 2s infinite ease alternate;
 
-    @keyframes profile {
-        to {
-            transform: translateY(20px);
+        img {
+            border-radius: 5%;
+            transition: .3s ease;
         }
     }
+
+    // @keyframes profile {
+    //     to {
+    //         transform: translateY(20px);
+    //     }
+    // }
 
 }
 
