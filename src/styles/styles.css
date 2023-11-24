@@ -307,6 +307,13 @@ template {
   display: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: white;
+    color: #213547;
+  }
+  /* Add more styles for dark theme as needed */
+}
 * {
   scroll-behavior: smooth;
   border: none;
