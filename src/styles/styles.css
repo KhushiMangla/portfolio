@@ -364,7 +364,7 @@ body {
   outline: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .btn:hover::before {
     width: 0;
   }
@@ -478,7 +478,7 @@ body {
   animation: cursorAnim 0.5s infinite alternate;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .cursor-one,
   .cursor-two,
   .cursor-three {
@@ -531,7 +531,7 @@ body {
 .site-header .site-navigation ul li .icon {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .site-header #masthead.site-header {
     justify-content: center;
   }
@@ -681,7 +681,7 @@ body {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .intro-scroll-container {
     height: auto;
   }
@@ -780,7 +780,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .featured-work-container {
     padding: 0 9%;
   }
@@ -794,6 +794,11 @@ body {
   }
 }
 @media screen and (max-width: 576px) {
+  .featured-work-container .featured_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .featured-work-container .card-title {
     font-size: 1.2rem;
   }
@@ -1011,7 +1016,7 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .about-container .about-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -1083,7 +1088,7 @@ body {
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .joke_wrapper {
     width: 90%;
   }
@@ -1152,7 +1157,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .work_page_container .work-title {
     margin: 1.5rem 0;
     font-size: 2rem;
@@ -1254,7 +1259,7 @@ body {
   text-transform: capitalize;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .single-work-container {
     width: 90%;
     padding: 1.75rem;
