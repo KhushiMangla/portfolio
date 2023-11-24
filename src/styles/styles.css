@@ -1062,7 +1062,7 @@ body {
 }
 .joke_wrapper {
   text-align: center;
-  margin: 2.5rem;
+  margin: 2.5rem 0;
   width: 100%;
   height: auto;
   background: oldlace;
